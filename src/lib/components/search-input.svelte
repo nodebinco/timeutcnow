@@ -20,11 +20,13 @@
 
 	const debouncedInput = debounce((val: string) => {
 		onInput?.(val);
-	}, 300);
+	}, 150); // Reduced debounce time for better responsiveness
 
 	function handleInput(e: Event) {
 		const target = e.target as HTMLInputElement;
 		value = target.value;
+		// Call onInput immediately for reactive updates, debounced for performance
+		onInput?.(value);
 		debouncedInput(value);
 	}
 </script>

@@ -39,18 +39,22 @@ export function isDayTime(date: Date, timezone: string): boolean {
  * Search cities by name, country, timezone label, or timezone IANA
  */
 export function searchCities(cities: City[], query: string, countryNames?: Map<string, string>): City[] {
-	if (!query.trim()) {
+	if (!query || !query.trim()) {
 		return cities;
 	}
 	
-	const lowerQuery = query.toLowerCase();
+	const lowerQuery = query.toLowerCase().trim();
+	if (!lowerQuery) {
+		return cities;
+	}
+	
 	return cities.filter(city => {
-		const cityNameMatch = city.name.toLowerCase().includes(lowerQuery);
-		const labelMatch = city.label.toLowerCase().includes(lowerQuery);
-		const timezoneMatch = city.timezone.toLowerCase().includes(lowerQuery);
+		const cityNameMatch = city.name?.toLowerCase().includes(lowerQuery) || false;
+		const labelMatch = city.label?.toLowerCase().includes(lowerQuery) || false;
+		const timezoneMatch = city.timezone?.toLowerCase().includes(lowerQuery) || false;
 		const countryMatch = countryNames 
 			? countryNames.get(city.country)?.toLowerCase().includes(lowerQuery) || false
-			: city.country.toLowerCase().includes(lowerQuery);
+			: city.country?.toLowerCase().includes(lowerQuery) || false;
 		
 		return cityNameMatch || labelMatch || timezoneMatch || countryMatch;
 	});

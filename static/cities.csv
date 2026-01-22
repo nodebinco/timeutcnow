@@ -1,0 +1,504 @@
+id,name,country,timezone,label,lat,lng
+abidjan,Abidjan,CI,Africa/Abidjan,GMT,5.36,-4.0083
+abilene,Abilene,US,America/Chicago,CDT/CST,32.4487,-99.7331
+accra,Accra,GH,Africa/Accra,GMT,5.6037,-0.187
+addis-ababa,Addis Ababa,ET,Africa/Addis_Ababa,EAT,9.145,38.7667
+adelaide,Adelaide,AU,Australia/Adelaide,ACST/ACDT,-34.9285,138.6007
+aguascalientes,Aguascalientes,MX,America/Mexico_City,CST/CDT,21.8853,-102.2916
+ahmedabad,Ahmedabad,IN,Asia/Kolkata,IST,23.0225,72.5714
+alexandria,Alexandria,US,America/New_York,EDT/EST,38.8048,-77.0469
+algiers,Algiers,DZ,Africa/Algiers,CET,36.7538,3.0588
+alicante,Alicante,ES,Europe/Madrid,CET/CEST,38.3452,-0.481
+allentown,Allentown,US,America/New_York,EDT/EST,40.6084,-75.4902
+almaty,Almaty,KZ,Asia/Almaty,ALMT,43.222,76.8512
+almere,Almere,NL,Europe/Amsterdam,CET/CEST,52.3508,5.2647
+amsterdam,Amsterdam,NL,Europe/Amsterdam,CET/CEST,52.3676,4.9041
+anaheim,Anaheim,US,America/Los_Angeles,PDT/PST,33.8353,-117.9145
+anchorage,Anchorage,US,America/Anchorage,AKDT/AKST,61.2181,-149.9003
+angers,Angers,FR,Europe/Paris,CET/CEST,47.4739,-0.5517
+ann-arbor,Ann Arbor,US,America/New_York,EDT/EST,42.2808,-83.743
+antioch,Antioch,US,America/Los_Angeles,PDT/PST,37.9799,-121.796
+arlington,Arlington,US,America/Chicago,CDT/CST,32.7357,-97.1081
+arvada,Arvada,US,America/Denver,MDT/MST,39.8028,-105.0875
+asuncion,Asunción,PY,America/Asuncion,PYT/PYST,-25.2637,-57.5759
+athens,Athens,US,America/New_York,EDT/EST,33.9519,-83.3576
+atlanta,Atlanta,US,America/New_York,EDT/EST,33.749,-84.388
+auckland,Auckland,NZ,Pacific/Auckland,NZST/NZDT,-36.8485,174.7633
+aurora,Aurora,US,America/Denver,MDT/MST,39.7294,-104.8319
+austin,Austin,US,America/Chicago,CDT/CST,30.2672,-97.7431
+baghdad,Baghdad,IQ,Asia/Baghdad,AST,33.3152,44.3661
+bakersfield,Bakersfield,US,America/Los_Angeles,PDT/PST,35.3733,-119.0187
+baku,Baku,AZ,Asia/Baku,AZT,40.4093,49.8671
+baltimore,Baltimore,US,America/New_York,EDT/EST,39.2904,-76.6122
+bangalore,Bangalore,IN,Asia/Kolkata,IST,12.9716,77.5946
+bangkok,Bangkok,TH,Asia/Bangkok,ICT,13.7563,100.5018
+barcelona,Barcelona,ES,Europe/Madrid,CET/CEST,41.3851,2.1734
+bari,Bari,IT,Europe/Rome,CET/CEST,41.1177,16.8719
+basel,Basel,CH,Europe/Zurich,CET/CEST,47.5596,7.5886
+baton-rouge,Baton Rouge,US,America/Chicago,CDT/CST,30.4515,-91.1871
+beijing,Beijing,CN,Asia/Shanghai,CST,39.9042,116.4074
+belfast,Belfast,GB,Europe/London,BST/GMT,54.5973,-5.9301
+belgrade,Belgrade,RS,Europe/Belgrade,CET/CEST,44.7866,20.4489
+bellevue,Bellevue,US,America/Los_Angeles,PDT/PST,47.6101,-122.2015
+belo-horizonte,Belo Horizonte,BR,America/Sao_Paulo,BRT/BRST,-19.9167,-43.9345
+belem,Belém,BR,America/Belem,BRT,-1.4558,-48.5044
+berkeley,Berkeley,US,America/Los_Angeles,PDT/PST,37.8715,-122.273
+berlin,Berlin,DE,Europe/Berlin,CET/CEST,52.52,13.405
+bern,Bern,CH,Europe/Zurich,CET/CEST,46.9481,7.4474
+bhopal,Bhopal,IN,Asia/Kolkata,IST,23.2599,77.4126
+bilbao,Bilbao,ES,Europe/Madrid,CET/CEST,43.2627,-2.9253
+birmingham,Birmingham,US,America/Chicago,CDT/CST,33.5207,-86.8025
+bochum,Bochum,DE,Europe/Berlin,CET/CEST,51.4818,7.2162
+bogota,Bogotá,CO,America/Bogota,COT,4.711,-74.0721
+boise,Boise,US,America/Boise,MDT/MST,43.615,-116.2023
+bologna,Bologna,IT,Europe/Rome,CET/CEST,44.4949,11.3426
+bordeaux,Bordeaux,FR,Europe/Paris,CET/CEST,44.8378,-0.5792
+boston,Boston,US,America/New_York,EDT/EST,42.3601,-71.0589
+brasilia,Brasília,BR,America/Sao_Paulo,BRT/BRST,-15.7942,-47.8822
+bridgeport,Bridgeport,US,America/New_York,EDT/EST,41.1865,-73.1952
+brisbane,Brisbane,AU,Australia/Brisbane,AEST,-27.4698,153.0251
+bristol,Bristol,GB,Europe/London,BST/GMT,51.4545,-2.5879
+brownsville,Brownsville,US,America/Chicago,CDT/CST,25.9017,-97.4975
+brussels,Brussels,BE,Europe/Brussels,CET/CEST,50.8503,4.3517
+bucharest,Bucharest,RO,Europe/Bucharest,EET/EEST,44.4268,26.1025
+budapest,Budapest,HU,Europe/Budapest,CET/CEST,47.4979,19.0402
+buenos-aires,Buenos Aires,AR,America/Argentina/Buenos_Aires,ART,-34.6037,-58.3816
+busan,Busan,KR,Asia/Seoul,KST,35.1796,129.0756
+cairns,Cairns,AU,Australia/Brisbane,AEST,-16.9186,145.7781
+cairo,Cairo,EG,Africa/Cairo,EET/EEST,30.0444,31.2357
+calgary,Calgary,CA,America/Edmonton,MDT/MST,51.0447,-114.0719
+cambridge,Cambridge,GB,Europe/London,BST/GMT,52.2053,0.1218
+canberra,Canberra,AU,Australia/Sydney,AEST,-35.2809,149.13
+cape-coral,Cape Coral,US,America/New_York,EDT/EST,26.5629,-81.9495
+caracas,Caracas,VE,America/Caracas,VET,10.4806,-66.9036
+cardiff,Cardiff,GB,Europe/London,BST/GMT,51.4816,-3.1791
+carrollton,Carrollton,US,America/Chicago,CDT/CST,32.9537,-96.8903
+cary,Cary,US,America/New_York,EDT/EST,35.7915,-78.7811
+casablanca,Casablanca,MA,Africa/Casablanca,WET/WEST,33.5731,-7.5898
+catania,Catania,IT,Europe/Rome,CET/CEST,37.5079,15.083
+cedar-rapids,Cedar Rapids,US,America/Chicago,CDT/CST,41.9778,-91.6656
+chandler,Chandler,US,America/Phoenix,MST,33.3062,-111.8413
+charleston-sc,"Charleston, SC",US,America/New_York,EDT/EST,32.7765,-79.9311
+charleston-wv,"Charleston, WV",US,America/New_York,EDT/EST,38.3498,-81.6326
+charlotte,Charlotte,US,America/New_York,EDT/EST,35.2271,-80.8431
+chattanooga,Chattanooga,US,America/New_York,EDT/EST,35.0456,-85.3097
+chelyabinsk,Chelyabinsk,RU,Asia/Yekaterinburg,YEKT,55.1644,61.4368
+chengdu,Chengdu,CN,Asia/Shanghai,CST,30.6624,104.0633
+chennai,Chennai,IN,Asia/Kolkata,IST,13.0827,80.2707
+chesapeake,Chesapeake,US,America/New_York,EDT/EST,36.7682,-76.2875
+chiba,Chiba,JP,Asia/Tokyo,JST,35.6074,140.1065
+chicago,Chicago,US,America/Chicago,CDT/CST,41.8781,-87.6298
+chongqing,Chongqing,CN,Asia/Shanghai,CST,29.563,106.5516
+chula-vista,Chula Vista,US,America/Los_Angeles,PDT/PST,32.6401,-117.0842
+cincinnati,Cincinnati,US,America/New_York,EDT/EST,39.1031,-84.512
+cleveland,Cleveland,US,America/New_York,EDT/EST,41.4993,-81.6944
+college-station,College Station,US,America/Chicago,CDT/CST,30.6279,-96.3344
+cologne,Cologne,DE,Europe/Berlin,CET/CEST,50.9375,6.9603
+colombo,Colombo,LK,Asia/Colombo,IST,6.9271,79.8612
+columbia-sc,"Columbia, SC",US,America/New_York,EDT/EST,34.0007,-81.0348
+columbus,Columbus,US,America/New_York,EDT/EST,39.9612,-82.9988
+concord,Concord,US,America/Los_Angeles,PDT/PST,37.978,-122.0311
+copenhagen,Copenhagen,DK,Europe/Copenhagen,CET/CEST,55.6761,12.5683
+coral-springs,Coral Springs,US,America/New_York,EDT/EST,26.2712,-80.2706
+corona,Corona,US,America/Los_Angeles,PDT/PST,33.8753,-117.5664
+corpus-christi,Corpus Christi,US,America/Chicago,CDT/CST,27.8006,-97.3964
+curitiba,Curitiba,BR,America/Sao_Paulo,BRT/BRST,-25.4284,-49.2733
+cordoba,Córdoba,ES,Europe/Madrid,CET/CEST,37.8882,-4.7794
+daegu,Daegu,KR,Asia/Seoul,KST,35.8714,128.6014
+daejeon,Daejeon,KR,Asia/Seoul,KST,36.3504,127.3845
+dakar,Dakar,SN,Africa/Dakar,GMT,14.7167,-17.4677
+dalian,Dalian,CN,Asia/Shanghai,CST,38.914,121.6147
+dallas,Dallas,US,America/Chicago,CDT/CST,32.7767,-96.797
+dar-es-salaam,Dar es Salaam,TZ,Africa/Dar_es_Salaam,EAT,-6.7924,39.2083
+darwin,Darwin,AU,Australia/Darwin,ACST,-12.4634,130.8456
+dayton,Dayton,US,America/New_York,EDT/EST,39.7589,-84.1916
+delhi,Delhi,IN,Asia/Kolkata,IST,28.6139,77.209
+denton,Denton,US,America/Chicago,CDT/CST,33.2148,-97.1331
+denver,Denver,US,America/Denver,MDT/MST,39.7392,-104.9903
+des-moines,Des Moines,US,America/Chicago,CDT/CST,41.5868,-93.625
+detroit,Detroit,US,America/New_York,EDT/EST,42.3314,-83.0458
+dhaka,Dhaka,BD,Asia/Dhaka,BST,23.8103,90.4125
+dijon,Dijon,FR,Europe/Paris,CET/CEST,47.322,5.0415
+doha,Doha,QA,Asia/Qatar,AST,25.2854,51.531
+dongguan,Dongguan,CN,Asia/Shanghai,CST,23.0477,113.749
+dortmund,Dortmund,DE,Europe/Berlin,CET/CEST,51.5136,7.4653
+dresden,Dresden,DE,Europe/Berlin,CET/CEST,51.0504,13.7373
+dubai,Dubai,AE,Asia/Dubai,GST,25.2048,55.2708
+dublin,Dublin,IE,Europe/Dublin,IST/GMT,53.3498,-6.2603
+duisburg,Duisburg,DE,Europe/Berlin,CET/CEST,51.4344,6.7623
+durham,Durham,US,America/New_York,EDT/EST,35.994,-78.8986
+dusseldorf,Düsseldorf,DE,Europe/Berlin,CET/CEST,51.2277,6.7735
+edinburgh,Edinburgh,GB,Europe/London,BST/GMT,55.9533,-3.1883
+edmonton,Edmonton,CA,America/Edmonton,MDT/MST,53.5461,-113.4938
+eindhoven,Eindhoven,NL,Europe/Amsterdam,CET/CEST,51.4416,5.4697
+elizabeth,Elizabeth,US,America/New_York,EDT/EST,40.6639,-74.2107
+elk-grove,Elk Grove,US,America/Los_Angeles,PDT/PST,38.4088,-121.3716
+erie,Erie,US,America/New_York,EDT/EST,42.1292,-80.0851
+escondido,Escondido,US,America/Los_Angeles,PDT/PST,33.1192,-117.0864
+essen,Essen,DE,Europe/Berlin,CET/CEST,51.4556,7.0116
+eugene,Eugene,US,America/Los_Angeles,PDT/PST,44.0521,-123.0868
+evansville,Evansville,US,America/Chicago,CDT/CST,37.9748,-87.5558
+fairfield,Fairfield,US,America/Los_Angeles,PDT/PST,38.2494,-122.04
+fargo,Fargo,US,America/Chicago,CDT/CST,46.8772,-96.7898
+fayetteville,Fayetteville,US,America/New_York,EDT/EST,35.0527,-78.8784
+florence,Florence,IT,Europe/Rome,CET/CEST,43.7696,11.2558
+fontana,Fontana,US,America/Los_Angeles,PDT/PST,34.0922,-117.435
+fort-collins,Fort Collins,US,America/Denver,MDT/MST,40.5853,-105.0844
+fort-lauderdale,Fort Lauderdale,US,America/New_York,EDT/EST,26.1224,-80.1373
+fort-wayne,Fort Wayne,US,America/New_York,EDT/EST,41.0793,-85.1394
+fort-worth,Fort Worth,US,America/Chicago,CDT/CST,32.7555,-97.3308
+fortaleza,Fortaleza,BR,America/Fortaleza,BRT/BRST,-3.7172,-38.5433
+frankfurt,Frankfurt,DE,Europe/Berlin,CET/CEST,50.1109,8.6821
+fremont,Fremont,US,America/Los_Angeles,PDT/PST,37.5483,-121.9886
+frisco,Frisco,US,America/Chicago,CDT/CST,33.1507,-96.8236
+fukuoka,Fukuoka,JP,Asia/Tokyo,JST,33.5904,130.4017
+fullerton,Fullerton,US,America/Los_Angeles,PDT/PST,33.8704,-117.9242
+gainesville,Gainesville,US,America/New_York,EDT/EST,29.6516,-82.3248
+garden-grove,Garden Grove,US,America/Los_Angeles,PDT/PST,33.7739,-117.9414
+garland,Garland,US,America/Chicago,CDT/CST,32.9126,-96.6389
+geelong,Geelong,AU,Australia/Melbourne,AEST,-38.1499,144.3617
+geneva,Geneva,CH,Europe/Zurich,CET/CEST,46.2044,6.1432
+genoa,Genoa,IT,Europe/Rome,CET/CEST,44.4056,8.9463
+glasgow,Glasgow,GB,Europe/London,BST/GMT,55.8642,-4.2518
+glendale,Glendale,US,America/Phoenix,MST,33.5387,-112.186
+goiania,Goiânia,BR,America/Sao_Paulo,BRT/BRST,-16.6864,-49.2643
+gold-coast,Gold Coast,AU,Australia/Brisbane,AEST,-28.0167,153.4
+goyang,Goyang,KR,Asia/Seoul,KST,37.6564,126.835
+grand-prairie,Grand Prairie,US,America/Chicago,CDT/CST,32.7459,-96.9978
+grand-rapids,Grand Rapids,US,America/New_York,EDT/EST,42.9634,-85.6681
+grenoble,Grenoble,FR,Europe/Paris,CET/CEST,45.1885,5.7245
+groningen,Groningen,NL,Europe/Amsterdam,CET/CEST,53.2194,6.5665
+guadalajara,Guadalajara,MX,America/Mexico_City,CST/CDT,20.6597,-103.3496
+guangzhou,Guangzhou,CN,Asia/Shanghai,CST,23.1291,113.2644
+guarulhos,Guarulhos,BR,America/Sao_Paulo,BRT/BRST,-23.4538,-46.5331
+guatemala-city,Guatemala City,GT,America/Guatemala,CST,14.6349,-90.5069
+gwangju,Gwangju,KR,Asia/Seoul,KST,35.1595,126.8526
+halifax,Halifax,CA,America/Halifax,ADT/AST,44.6488,-63.5752
+hamburg,Hamburg,DE,Europe/Berlin,CET/CEST,53.5511,9.9937
+hamilton,Hamilton,CA,America/Toronto,EDT/EST,43.2557,-79.8711
+hampton,Hampton,US,America/New_York,EDT/EST,37.0299,-76.3452
+hangzhou,Hangzhou,CN,Asia/Shanghai,CST,30.2741,120.1551
+hannover,Hannover,DE,Europe/Berlin,CET/CEST,52.3759,9.732
+hartford,Hartford,US,America/New_York,EDT/EST,41.7658,-73.7694
+havana,Havana,CU,America/Havana,CST/CDT,23.1136,-82.3666
+hayward,Hayward,US,America/Los_Angeles,PDT/PST,37.6688,-122.081
+helsinki,Helsinki,FI,Europe/Helsinki,EET/EEST,60.1699,24.9384
+henderson,Henderson,US,America/Los_Angeles,PDT/PST,36.0395,-114.9817
+hialeah,Hialeah,US,America/New_York,EDT/EST,25.8576,-80.2781
+high-point,High Point,US,America/New_York,EDT/EST,35.9557,-80.0053
+hiroshima,Hiroshima,JP,Asia/Tokyo,JST,34.3853,132.4553
+ho-chi-minh,Ho Chi Minh City,VN,Asia/Ho_Chi_Minh,ICT,10.8231,106.6297
+hobart,Hobart,AU,Australia/Hobart,AEDT/AEST,-42.8821,147.3272
+hollywood,Hollywood,US,America/New_York,EDT/EST,26.0112,-80.1495
+hong-kong,Hong Kong,HK,Asia/Hong_Kong,HKT,22.3193,114.1694
+honolulu,Honolulu,US,Pacific/Honolulu,HST,21.3099,-157.8581
+houston,Houston,US,America/Chicago,CDT/CST,29.7604,-95.3698
+huntsville,Huntsville,US,America/Chicago,CDT/CST,34.7304,-86.5861
+hyderabad,Hyderabad,IN,Asia/Kolkata,IST,17.385,78.4867
+incheon,Incheon,KR,Asia/Seoul,KST,37.4563,126.7052
+indianapolis,Indianapolis,US,America/New_York,EDT/EST,39.7684,-86.1581
+indore,Indore,IN,Asia/Kolkata,IST,22.7196,75.8577
+inglewood,Inglewood,US,America/Los_Angeles,PDT/PST,33.9617,-118.3531
+irving,Irving,US,America/Chicago,CDT/CST,32.814,-96.9489
+istanbul,Istanbul,TR,Europe/Istanbul,TRT,41.0082,28.9784
+jacksonville,Jacksonville,US,America/New_York,EDT/EST,30.3322,-81.6557
+jaipur,Jaipur,IN,Asia/Kolkata,IST,26.9124,75.7873
+jakarta,Jakarta,ID,Asia/Jakarta,WIB,-6.2088,106.8456
+jersey-city,Jersey City,US,America/New_York,EDT/EST,40.7178,-74.0431
+johannesburg,Johannesburg,ZA,Africa/Johannesburg,SAST,-26.2041,28.0473
+joliet,Joliet,US,America/Chicago,CDT/CST,41.525,-88.0817
+juarez,Juárez,MX,America/Ojinaga,MST/MDT,31.6904,-106.4244
+kampala,Kampala,UG,Africa/Kampala,EAT,0.3476,32.5825
+kanpur,Kanpur,IN,Asia/Kolkata,IST,26.4499,80.3319
+kansas-city,Kansas City,US,America/Chicago,CDT/CST,39.0997,-94.5786
+kansas-city-ks,"Kansas City, KS",US,America/Chicago,CDT/CST,39.1142,-94.6275
+karachi,Karachi,PK,Asia/Karachi,PKT,24.8607,67.0011
+kathmandu,Kathmandu,NP,Asia/Kathmandu,NPT,27.7172,85.324
+kawasaki,Kawasaki,JP,Asia/Tokyo,JST,35.5309,139.703
+kazan,Kazan,RU,Europe/Moscow,MSK,55.8304,49.0661
+kenosha,Kenosha,US,America/Chicago,CDT/CST,42.5847,-87.8212
+killeen,Killeen,US,America/Chicago,CDT/CST,31.1171,-97.7278
+kinshasa,Kinshasa,CD,Africa/Kinshasa,WAT,-4.4419,15.2663
+kitakyushu,Kitakyushu,JP,Asia/Tokyo,JST,33.8835,130.875
+knoxville,Knoxville,US,America/New_York,EDT/EST,35.9606,-83.9207
+kobe,Kobe,JP,Asia/Tokyo,JST,34.6901,135.1956
+kolkata,Kolkata,IN,Asia/Kolkata,IST,22.5726,88.3639
+krasnoyarsk,Krasnoyarsk,RU,Asia/Krasnoyarsk,KRAT,56.0184,92.8672
+kuala-lumpur,Kuala Lumpur,MY,Asia/Kuala_Lumpur,MYT,3.139,101.6869
+kuwait-city,Kuwait City,KW,Asia/Kuwait,AST,29.3759,47.9774
+kiev,Kyiv,UA,Europe/Kiev,EET/EEST,50.4501,30.5234
+kyoto,Kyoto,JP,Asia/Tokyo,JST,35.0116,135.7681
+la-paz,La Paz,BO,America/La_Paz,BOT,-16.5,-68.15
+lagos,Lagos,NG,Africa/Lagos,WAT,6.5244,3.3792
+lakeland,Lakeland,US,America/New_York,EDT/EST,28.0395,-81.9498
+lakewood,Lakewood,US,America/Denver,MDT/MST,39.7047,-105.0814
+lancaster,Lancaster,US,America/Los_Angeles,PDT/PST,34.6868,-118.1542
+laredo,Laredo,US,America/Chicago,CDT/CST,27.5306,-99.4803
+las-cruces,Las Cruces,US,America/Denver,MDT/MST,32.3199,-106.7637
+las-palmas,Las Palmas,ES,Atlantic/Canary,WET/WEST,28.1248,-15.43
+las-vegas,Las Vegas,US,America/Los_Angeles,PDT/PST,36.1699,-115.1398
+lausanne,Lausanne,CH,Europe/Zurich,CET/CEST,46.5197,6.6323
+leeds,Leeds,GB,Europe/London,BST/GMT,53.8008,-1.5491
+leicester,Leicester,GB,Europe/London,BST/GMT,52.6369,-1.1398
+leipzig,Leipzig,DE,Europe/Berlin,CET/CEST,51.3397,12.3731
+lewisville,Lewisville,US,America/Chicago,CDT/CST,33.0462,-96.9942
+lexington,Lexington,US,America/New_York,EDT/EST,38.0406,-84.5037
+leon,León,MX,America/Mexico_City,CST/CDT,21.1253,-101.686
+lille,Lille,FR,Europe/Paris,CET/CEST,50.6292,3.0573
+lima,Lima,PE,America/Lima,PET,-12.0464,-77.0428
+lisbon,Lisbon,PT,Europe/Lisbon,WET/WEST,38.7223,-9.1393
+liverpool,Liverpool,GB,Europe/London,BST/GMT,53.4084,-2.9916
+london,London,GB,Europe/London,BST/GMT,51.5074,-0.1278
+longview,Longview,US,America/Chicago,CDT/CST,32.5007,-94.7405
+los-angeles,Los Angeles,US,America/Los_Angeles,PDT/PST,34.0522,-118.2437
+luanda,Luanda,AO,Africa/Luanda,WAT,-8.8383,13.2344
+lubbock,Lubbock,US,America/Chicago,CDT/CST,33.5779,-101.8552
+lucknow,Lucknow,IN,Asia/Kolkata,IST,26.8467,80.9462
+lyon,Lyon,FR,Europe/Paris,CET/CEST,45.764,4.8357
+madison,Madison,US,America/Chicago,CDT/CST,43.0731,-89.4012
+madrid,Madrid,ES,Europe/Madrid,CET/CEST,40.4168,-3.7038
+manaus,Manaus,BR,America/Manaus,AMT,-3.119,-60.0217
+manchester,Manchester,GB,Europe/London,BST/GMT,53.4808,-2.2426
+manila,Manila,PH,Asia/Manila,PHT,14.5995,120.9842
+marseille,Marseille,FR,Europe/Paris,CET/CEST,43.2965,5.3698
+mcallen,McAllen,US,America/Chicago,CDT/CST,26.2034,-98.23
+mckinney,McKinney,US,America/Chicago,CDT/CST,33.1972,-96.6397
+melbourne,Melbourne,AU,Australia/Melbourne,AEST,-37.8136,144.9631
+memphis,Memphis,US,America/Chicago,CDT/CST,35.1495,-90.049
+mesquite,Mesquite,US,America/Chicago,CDT/CST,32.7668,-96.5992
+messina,Messina,IT,Europe/Rome,CET/CEST,38.1938,15.554
+mexico-city,Mexico City,MX,America/Mexico_City,CST/CDT,19.4326,-99.1332
+miami,Miami,US,America/New_York,EDT/EST,25.7617,-80.1918
+midland,Midland,US,America/Chicago,CDT/CST,31.9973,-102.0779
+milan,Milan,IT,Europe/Rome,CET/CEST,45.4642,9.19
+milwaukee,Milwaukee,US,America/Chicago,CDT/CST,43.0389,-87.9065
+minneapolis,Minneapolis,US,America/Chicago,CDT/CST,44.9778,-93.265
+miramar,Miramar,US,America/New_York,EDT/EST,25.9861,-80.3036
+modesto,Modesto,US,America/Los_Angeles,PDT/PST,37.6391,-120.9969
+monterrey,Monterrey,MX,America/Mexico_City,CST/CDT,25.6866,-100.3161
+montevideo,Montevideo,UY,America/Montevideo,UYT,-34.9011,-56.1645
+montreal,Montreal,CA,America/Toronto,EDT/EST,45.5017,-73.5673
+moreno-valley,Moreno Valley,US,America/Los_Angeles,PDT/PST,33.9425,-117.2297
+moscow,Moscow,RU,Europe/Moscow,MSK,55.7558,37.6173
+mumbai,Mumbai,IN,Asia/Kolkata,IST,19.076,72.8777
+munich,Munich,DE,Europe/Berlin,CET/CEST,48.1351,11.582
+murcia,Murcia,ES,Europe/Madrid,CET/CEST,37.9922,-1.1307
+murfreesboro,Murfreesboro,US,America/Chicago,CDT/CST,35.8456,-86.3903
+muscat,Muscat,OM,Asia/Muscat,GST,23.5859,58.4059
+malaga,Málaga,ES,Europe/Madrid,CET/CEST,36.7213,-4.4214
+merida,Mérida,MX,America/Merida,CST/CDT,20.9674,-89.5926
+nagoya,Nagoya,JP,Asia/Tokyo,JST,35.1815,136.9066
+nagpur,Nagpur,IN,Asia/Kolkata,IST,21.1458,79.0882
+nairobi,Nairobi,KE,Africa/Nairobi,EAT,-1.2921,36.8219
+nanjing,Nanjing,CN,Asia/Shanghai,CST,32.0603,118.7969
+nantes,Nantes,FR,Europe/Paris,CET/CEST,47.2184,-1.5536
+naperville,Naperville,US,America/Chicago,CDT/CST,41.7508,-88.1535
+naples,Naples,IT,Europe/Rome,CET/CEST,40.8518,14.2681
+nashville,Nashville,US,America/Chicago,CDT/CST,36.1627,-86.7816
+new-haven,New Haven,US,America/New_York,EDT/EST,41.3083,-72.9279
+new-orleans,New Orleans,US,America/Chicago,CDT/CST,29.9511,-90.0715
+new-york,New York,US,America/New_York,EDT/EST,40.7128,-74.006
+newcastle,Newcastle,AU,Australia/Sydney,AEST,-32.9283,151.7817
+newport-news,Newport News,US,America/New_York,EDT/EST,37.0871,-76.473
+nice,Nice,FR,Europe/Paris,CET/CEST,43.7102,7.262
+nizhny-novgorod,Nizhny Novgorod,RU,Europe/Moscow,MSK,56.3269,44.0075
+norfolk,Norfolk,US,America/New_York,EDT/EST,36.8468,-76.2852
+norman,Norman,US,America/Chicago,CDT/CST,35.2226,-97.4395
+north-las-vegas,North Las Vegas,US,America/Los_Angeles,PDT/PST,36.1989,-115.1175
+novosibirsk,Novosibirsk,RU,Asia/Novosibirsk,NOVT,55.0084,82.9357
+nuremberg,Nuremberg,DE,Europe/Berlin,CET/CEST,49.4521,11.0767
+oakland,Oakland,US,America/Los_Angeles,PDT/PST,37.8044,-122.2712
+oceanside,Oceanside,US,America/Los_Angeles,PDT/PST,33.1959,-117.3795
+odessa,Odessa,US,America/Chicago,CDT/CST,31.8457,-102.3676
+olathe,Olathe,US,America/Chicago,CDT/CST,38.8814,-94.8191
+omaha,Omaha,US,America/Chicago,CDT/CST,41.2565,-95.9345
+omsk,Omsk,RU,Asia/Omsk,OMST,54.9885,73.3242
+ontario,Ontario,US,America/Los_Angeles,PDT/PST,34.0633,-117.6509
+orange,Orange,US,America/Los_Angeles,PDT/PST,33.7879,-117.8531
+orlando,Orlando,US,America/New_York,EDT/EST,28.5383,-81.3792
+osaka,Osaka,JP,Asia/Tokyo,JST,34.6937,135.5023
+oslo,Oslo,NO,Europe/Oslo,CET/CEST,59.9139,10.7522
+ottawa,Ottawa,CA,America/Toronto,EDT/EST,45.4215,-75.6972
+overland-park,Overland Park,US,America/Chicago,CDT/CST,38.9822,-94.6708
+oxford,Oxford,GB,Europe/London,BST/GMT,51.752,-1.2577
+oxnard,Oxnard,US,America/Los_Angeles,PDT/PST,34.1975,-119.1771
+padua,Padua,IT,Europe/Rome,CET/CEST,45.4064,11.8768
+palermo,Palermo,IT,Europe/Rome,CET/CEST,38.1157,13.3613
+palma,Palma,ES,Europe/Madrid,CET/CEST,39.5696,2.6502
+palmdale,Palmdale,US,America/Los_Angeles,PDT/PST,34.5794,-118.1165
+panama-city,Panama City,PA,America/Panama,EST,8.9824,-79.5199
+paris,Paris,FR,Europe/Paris,CET/CEST,48.8566,2.3522
+pasadena,Pasadena,US,America/Los_Angeles,PDT/PST,34.1478,-118.1445
+pasadena-tx,"Pasadena, TX",US,America/Chicago,CDT/CST,29.6911,-95.2091
+paterson,Paterson,US,America/New_York,EDT/EST,40.9168,-74.1718
+pembroke-pines,Pembroke Pines,US,America/New_York,EDT/EST,26.0078,-80.2963
+peoria,Peoria,US,America/Phoenix,MST,33.5806,-112.2374
+perth,Perth,AU,Australia/Perth,AWST,-31.9505,115.8605
+philadelphia,Philadelphia,US,America/New_York,EDT/EST,39.9526,-75.1652
+phnom-penh,Phnom Penh,KH,Asia/Phnom_Penh,ICT,11.5564,104.9282
+phoenix,Phoenix,US,America/Phoenix,MST,33.4484,-112.074
+pittsburgh,Pittsburgh,US,America/New_York,EDT/EST,40.4406,-79.9959
+pomona,Pomona,US,America/Los_Angeles,PDT/PST,34.0551,-117.7498
+port-st-lucie,Port St. Lucie,US,America/New_York,EDT/EST,27.273,-80.3582
+portland,Portland,US,America/Los_Angeles,PDT/PST,45.5152,-122.6784
+portland-me,"Portland, ME",US,America/New_York,EDT/EST,43.6591,-70.2568
+porto-alegre,Porto Alegre,BR,America/Sao_Paulo,BRT/BRST,-30.0346,-51.2177
+prague,Prague,CZ,Europe/Prague,CET/CEST,50.0755,14.4378
+providence,Providence,US,America/New_York,EDT/EST,41.824,-71.4128
+puebla,Puebla,MX,America/Mexico_City,CST/CDT,19.0414,-98.2063
+pune,Pune,IN,Asia/Kolkata,IST,18.5204,73.8567
+qingdao,Qingdao,CN,Asia/Shanghai,CST,36.0671,120.3826
+quebec-city,Quebec City,CA,America/Toronto,EDT/EST,46.8139,-71.208
+queretaro,Querétaro,MX,America/Mexico_City,CST/CDT,20.5888,-100.3899
+quito,Quito,EC,America/Guayaquil,ECT,-0.1807,-78.4678
+raleigh,Raleigh,US,America/New_York,EDT/EST,35.7796,-78.6382
+rancho-cucamonga,Rancho Cucamonga,US,America/Los_Angeles,PDT/PST,34.1064,-117.5931
+recife,Recife,BR,America/Recife,BRT/BRST,-8.0476,-34.877
+reims,Reims,FR,Europe/Paris,CET/CEST,49.2583,4.0317
+rennes,Rennes,FR,Europe/Paris,CET/CEST,48.1173,-1.6778
+reno,Reno,US,America/Los_Angeles,PDT/PST,39.5296,-119.8138
+reykjavik,Reykjavik,IS,Atlantic/Reykjavik,GMT,64.1466,-21.9426
+richmond,Richmond,US,America/New_York,EDT/EST,37.5407,-77.436
+richmond-va,"Richmond, VA",US,America/New_York,EDT/EST,37.5407,-77.436
+rio-de-janeiro,Rio de Janeiro,BR,America/Sao_Paulo,BRT/BRST,-22.9068,-43.1729
+riverside,Riverside,US,America/Los_Angeles,PDT/PST,33.9533,-117.3962
+riyadh,Riyadh,SA,Asia/Riyadh,AST,24.7136,46.6753
+rochester,Rochester,US,America/New_York,EDT/EST,43.1566,-77.6088
+rockford,Rockford,US,America/Chicago,CDT/CST,42.2711,-89.094
+rome,Rome,IT,Europe/Rome,CET/CEST,41.9028,12.4964
+rosario,Rosario,AR,America/Argentina/Buenos_Aires,ART,-32.9442,-60.6505
+roseville,Roseville,US,America/Los_Angeles,PDT/PST,38.7521,-121.288
+rostov-on-don,Rostov-on-Don,RU,Europe/Moscow,MSK,47.2357,39.7015
+rotterdam,Rotterdam,NL,Europe/Amsterdam,CET/CEST,51.9244,4.4777
+round-rock,Round Rock,US,America/Chicago,CDT/CST,30.5083,-97.6789
+sacramento,Sacramento,US,America/Los_Angeles,PDT/PST,38.5816,-121.4944
+saint-petersburg,Saint Petersburg,RU,Europe/Moscow,MSK,59.9343,30.3351
+saint-etienne,Saint-Étienne,FR,Europe/Paris,CET/CEST,45.4397,4.3872
+saitama,Saitama,JP,Asia/Tokyo,JST,35.8617,139.6455
+salem,Salem,US,America/Los_Angeles,PDT/PST,44.9429,-123.0351
+salem-or,"Salem, OR",US,America/Los_Angeles,PDT/PST,44.9429,-123.0351
+salinas,Salinas,US,America/Los_Angeles,PDT/PST,36.6777,-121.6555
+salt-lake-city,Salt Lake City,US,America/Denver,MDT/MST,40.7608,-111.891
+salvador,Salvador,BR,America/Bahia,BRT/BRST,-12.9714,-38.5014
+samara,Samara,RU,Europe/Samara,SAMT,53.2001,50.15
+san-angelo,San Angelo,US,America/Chicago,CDT/CST,31.4638,-100.437
+san-antonio,San Antonio,US,America/Chicago,CDT/CST,29.4241,-98.4936
+san-bernardino,San Bernardino,US,America/Los_Angeles,PDT/PST,34.1083,-117.2898
+san-diego,San Diego,US,America/Los_Angeles,PDT/PST,32.7157,-117.1611
+san-francisco,San Francisco,US,America/Los_Angeles,PDT/PST,37.7749,-122.4194
+san-jose,San Jose,US,America/Los_Angeles,PDT/PST,37.3382,-121.8863
+san-jose-cr,San José,CR,America/Costa_Rica,CST,9.9281,-84.0907
+san-juan,San Juan,PR,America/Puerto_Rico,AST,18.4655,-66.1057
+san-luis-potosi,San Luis Potosí,MX,America/Mexico_City,CST/CDT,22.1565,-100.9855
+santa-ana,Santa Ana,US,America/Los_Angeles,PDT/PST,33.7455,-117.8677
+santa-barbara,Santa Barbara,US,America/Los_Angeles,PDT/PST,34.4208,-119.6982
+santa-clara,Santa Clara,US,America/Los_Angeles,PDT/PST,37.3541,-121.9552
+santa-clarita,Santa Clarita,US,America/Los_Angeles,PDT/PST,34.3917,-118.5426
+santa-rosa,Santa Rosa,US,America/Los_Angeles,PDT/PST,38.4404,-122.7141
+santiago,Santiago,CL,America/Santiago,CLT/CLST,-33.4489,-70.6693
+sapporo,Sapporo,JP,Asia/Tokyo,JST,43.0642,141.3469
+saskatoon,Saskatoon,CA,America/Regina,CST,52.1332,-106.67
+savannah,Savannah,US,America/New_York,EDT/EST,32.0809,-81.0912
+scottsdale,Scottsdale,US,America/Phoenix,MST,33.4942,-111.9261
+seattle,Seattle,US,America/Los_Angeles,PDT/PST,47.6062,-122.3321
+sendai,Sendai,JP,Asia/Tokyo,JST,38.2682,140.8694
+seoul,Seoul,KR,Asia/Seoul,KST,37.5665,126.978
+seville,Seville,ES,Europe/Madrid,CET/CEST,37.3891,-5.9845
+shanghai,Shanghai,CN,Asia/Shanghai,CST,31.2304,121.4737
+sheffield,Sheffield,GB,Europe/London,BST/GMT,53.3811,-1.4701
+shenyang,Shenyang,CN,Asia/Shanghai,CST,41.8057,123.4315
+shenzhen,Shenzhen,CN,Asia/Shanghai,CST,22.5431,114.0579
+simi-valley,Simi Valley,US,America/Los_Angeles,PDT/PST,34.2694,-118.7815
+singapore,Singapore,SG,Asia/Singapore,SGT,1.3521,103.8198
+sioux-falls,Sioux Falls,US,America/Chicago,CDT/CST,43.5446,-96.7311
+sofia,Sofia,BG,Europe/Sofia,EET/EEST,42.6977,23.3219
+spokane,Spokane,US,America/Los_Angeles,PDT/PST,47.6588,-117.426
+springfield,Springfield,US,America/New_York,EDT/EST,42.1015,-72.5898
+st-louis,St. Louis,US,America/Chicago,CDT/CST,38.627,-90.1994
+st-paul,St. Paul,US,America/Chicago,CDT/CST,44.9537,-93.09
+st-petersburg,St. Petersburg,US,America/New_York,EDT/EST,27.7676,-82.6403
+stamford,Stamford,US,America/New_York,EDT/EST,41.0534,-73.5387
+sterling-heights,Sterling Heights,US,America/New_York,EDT/EST,42.5803,-83.0302
+stockholm,Stockholm,SE,Europe/Stockholm,CET/CEST,59.3293,18.0686
+stockton,Stockton,US,America/Los_Angeles,PDT/PST,37.9577,-121.2908
+strasbourg,Strasbourg,FR,Europe/Paris,CET/CEST,48.5734,7.7521
+stuttgart,Stuttgart,DE,Europe/Berlin,CET/CEST,48.7758,9.1829
+sunnyvale,Sunnyvale,US,America/Los_Angeles,PDT/PST,37.3688,-122.0363
+surat,Surat,IN,Asia/Kolkata,IST,21.1702,72.8311
+surprise,Surprise,US,America/Phoenix,MST,33.6292,-112.3679
+suwon,Suwon,KR,Asia/Seoul,KST,37.2636,127.0286
+suzhou,Suzhou,CN,Asia/Shanghai,CST,31.2989,120.5853
+sydney,Sydney,AU,Australia/Sydney,AEST,-33.8688,151.2093
+syracuse,Syracuse,US,America/New_York,EDT/EST,43.0481,-76.1474
+sao-paulo,São Paulo,BR,America/Sao_Paulo,BRT/BRST,-23.5505,-46.6333
+tacoma,Tacoma,US,America/Los_Angeles,PDT/PST,47.2529,-122.4443
+taipei,Taipei,TW,Asia/Taipei,CST,25.033,121.5654
+tallahassee,Tallahassee,US,America/New_York,EDT/EST,30.4383,-84.2807
+tampa,Tampa,US,America/New_York,EDT/EST,27.9506,-82.4572
+tashkent,Tashkent,UZ,Asia/Tashkent,UZT,41.2995,69.2401
+tbilisi,Tbilisi,GE,Asia/Tbilisi,GET,41.7151,44.8271
+tehran,Tehran,IR,Asia/Tehran,IRST/IRDT,35.6892,51.389
+tel-aviv,Tel Aviv,IL,Asia/Jerusalem,IST/IDT,32.0853,34.7818
+tempe,Tempe,US,America/Phoenix,MST,33.4255,-111.94
+thane,Thane,IN,Asia/Kolkata,IST,19.2183,72.9781
+the-hague,The Hague,NL,Europe/Amsterdam,CET/CEST,52.0705,4.3007
+thornton,Thornton,US,America/Denver,MDT/MST,39.868,-104.9719
+thousand-oaks,Thousand Oaks,US,America/Los_Angeles,PDT/PST,34.1706,-118.8376
+tianjin,Tianjin,CN,Asia/Shanghai,CST,39.3434,117.3616
+tijuana,Tijuana,MX,America/Tijuana,PST/PDT,32.5149,-117.0382
+tilburg,Tilburg,NL,Europe/Amsterdam,CET/CEST,51.5653,5.0913
+tokyo,Tokyo,JP,Asia/Tokyo,JST,35.6762,139.6503
+topeka,Topeka,US,America/Chicago,CDT/CST,39.0558,-95.689
+toronto,Toronto,CA,America/Toronto,EDT/EST,43.6532,-79.3832
+torrance,Torrance,US,America/Los_Angeles,PDT/PST,33.8358,-118.3406
+torreon,Torreón,MX,America/Mexico_City,CST/CDT,25.5428,-103.4068
+toulon,Toulon,FR,Europe/Paris,CET/CEST,43.1242,5.928
+toulouse,Toulouse,FR,Europe/Paris,CET/CEST,43.6047,1.4442
+townsville,Townsville,AU,Australia/Brisbane,AEST,-19.259,146.8169
+tracy,Tracy,US,America/Los_Angeles,PDT/PST,37.7397,-121.4252
+tulsa,Tulsa,US,America/Chicago,CDT/CST,36.154,-95.9928
+tunis,Tunis,TN,Africa/Tunis,CET,36.8065,10.1815
+turin,Turin,IT,Europe/Rome,CET/CEST,45.0703,7.6869
+tyler,Tyler,US,America/Chicago,CDT/CST,32.3513,-95.3011
+ufa,Ufa,RU,Asia/Yekaterinburg,YEKT,54.7388,55.9721
+ulaanbaatar,Ulaanbaatar,MN,Asia/Ulaanbaatar,ULAT,47.8864,106.9057
+ulsan,Ulsan,KR,Asia/Seoul,KST,35.5384,129.3114
+utrecht,Utrecht,NL,Europe/Amsterdam,CET/CEST,52.0907,5.1214
+valencia,Valencia,ES,Europe/Madrid,CET/CEST,39.4699,-0.3763
+vallejo,Vallejo,US,America/Los_Angeles,PDT/PST,38.1041,-122.2566
+vancouver,Vancouver,CA,America/Vancouver,PDT/PST,49.2827,-123.1207
+vancouver-wa,"Vancouver, WA",US,America/Los_Angeles,PDT/PST,45.6387,-122.6615
+venice,Venice,IT,Europe/Rome,CET/CEST,45.4408,12.3155
+verona,Verona,IT,Europe/Rome,CET/CEST,45.4384,10.9916
+victoria,Victoria,CA,America/Vancouver,PDT/PST,48.4284,-123.3656
+victorville,Victorville,US,America/Los_Angeles,PDT/PST,34.5361,-117.2912
+vienna,Vienna,AT,Europe/Vienna,CET/CEST,48.2082,16.3738
+vientiane,Vientiane,LA,Asia/Vientiane,ICT,17.9757,102.6331
+villeurbanne,Villeurbanne,FR,Europe/Paris,CET/CEST,45.7719,4.8902
+virginia-beach,Virginia Beach,US,America/New_York,EDT/EST,36.8529,-75.978
+visakhapatnam,Visakhapatnam,IN,Asia/Kolkata,IST,17.6868,83.2185
+visalia,Visalia,US,America/Los_Angeles,PDT/PST,36.3302,-119.2921
+waco,Waco,US,America/Chicago,CDT/CST,31.5493,-97.1467
+warren,Warren,US,America/New_York,EDT/EST,42.5145,-83.0147
+warsaw,Warsaw,PL,Europe/Warsaw,CET/CEST,52.2297,21.0122
+washington-dc,Washington DC,US,America/New_York,EDT/EST,38.9072,-77.0369
+wellington,Wellington,NZ,Pacific/Auckland,NZST/NZDT,-41.2865,174.7762
+west-valley-city,West Valley City,US,America/Denver,MDT/MST,40.6916,-112.0011
+wichita,Wichita,US,America/Chicago,CDT/CST,37.6872,-97.3301
+wilmington,Wilmington,US,America/New_York,EDT/EST,34.2257,-77.9447
+winnipeg,Winnipeg,CA,America/Winnipeg,CDT/CST,49.8951,-97.1384
+winston-salem,Winston-Salem,US,America/New_York,EDT/EST,36.0999,-80.2442
+winterthur,Winterthur,CH,Europe/Zurich,CET/CEST,47.5056,8.7241
+wollongong,Wollongong,AU,Australia/Sydney,AEST,-34.4278,150.8931
+worcester,Worcester,US,America/New_York,EDT/EST,42.2626,-71.8023
+wuhan,Wuhan,CN,Asia/Shanghai,CST,30.5928,114.3055
+xian,Xi'an,CN,Asia/Shanghai,CST,34.3416,108.9398
+xiamen,Xiamen,CN,Asia/Shanghai,CST,24.4798,118.0819
+yangon,Yangon,MM,Asia/Yangon,MMT,16.8661,96.1951
+yekaterinburg,Yekaterinburg,RU,Asia/Yekaterinburg,YEKT,56.8431,60.6454
+yerevan,Yerevan,AM,Asia/Yerevan,AMT,40.1811,44.5136
+yokohama,Yokohama,JP,Asia/Tokyo,JST,35.4437,139.638
+yongin,Yongin,KR,Asia/Seoul,KST,37.2411,127.1776
+zagreb,Zagreb,HR,Europe/Zagreb,CET/CEST,45.815,15.9819
+zaragoza,Zaragoza,ES,Europe/Madrid,CET/CEST,41.6488,-0.8891
+zurich,Zurich,CH,Europe/Zurich,CET/CEST,47.3769,8.5417

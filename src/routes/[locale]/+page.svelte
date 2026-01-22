@@ -9,7 +9,7 @@
 	import SearchInput from '$lib/components/search-input.svelte';
 	import TimeFormatSelector from '$lib/components/time-format-selector.svelte';
 	import type { City, TimeFormat } from '$lib/types/timezone';
-	import { getTimezoneData, getUserPreferences, saveUserPreferences } from '$lib/utils/indexed-db-utils';
+	import { getTimezoneData, getUserPreferences, saveUserPreferences, getHomeSelectedCities, saveHomeSelectedCities } from '$lib/utils/indexed-db-utils';
 	import { getUnixTimestamp, getJulianDate, getISO8601, getUTCOffset, formatUTCOffset, formatTime } from '$lib/utils/time-utils';
 	import { searchCities, filterCitiesByIds, sortCitiesByOrder, isDayTime, getTimezoneOffset } from '$lib/utils/timezone-utils';
 	import * as m from '$lib/paraglide/messages';
@@ -18,7 +18,6 @@
 	let copied = $state(false);
 	let searchQuery = $state('');
 	let timeFormat = $state<TimeFormat>('24h');
-	let cities = $state<City[]>([]);
 	let allCities = $state<City[]>([]);
 	let selectedCityIds = $state<string[]>([]);
 	let userTimezone = $state('');
@@ -37,55 +36,107 @@
 
 	// Load data on mount
 	onMount(async () => {
-		// Load timezone data
-		const data = await getTimezoneData();
-		allCities = data.cities;
-		
-		// Debug: Log the number of cities loaded
-		console.log('Loaded cities:', allCities.length);
-		
-		// Create country names mapping
-		const countryMap = new Map<string, string>();
-		data.countries.forEach(country => {
-			countryMap.set(country.code, country.name);
-		});
-		countryNames = countryMap;
-		
-		// Get user timezone first
-		userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-		
-		// Load user preferences
-		const prefs = await getUserPreferences();
-		if (prefs) {
-			if (prefs.timeFormat) {
-				timeFormat = prefs.timeFormat;
+		try {
+			// Load timezone data
+			const data = await getTimezoneData();
+			allCities = data.cities;
+			
+			if (allCities.length === 0) {
+				console.warn('⚠️ Homepage: No cities loaded! Check migration and database.');
+				return;
 			}
-			if (prefs.selectedCities && prefs.selectedCities.length > 0) {
-				selectedCityIds = prefs.selectedCities;
+			
+			// Create country names mapping
+			const countryMap = new Map<string, string>();
+			data.countries.forEach(country => {
+				countryMap.set(country.code, country.name);
+			});
+			countryNames = countryMap;
+			
+			// Get user timezone
+			userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+			
+			// Load user preferences for time format
+			try {
+				const prefs = await getUserPreferences();
+				if (prefs && prefs.timeFormat) {
+					timeFormat = prefs.timeFormat;
+				}
+			} catch (error) {
+				console.error('❌ Failed to load user preferences:', error);
 			}
+			
+			// Load home selected cities from IndexedDB
+			let savedCities: string[] = [];
+			try {
+				savedCities = await getHomeSelectedCities();
+			} catch (error) {
+				console.error('❌ Failed to load home-selected-cities:', error);
+			}
+			
+			if (savedCities.length > 0) {
+				selectedCityIds = [...savedCities];
+			} else {
+				// Set default cities if none selected (16 major world cities)
+				const defaultCities = [
+					'london',        // London, UK
+					'new-york',      // New York, USA
+					'tokyo',         // Tokyo, Japan
+					'dubai',         // Dubai, UAE
+					'sydney',        // Sydney, Australia
+					'paris',         // Paris, France
+					'singapore',     // Singapore
+					'hong-kong',     // Hong Kong
+					'beijing',       // Beijing, China
+					'mumbai',        // Mumbai, India
+					'moscow',        // Moscow, Russia
+					'los-angeles',   // Los Angeles, USA
+					'bangkok',       // Bangkok, Thailand
+					'seoul',         // Seoul, South Korea
+					'istanbul',      // Istanbul, Turkey
+					'cairo'          // Cairo, Egypt
+				];
+				selectedCityIds = [...defaultCities];
+				
+				try {
+					await saveHomeSelectedCities(Array.from(selectedCityIds));
+				} catch (error) {
+					console.error('❌ Failed to save default cities:', error);
+				}
+			}
+		} catch (error) {
+			console.error('❌ onMount error:', error);
 		}
-		
-		// Set default cities if none selected
-		if (selectedCityIds.length === 0) {
-			selectedCityIds = ['london', 'new-york', 'tokyo', 'dubai', 'sydney', 'san-francisco'];
-			await saveCityPreferences();
-		}
-		
-		updateCities();
 	});
 
-	// Update cities based on search and selection
-	function updateCities() {
+	// Use $derived to automatically compute cities based on dependencies
+	let cities = $derived.by(() => {
 		try {
+			const selectedIds = Array.from(selectedCityIds);
+			
+			// If allCities is empty, return empty array (wait for onMount to load data)
+			if (allCities.length === 0) {
+				return [];
+			}
+			
+			// If no cities selected, return empty array (wait for onMount to set default)
+			if (selectedIds.length === 0) {
+				return [];
+			}
+			
 			let filtered = allCities;
 			
 			// Filter by selected cities
-			if (selectedCityIds.length > 0) {
-				filtered = filterCitiesByIds(filtered, selectedCityIds);
+			if (selectedIds.length > 0) {
+				filtered = filterCitiesByIds(filtered, selectedIds);
+				
+				if (filtered.length === 0) {
+					console.warn('⚠️ No cities found after filtering! Check if city IDs match.');
+				}
+				
 				// Sort by order if available
-				filtered = sortCitiesByOrder(filtered, selectedCityIds);
+				filtered = sortCitiesByOrder(filtered, selectedIds);
 			} else {
-				// If no cities selected, show empty array
 				filtered = [];
 			}
 			
@@ -94,21 +145,11 @@
 				filtered = searchCities(filtered, searchQuery, countryNames);
 			}
 			
-			cities = filtered;
+			return filtered;
 		} catch (error) {
-			console.error('Failed to update cities:', error);
-			cities = [];
+			console.error('❌ Failed to compute cities:', error);
+			return [];
 		}
-	}
-
-	// Watch for search query changes
-	$effect(() => {
-		updateCities();
-	});
-
-	// Watch for selected cities changes
-	$effect(() => {
-		updateCities();
 	});
 
 	// Copy to clipboard
@@ -141,7 +182,6 @@
 		if (!selectedCityIds.includes(cityId)) {
 			selectedCityIds = [...selectedCityIds, cityId];
 			await saveCityPreferences();
-			updateCities();
 		}
 	}
 
@@ -151,10 +191,9 @@
 			if (selectedCityIds.includes(cityId)) {
 				selectedCityIds = selectedCityIds.filter(id => id !== cityId);
 				await saveCityPreferences();
-				updateCities();
 			}
 		} catch (error) {
-			console.error('Failed to remove city:', error);
+			console.error('❌ Failed to remove city:', error);
 		}
 	}
 
@@ -168,17 +207,25 @@
 	// Save city preferences
 	async function saveCityPreferences() {
 		try {
-			const prefs = await getUserPreferences();
-			// Create plain arrays from Svelte runes
-			const plainSelectedCities = Array.isArray(selectedCityIds) ? [...selectedCityIds] : [];
-			await saveUserPreferences({
-				timeFormat: prefs?.timeFormat || '24h',
-				selectedCities: plainSelectedCities,
-				cityOrder: plainSelectedCities,
-				widgetConfigs: prefs?.widgetConfigs
-			});
+			const plainSelectedCities = Array.isArray(selectedCityIds) ? Array.from(selectedCityIds) : [];
+			
+			// Save to home-selected-cities key
+			await saveHomeSelectedCities(plainSelectedCities);
+			
+			// Also save to user preferences for backward compatibility
+			try {
+				const prefs = await getUserPreferences();
+				await saveUserPreferences({
+					timeFormat: prefs?.timeFormat || timeFormat || '24h',
+					selectedCities: plainSelectedCities,
+					cityOrder: plainSelectedCities,
+					widgetConfigs: prefs?.widgetConfigs
+				});
+			} catch (error) {
+				console.error('⚠️ Failed to save to default preferences (non-critical):', error);
+			}
 		} catch (error) {
-			console.error('Failed to save city preferences:', error);
+			console.error('❌ Failed to save city preferences:', error);
 		}
 	}
 
@@ -247,9 +294,8 @@
 			
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
 				<a href="/{page.params.locale}" class="hover:text-primary">{m.world_clock()}</a>
-				<a href="/{page.params.locale}/timezone-converter" class="hover:text-primary">Time Zone Converter</a>
+				<a href="/{page.params.locale}/timezone-map" class="hover:text-primary">{m.timezone_map()}</a>
 				<a href="/{page.params.locale}/converter" class="hover:text-primary">{m.converter()}</a>
-				<a href="/{page.params.locale}/api" class="hover:text-primary">{m.api()}</a>
 				<TimeFormatSelector value={timeFormat} onChange={handleTimeFormatChange} />
 			</div>
 

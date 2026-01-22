@@ -1,0 +1,96 @@
+code,name,primaryTimezone
+DZ,Algeria,Africa/Algiers
+AO,Angola,Africa/Luanda
+AR,Argentina,America/Argentina/Buenos_Aires
+AM,Armenia,Asia/Yerevan
+AU,Australia,Australia/Sydney
+AT,Austria,Europe/Vienna
+AZ,Azerbaijan,Asia/Baku
+BD,Bangladesh,Asia/Dhaka
+BE,Belgium,Europe/Brussels
+BO,Bolivia,America/La_Paz
+BR,Brazil,America/Sao_Paulo
+BG,Bulgaria,Europe/Sofia
+KH,Cambodia,Asia/Phnom_Penh
+CA,Canada,America/Toronto
+CL,Chile,America/Santiago
+CN,China,Asia/Shanghai
+CO,Colombia,America/Bogota
+CR,Costa Rica,America/Costa_Rica
+HR,Croatia,Europe/Zagreb
+CU,Cuba,America/Havana
+CZ,Czech Republic,Europe/Prague
+CD,Democratic Republic of the Congo,Africa/Kinshasa
+DK,Denmark,Europe/Copenhagen
+EC,Ecuador,America/Guayaquil
+EG,Egypt,Africa/Cairo
+ET,Ethiopia,Africa/Addis_Ababa
+FI,Finland,Europe/Helsinki
+FR,France,Europe/Paris
+GE,Georgia,Asia/Tbilisi
+DE,Germany,Europe/Berlin
+GH,Ghana,Africa/Accra
+GR,Greece,Europe/Athens
+GT,Guatemala,America/Guatemala
+HK,Hong Kong,Asia/Hong_Kong
+HU,Hungary,Europe/Budapest
+IS,Iceland,Atlantic/Reykjavik
+IN,India,Asia/Kolkata
+ID,Indonesia,Asia/Jakarta
+IR,Iran,Asia/Tehran
+IQ,Iraq,Asia/Baghdad
+IE,Ireland,Europe/Dublin
+IL,Israel,Asia/Jerusalem
+IT,Italy,Europe/Rome
+CI,Ivory Coast,Africa/Abidjan
+JP,Japan,Asia/Tokyo
+KZ,Kazakhstan,Asia/Almaty
+KE,Kenya,Africa/Nairobi
+KW,Kuwait,Asia/Kuwait
+LA,Laos,Asia/Vientiane
+MY,Malaysia,Asia/Kuala_Lumpur
+MX,Mexico,America/Mexico_City
+MN,Mongolia,Asia/Ulaanbaatar
+MA,Morocco,Africa/Casablanca
+MM,Myanmar,Asia/Yangon
+NP,Nepal,Asia/Kathmandu
+NL,Netherlands,Europe/Amsterdam
+NZ,New Zealand,Pacific/Auckland
+NG,Nigeria,Africa/Lagos
+NO,Norway,Europe/Oslo
+OM,Oman,Asia/Muscat
+PK,Pakistan,Asia/Karachi
+PA,Panama,America/Panama
+PY,Paraguay,America/Asuncion
+PE,Peru,America/Lima
+PH,Philippines,Asia/Manila
+PL,Poland,Europe/Warsaw
+PT,Portugal,Europe/Lisbon
+PR,Puerto Rico,America/Puerto_Rico
+QA,Qatar,Asia/Qatar
+RO,Romania,Europe/Bucharest
+RU,Russia,Europe/Moscow
+SA,Saudi Arabia,Asia/Riyadh
+SN,Senegal,Africa/Dakar
+RS,Serbia,Europe/Belgrade
+SG,Singapore,Asia/Singapore
+ZA,South Africa,Africa/Johannesburg
+KR,South Korea,Asia/Seoul
+ES,Spain,Europe/Madrid
+LK,Sri Lanka,Asia/Colombo
+SE,Sweden,Europe/Stockholm
+CH,Switzerland,Europe/Zurich
+TW,Taiwan,Asia/Taipei
+TZ,Tanzania,Africa/Dar_es_Salaam
+TH,Thailand,Asia/Bangkok
+TN,Tunisia,Africa/Tunis
+TR,Turkey,Europe/Istanbul
+UG,Uganda,Africa/Kampala
+UA,Ukraine,Europe/Kiev
+AE,United Arab Emirates,Asia/Dubai
+GB,United Kingdom,Europe/London
+US,United States,America/New_York
+UY,Uruguay,America/Montevideo
+UZ,Uzbekistan,Asia/Tashkent
+VE,Venezuela,America/Caracas
+VN,Vietnam,Asia/Ho_Chi_Minh

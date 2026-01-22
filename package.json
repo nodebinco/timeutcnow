@@ -9,7 +9,10 @@
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"convert:sqlite": "bun run scripts/convert-json-to-sqlite.ts",
+		"generate:data-json": "bun run scripts/generate-data-json.ts",
+		"convert:csv": "bun run scripts/convert-sqlite-to-csv.ts"
 	},
 	"devDependencies": {
 		"@inlang/paraglide-js": "^2.6.0",

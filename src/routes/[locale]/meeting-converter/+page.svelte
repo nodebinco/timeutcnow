@@ -221,7 +221,6 @@
 				<a href="/{page.params.locale}" class="hover:text-primary">{m.world_clock()}</a>
 				<a href="/{page.params.locale}/meeting-converter" class="hover:text-primary font-semibold">Time Zone Converter</a>
 				<a href="/{page.params.locale}/converter" class="hover:text-primary">{m.converter()}</a>
-				<a href="/{page.params.locale}/api" class="hover:text-primary">{m.api()}</a>
 				<TimeFormatSelector bind:value={timeFormat} />
 			</div>
 
@@ -388,7 +387,6 @@
 			<div>
 				<h4 class="font-bold mb-4">Support</h4>
 				<ul class="space-y-2 text-sm text-base-content/60">
-					<li><a href="/{page.params.locale}/api" class="hover:text-primary">{m.api_documentation()}</a></li>
 					<li><a href="/{page.params.locale}/about" class="hover:text-primary">{m.about_us()}</a></li>
 					<li><a href="/{page.params.locale}/privacy" class="hover:text-primary">{m.privacy_policy()}</a></li>
 				</ul>
