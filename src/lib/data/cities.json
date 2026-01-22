@@ -1,0 +1,1322 @@
+[
+	{
+		"id": "london",
+		"name": "London",
+		"country": "GB",
+		"timezone": "Europe/London",
+		"label": "BST/GMT",
+		"coordinates": {
+			"lat": 51.5074,
+			"lng": -0.1278
+		}
+	},
+	{
+		"id": "new-york",
+		"name": "New York",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 40.7128,
+			"lng": -74.0060
+		}
+	},
+	{
+		"id": "tokyo",
+		"name": "Tokyo",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 35.6762,
+			"lng": 139.6503
+		}
+	},
+	{
+		"id": "dubai",
+		"name": "Dubai",
+		"country": "AE",
+		"timezone": "Asia/Dubai",
+		"label": "GST",
+		"coordinates": {
+			"lat": 25.2048,
+			"lng": 55.2708
+		}
+	},
+	{
+		"id": "sydney",
+		"name": "Sydney",
+		"country": "AU",
+		"timezone": "Australia/Sydney",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -33.8688,
+			"lng": 151.2093
+		}
+	},
+	{
+		"id": "san-francisco",
+		"name": "San Francisco",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 37.7749,
+			"lng": -122.4194
+		}
+	},
+	{
+		"id": "bangkok",
+		"name": "Bangkok",
+		"country": "TH",
+		"timezone": "Asia/Bangkok",
+		"label": "ICT",
+		"coordinates": {
+			"lat": 13.7563,
+			"lng": 100.5018
+		}
+	},
+	{
+		"id": "singapore",
+		"name": "Singapore",
+		"country": "SG",
+		"timezone": "Asia/Singapore",
+		"label": "SGT",
+		"coordinates": {
+			"lat": 1.3521,
+			"lng": 103.8198
+		}
+	},
+	{
+		"id": "hong-kong",
+		"name": "Hong Kong",
+		"country": "HK",
+		"timezone": "Asia/Hong_Kong",
+		"label": "HKT",
+		"coordinates": {
+			"lat": 22.3193,
+			"lng": 114.1694
+		}
+	},
+	{
+		"id": "paris",
+		"name": "Paris",
+		"country": "FR",
+		"timezone": "Europe/Paris",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 48.8566,
+			"lng": 2.3522
+		}
+	},
+	{
+		"id": "berlin",
+		"name": "Berlin",
+		"country": "DE",
+		"timezone": "Europe/Berlin",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 52.5200,
+			"lng": 13.4050
+		}
+	},
+	{
+		"id": "moscow",
+		"name": "Moscow",
+		"country": "RU",
+		"timezone": "Europe/Moscow",
+		"label": "MSK",
+		"coordinates": {
+			"lat": 55.7558,
+			"lng": 37.6173
+		}
+	},
+	{
+		"id": "toronto",
+		"name": "Toronto",
+		"country": "CA",
+		"timezone": "America/Toronto",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 43.6532,
+			"lng": -79.3832
+		}
+	},
+	{
+		"id": "mexico-city",
+		"name": "Mexico City",
+		"country": "MX",
+		"timezone": "America/Mexico_City",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 19.4326,
+			"lng": -99.1332
+		}
+	},
+	{
+		"id": "chicago",
+		"name": "Chicago",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 41.8781,
+			"lng": -87.6298
+		}
+	},
+	{
+		"id": "denver",
+		"name": "Denver",
+		"country": "US",
+		"timezone": "America/Denver",
+		"label": "MDT/MST",
+		"coordinates": {
+			"lat": 39.7392,
+			"lng": -104.9903
+		}
+	},
+	{
+		"id": "los-angeles",
+		"name": "Los Angeles",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.0522,
+			"lng": -118.2437
+		}
+	},
+	{
+		"id": "miami",
+		"name": "Miami",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 25.7617,
+			"lng": -80.1918
+		}
+	},
+	{
+		"id": "sao-paulo",
+		"name": "São Paulo",
+		"country": "BR",
+		"timezone": "America/Sao_Paulo",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -23.5505,
+			"lng": -46.6333
+		}
+	},
+	{
+		"id": "buenos-aires",
+		"name": "Buenos Aires",
+		"country": "AR",
+		"timezone": "America/Argentina/Buenos_Aires",
+		"label": "ART",
+		"coordinates": {
+			"lat": -34.6037,
+			"lng": -58.3816
+		}
+	},
+	{
+		"id": "lima",
+		"name": "Lima",
+		"country": "PE",
+		"timezone": "America/Lima",
+		"label": "PET",
+		"coordinates": {
+			"lat": -12.0464,
+			"lng": -77.0428
+		}
+	},
+	{
+		"id": "bogota",
+		"name": "Bogotá",
+		"country": "CO",
+		"timezone": "America/Bogota",
+		"label": "COT",
+		"coordinates": {
+			"lat": 4.7110,
+			"lng": -74.0721
+		}
+	},
+	{
+		"id": "santiago",
+		"name": "Santiago",
+		"country": "CL",
+		"timezone": "America/Santiago",
+		"label": "CLT/CLST",
+		"coordinates": {
+			"lat": -33.4489,
+			"lng": -70.6693
+		}
+	},
+	{
+		"id": "madrid",
+		"name": "Madrid",
+		"country": "ES",
+		"timezone": "Europe/Madrid",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 40.4168,
+			"lng": -3.7038
+		}
+	},
+	{
+		"id": "rome",
+		"name": "Rome",
+		"country": "IT",
+		"timezone": "Europe/Rome",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 41.9028,
+			"lng": 12.4964
+		}
+	},
+	{
+		"id": "amsterdam",
+		"name": "Amsterdam",
+		"country": "NL",
+		"timezone": "Europe/Amsterdam",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 52.3676,
+			"lng": 4.9041
+		}
+	},
+	{
+		"id": "stockholm",
+		"name": "Stockholm",
+		"country": "SE",
+		"timezone": "Europe/Stockholm",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 59.3293,
+			"lng": 18.0686
+		}
+	},
+	{
+		"id": "zurich",
+		"name": "Zurich",
+		"country": "CH",
+		"timezone": "Europe/Zurich",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 47.3769,
+			"lng": 8.5417
+		}
+	},
+	{
+		"id": "vienna",
+		"name": "Vienna",
+		"country": "AT",
+		"timezone": "Europe/Vienna",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 48.2082,
+			"lng": 16.3738
+		}
+	},
+	{
+		"id": "istanbul",
+		"name": "Istanbul",
+		"country": "TR",
+		"timezone": "Europe/Istanbul",
+		"label": "TRT",
+		"coordinates": {
+			"lat": 41.0082,
+			"lng": 28.9784
+		}
+	},
+	{
+		"id": "athens",
+		"name": "Athens",
+		"country": "GR",
+		"timezone": "Europe/Athens",
+		"label": "EET/EEST",
+		"coordinates": {
+			"lat": 37.9838,
+			"lng": 23.7275
+		}
+	},
+	{
+		"id": "lisbon",
+		"name": "Lisbon",
+		"country": "PT",
+		"timezone": "Europe/Lisbon",
+		"label": "WET/WEST",
+		"coordinates": {
+			"lat": 38.7223,
+			"lng": -9.1393
+		}
+	},
+	{
+		"id": "dublin",
+		"name": "Dublin",
+		"country": "IE",
+		"timezone": "Europe/Dublin",
+		"label": "IST/GMT",
+		"coordinates": {
+			"lat": 53.3498,
+			"lng": -6.2603
+		}
+	},
+	{
+		"id": "warsaw",
+		"name": "Warsaw",
+		"country": "PL",
+		"timezone": "Europe/Warsaw",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 52.2297,
+			"lng": 21.0122
+		}
+	},
+	{
+		"id": "prague",
+		"name": "Prague",
+		"country": "CZ",
+		"timezone": "Europe/Prague",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 50.0755,
+			"lng": 14.4378
+		}
+	},
+	{
+		"id": "budapest",
+		"name": "Budapest",
+		"country": "HU",
+		"timezone": "Europe/Budapest",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 47.4979,
+			"lng": 19.0402
+		}
+	},
+	{
+		"id": "seoul",
+		"name": "Seoul",
+		"country": "KR",
+		"timezone": "Asia/Seoul",
+		"label": "KST",
+		"coordinates": {
+			"lat": 37.5665,
+			"lng": 126.9780
+		}
+	},
+	{
+		"id": "beijing",
+		"name": "Beijing",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 39.9042,
+			"lng": 116.4074
+		}
+	},
+	{
+		"id": "shanghai",
+		"name": "Shanghai",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 31.2304,
+			"lng": 121.4737
+		}
+	},
+	{
+		"id": "mumbai",
+		"name": "Mumbai",
+		"country": "IN",
+		"timezone": "Asia/Kolkata",
+		"label": "IST",
+		"coordinates": {
+			"lat": 19.0760,
+			"lng": 72.8777
+		}
+	},
+	{
+		"id": "delhi",
+		"name": "Delhi",
+		"country": "IN",
+		"timezone": "Asia/Kolkata",
+		"label": "IST",
+		"coordinates": {
+			"lat": 28.6139,
+			"lng": 77.2090
+		}
+	},
+	{
+		"id": "bangalore",
+		"name": "Bangalore",
+		"country": "IN",
+		"timezone": "Asia/Kolkata",
+		"label": "IST",
+		"coordinates": {
+			"lat": 12.9716,
+			"lng": 77.5946
+		}
+	},
+	{
+		"id": "jakarta",
+		"name": "Jakarta",
+		"country": "ID",
+		"timezone": "Asia/Jakarta",
+		"label": "WIB",
+		"coordinates": {
+			"lat": -6.2088,
+			"lng": 106.8456
+		}
+	},
+	{
+		"id": "manila",
+		"name": "Manila",
+		"country": "PH",
+		"timezone": "Asia/Manila",
+		"label": "PHT",
+		"coordinates": {
+			"lat": 14.5995,
+			"lng": 120.9842
+		}
+	},
+	{
+		"id": "taipei",
+		"name": "Taipei",
+		"country": "TW",
+		"timezone": "Asia/Taipei",
+		"label": "CST",
+		"coordinates": {
+			"lat": 25.0330,
+			"lng": 121.5654
+		}
+	},
+	{
+		"id": "kuala-lumpur",
+		"name": "Kuala Lumpur",
+		"country": "MY",
+		"timezone": "Asia/Kuala_Lumpur",
+		"label": "MYT",
+		"coordinates": {
+			"lat": 3.1390,
+			"lng": 101.6869
+		}
+	},
+	{
+		"id": "ho-chi-minh",
+		"name": "Ho Chi Minh City",
+		"country": "VN",
+		"timezone": "Asia/Ho_Chi_Minh",
+		"label": "ICT",
+		"coordinates": {
+			"lat": 10.8231,
+			"lng": 106.6297
+		}
+	},
+	{
+		"id": "dhaka",
+		"name": "Dhaka",
+		"country": "BD",
+		"timezone": "Asia/Dhaka",
+		"label": "BST",
+		"coordinates": {
+			"lat": 23.8103,
+			"lng": 90.4125
+		}
+	},
+	{
+		"id": "karachi",
+		"name": "Karachi",
+		"country": "PK",
+		"timezone": "Asia/Karachi",
+		"label": "PKT",
+		"coordinates": {
+			"lat": 24.8607,
+			"lng": 67.0011
+		}
+	},
+	{
+		"id": "riyadh",
+		"name": "Riyadh",
+		"country": "SA",
+		"timezone": "Asia/Riyadh",
+		"label": "AST",
+		"coordinates": {
+			"lat": 24.7136,
+			"lng": 46.6753
+		}
+	},
+	{
+		"id": "tel-aviv",
+		"name": "Tel Aviv",
+		"country": "IL",
+		"timezone": "Asia/Jerusalem",
+		"label": "IST/IDT",
+		"coordinates": {
+			"lat": 32.0853,
+			"lng": 34.7818
+		}
+	},
+	{
+		"id": "cairo",
+		"name": "Cairo",
+		"country": "EG",
+		"timezone": "Africa/Cairo",
+		"label": "EET/EEST",
+		"coordinates": {
+			"lat": 30.0444,
+			"lng": 31.2357
+		}
+	},
+	{
+		"id": "tehran",
+		"name": "Tehran",
+		"country": "IR",
+		"timezone": "Asia/Tehran",
+		"label": "IRST/IRDT",
+		"coordinates": {
+			"lat": 35.6892,
+			"lng": 51.3890
+		}
+	},
+	{
+		"id": "baghdad",
+		"name": "Baghdad",
+		"country": "IQ",
+		"timezone": "Asia/Baghdad",
+		"label": "AST",
+		"coordinates": {
+			"lat": 33.3152,
+			"lng": 44.3661
+		}
+	},
+	{
+		"id": "johannesburg",
+		"name": "Johannesburg",
+		"country": "ZA",
+		"timezone": "Africa/Johannesburg",
+		"label": "SAST",
+		"coordinates": {
+			"lat": -26.2041,
+			"lng": 28.0473
+		}
+	},
+	{
+		"id": "lagos",
+		"name": "Lagos",
+		"country": "NG",
+		"timezone": "Africa/Lagos",
+		"label": "WAT",
+		"coordinates": {
+			"lat": 6.5244,
+			"lng": 3.3792
+		}
+	},
+	{
+		"id": "nairobi",
+		"name": "Nairobi",
+		"country": "KE",
+		"timezone": "Africa/Nairobi",
+		"label": "EAT",
+		"coordinates": {
+			"lat": -1.2921,
+			"lng": 36.8219
+		}
+	},
+	{
+		"id": "melbourne",
+		"name": "Melbourne",
+		"country": "AU",
+		"timezone": "Australia/Melbourne",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -37.8136,
+			"lng": 144.9631
+		}
+	},
+	{
+		"id": "auckland",
+		"name": "Auckland",
+		"country": "NZ",
+		"timezone": "Pacific/Auckland",
+		"label": "NZST/NZDT",
+		"coordinates": {
+			"lat": -36.8485,
+			"lng": 174.7633
+		}
+	},
+	{
+		"id": "wellington",
+		"name": "Wellington",
+		"country": "NZ",
+		"timezone": "Pacific/Auckland",
+		"label": "NZST/NZDT",
+		"coordinates": {
+			"lat": -41.2865,
+			"lng": 174.7762
+		}
+	},
+	{
+		"id": "honolulu",
+		"name": "Honolulu",
+		"country": "US",
+		"timezone": "Pacific/Honolulu",
+		"label": "HST",
+		"coordinates": {
+			"lat": 21.3099,
+			"lng": -157.8581
+		}
+	},
+	{
+		"id": "anchorage",
+		"name": "Anchorage",
+		"country": "US",
+		"timezone": "America/Anchorage",
+		"label": "AKDT/AKST",
+		"coordinates": {
+			"lat": 61.2181,
+			"lng": -149.9003
+		}
+	},
+	{
+		"id": "vancouver",
+		"name": "Vancouver",
+		"country": "CA",
+		"timezone": "America/Vancouver",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 49.2827,
+			"lng": -123.1207
+		}
+	},
+	{
+		"id": "montreal",
+		"name": "Montreal",
+		"country": "CA",
+		"timezone": "America/Toronto",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 45.5017,
+			"lng": -73.5673
+		}
+	},
+	{
+		"id": "oslo",
+		"name": "Oslo",
+		"country": "NO",
+		"timezone": "Europe/Oslo",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 59.9139,
+			"lng": 10.7522
+		}
+	},
+	{
+		"id": "copenhagen",
+		"name": "Copenhagen",
+		"country": "DK",
+		"timezone": "Europe/Copenhagen",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 55.6761,
+			"lng": 12.5683
+		}
+	},
+	{
+		"id": "helsinki",
+		"name": "Helsinki",
+		"country": "FI",
+		"timezone": "Europe/Helsinki",
+		"label": "EET/EEST",
+		"coordinates": {
+			"lat": 60.1699,
+			"lng": 24.9384
+		}
+	},
+	{
+		"id": "brussels",
+		"name": "Brussels",
+		"country": "BE",
+		"timezone": "Europe/Brussels",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 50.8503,
+			"lng": 4.3517
+		}
+	},
+	{
+		"id": "bucharest",
+		"name": "Bucharest",
+		"country": "RO",
+		"timezone": "Europe/Bucharest",
+		"label": "EET/EEST",
+		"coordinates": {
+			"lat": 44.4268,
+			"lng": 26.1025
+		}
+	},
+	{
+		"id": "kiev",
+		"name": "Kyiv",
+		"country": "UA",
+		"timezone": "Europe/Kiev",
+		"label": "EET/EEST",
+		"coordinates": {
+			"lat": 50.4501,
+			"lng": 30.5234
+		}
+	},
+	{
+		"id": "almaty",
+		"name": "Almaty",
+		"country": "KZ",
+		"timezone": "Asia/Almaty",
+		"label": "ALMT",
+		"coordinates": {
+			"lat": 43.2220,
+			"lng": 76.8512
+		}
+	},
+	{
+		"id": "tashkent",
+		"name": "Tashkent",
+		"country": "UZ",
+		"timezone": "Asia/Tashkent",
+		"label": "UZT",
+		"coordinates": {
+			"lat": 41.2995,
+			"lng": 69.2401
+		}
+	},
+	{
+		"id": "kolkata",
+		"name": "Kolkata",
+		"country": "IN",
+		"timezone": "Asia/Kolkata",
+		"label": "IST",
+		"coordinates": {
+			"lat": 22.5726,
+			"lng": 88.3639
+		}
+	},
+	{
+		"id": "chennai",
+		"name": "Chennai",
+		"country": "IN",
+		"timezone": "Asia/Kolkata",
+		"label": "IST",
+		"coordinates": {
+			"lat": 13.0827,
+			"lng": 80.2707
+		}
+	},
+	{
+		"id": "hyderabad",
+		"name": "Hyderabad",
+		"country": "IN",
+		"timezone": "Asia/Kolkata",
+		"label": "IST",
+		"coordinates": {
+			"lat": 17.3850,
+			"lng": 78.4867
+		}
+	},
+	{
+		"id": "guangzhou",
+		"name": "Guangzhou",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 23.1291,
+			"lng": 113.2644
+		}
+	},
+	{
+		"id": "shenzhen",
+		"name": "Shenzhen",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 22.5431,
+			"lng": 114.0579
+		}
+	},
+	{
+		"id": "osaka",
+		"name": "Osaka",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 34.6937,
+			"lng": 135.5023
+		}
+	},
+	{
+		"id": "yokohama",
+		"name": "Yokohama",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 35.4437,
+			"lng": 139.6380
+		}
+	},
+	{
+		"id": "brisbane",
+		"name": "Brisbane",
+		"country": "AU",
+		"timezone": "Australia/Brisbane",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -27.4698,
+			"lng": 153.0251
+		}
+	},
+	{
+		"id": "perth",
+		"name": "Perth",
+		"country": "AU",
+		"timezone": "Australia/Perth",
+		"label": "AWST",
+		"coordinates": {
+			"lat": -31.9505,
+			"lng": 115.8605
+		}
+	},
+	{
+		"id": "adelaide",
+		"name": "Adelaide",
+		"country": "AU",
+		"timezone": "Australia/Adelaide",
+		"label": "ACST/ACDT",
+		"coordinates": {
+			"lat": -34.9285,
+			"lng": 138.6007
+		}
+	},
+	{
+		"id": "doha",
+		"name": "Doha",
+		"country": "QA",
+		"timezone": "Asia/Qatar",
+		"label": "AST",
+		"coordinates": {
+			"lat": 25.2854,
+			"lng": 51.5310
+		}
+	},
+	{
+		"id": "kuwait-city",
+		"name": "Kuwait City",
+		"country": "KW",
+		"timezone": "Asia/Kuwait",
+		"label": "AST",
+		"coordinates": {
+			"lat": 29.3759,
+			"lng": 47.9774
+		}
+	},
+	{
+		"id": "muscat",
+		"name": "Muscat",
+		"country": "OM",
+		"timezone": "Asia/Muscat",
+		"label": "GST",
+		"coordinates": {
+			"lat": 23.5859,
+			"lng": 58.4059
+		}
+	},
+	{
+		"id": "colombo",
+		"name": "Colombo",
+		"country": "LK",
+		"timezone": "Asia/Colombo",
+		"label": "IST",
+		"coordinates": {
+			"lat": 6.9271,
+			"lng": 79.8612
+		}
+	},
+	{
+		"id": "kathmandu",
+		"name": "Kathmandu",
+		"country": "NP",
+		"timezone": "Asia/Kathmandu",
+		"label": "NPT",
+		"coordinates": {
+			"lat": 27.7172,
+			"lng": 85.3240
+		}
+	},
+	{
+		"id": "ulaanbaatar",
+		"name": "Ulaanbaatar",
+		"country": "MN",
+		"timezone": "Asia/Ulaanbaatar",
+		"label": "ULAT",
+		"coordinates": {
+			"lat": 47.8864,
+			"lng": 106.9057
+		}
+	},
+	{
+		"id": "phnom-penh",
+		"name": "Phnom Penh",
+		"country": "KH",
+		"timezone": "Asia/Phnom_Penh",
+		"label": "ICT",
+		"coordinates": {
+			"lat": 11.5564,
+			"lng": 104.9282
+		}
+	},
+	{
+		"id": "vientiane",
+		"name": "Vientiane",
+		"country": "LA",
+		"timezone": "Asia/Vientiane",
+		"label": "ICT",
+		"coordinates": {
+			"lat": 17.9757,
+			"lng": 102.6331
+		}
+	},
+	{
+		"id": "yangon",
+		"name": "Yangon",
+		"country": "MM",
+		"timezone": "Asia/Yangon",
+		"label": "MMT",
+		"coordinates": {
+			"lat": 16.8661,
+			"lng": 96.1951
+		}
+	},
+	{
+		"id": "casablanca",
+		"name": "Casablanca",
+		"country": "MA",
+		"timezone": "Africa/Casablanca",
+		"label": "WET/WEST",
+		"coordinates": {
+			"lat": 33.5731,
+			"lng": -7.5898
+		}
+	},
+	{
+		"id": "tunis",
+		"name": "Tunis",
+		"country": "TN",
+		"timezone": "Africa/Tunis",
+		"label": "CET",
+		"coordinates": {
+			"lat": 36.8065,
+			"lng": 10.1815
+		}
+	},
+	{
+		"id": "algiers",
+		"name": "Algiers",
+		"country": "DZ",
+		"timezone": "Africa/Algiers",
+		"label": "CET",
+		"coordinates": {
+			"lat": 36.7538,
+			"lng": 3.0588
+		}
+	},
+	{
+		"id": "accra",
+		"name": "Accra",
+		"country": "GH",
+		"timezone": "Africa/Accra",
+		"label": "GMT",
+		"coordinates": {
+			"lat": 5.6037,
+			"lng": -0.1870
+		}
+	},
+	{
+		"id": "dar-es-salaam",
+		"name": "Dar es Salaam",
+		"country": "TZ",
+		"timezone": "Africa/Dar_es_Salaam",
+		"label": "EAT",
+		"coordinates": {
+			"lat": -6.7924,
+			"lng": 39.2083
+		}
+	},
+	{
+		"id": "addis-ababa",
+		"name": "Addis Ababa",
+		"country": "ET",
+		"timezone": "Africa/Addis_Ababa",
+		"label": "EAT",
+		"coordinates": {
+			"lat": 9.1450,
+			"lng": 38.7667
+		}
+	},
+	{
+		"id": "kampala",
+		"name": "Kampala",
+		"country": "UG",
+		"timezone": "Africa/Kampala",
+		"label": "EAT",
+		"coordinates": {
+			"lat": 0.3476,
+			"lng": 32.5825
+		}
+	},
+	{
+		"id": "luanda",
+		"name": "Luanda",
+		"country": "AO",
+		"timezone": "Africa/Luanda",
+		"label": "WAT",
+		"coordinates": {
+			"lat": -8.8383,
+			"lng": 13.2344
+		}
+	},
+	{
+		"id": "kinshasa",
+		"name": "Kinshasa",
+		"country": "CD",
+		"timezone": "Africa/Kinshasa",
+		"label": "WAT",
+		"coordinates": {
+			"lat": -4.4419,
+			"lng": 15.2663
+		}
+	},
+	{
+		"id": "abidjan",
+		"name": "Abidjan",
+		"country": "CI",
+		"timezone": "Africa/Abidjan",
+		"label": "GMT",
+		"coordinates": {
+			"lat": 5.3600,
+			"lng": -4.0083
+		}
+	},
+	{
+		"id": "dakar",
+		"name": "Dakar",
+		"country": "SN",
+		"timezone": "Africa/Dakar",
+		"label": "GMT",
+		"coordinates": {
+			"lat": 14.7167,
+			"lng": -17.4677
+		}
+	},
+	{
+		"id": "rio-de-janeiro",
+		"name": "Rio de Janeiro",
+		"country": "BR",
+		"timezone": "America/Sao_Paulo",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -22.9068,
+			"lng": -43.1729
+		}
+	},
+	{
+		"id": "caracas",
+		"name": "Caracas",
+		"country": "VE",
+		"timezone": "America/Caracas",
+		"label": "VET",
+		"coordinates": {
+			"lat": 10.4806,
+			"lng": -66.9036
+		}
+	},
+	{
+		"id": "havana",
+		"name": "Havana",
+		"country": "CU",
+		"timezone": "America/Havana",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 23.1136,
+			"lng": -82.3666
+		}
+	},
+	{
+		"id": "panama-city",
+		"name": "Panama City",
+		"country": "PA",
+		"timezone": "America/Panama",
+		"label": "EST",
+		"coordinates": {
+			"lat": 8.9824,
+			"lng": -79.5199
+		}
+	},
+	{
+		"id": "san-juan",
+		"name": "San Juan",
+		"country": "PR",
+		"timezone": "America/Puerto_Rico",
+		"label": "AST",
+		"coordinates": {
+			"lat": 18.4655,
+			"lng": -66.1057
+		}
+	},
+	{
+		"id": "guatemala-city",
+		"name": "Guatemala City",
+		"country": "GT",
+		"timezone": "America/Guatemala",
+		"label": "CST",
+		"coordinates": {
+			"lat": 14.6349,
+			"lng": -90.5069
+		}
+	},
+	{
+		"id": "san-jose-cr",
+		"name": "San José",
+		"country": "CR",
+		"timezone": "America/Costa_Rica",
+		"label": "CST",
+		"coordinates": {
+			"lat": 9.9281,
+			"lng": -84.0907
+		}
+	},
+	{
+		"id": "quito",
+		"name": "Quito",
+		"country": "EC",
+		"timezone": "America/Guayaquil",
+		"label": "ECT",
+		"coordinates": {
+			"lat": -0.1807,
+			"lng": -78.4678
+		}
+	},
+	{
+		"id": "la-paz",
+		"name": "La Paz",
+		"country": "BO",
+		"timezone": "America/La_Paz",
+		"label": "BOT",
+		"coordinates": {
+			"lat": -16.5000,
+			"lng": -68.1500
+		}
+	},
+	{
+		"id": "asuncion",
+		"name": "Asunción",
+		"country": "PY",
+		"timezone": "America/Asuncion",
+		"label": "PYT/PYST",
+		"coordinates": {
+			"lat": -25.2637,
+			"lng": -57.5759
+		}
+	},
+	{
+		"id": "montevideo",
+		"name": "Montevideo",
+		"country": "UY",
+		"timezone": "America/Montevideo",
+		"label": "UYT",
+		"coordinates": {
+			"lat": -34.9011,
+			"lng": -56.1645
+		}
+	},
+	{
+		"id": "reykjavik",
+		"name": "Reykjavik",
+		"country": "IS",
+		"timezone": "Atlantic/Reykjavik",
+		"label": "GMT",
+		"coordinates": {
+			"lat": 64.1466,
+			"lng": -21.9426
+		}
+	},
+	{
+		"id": "belgrade",
+		"name": "Belgrade",
+		"country": "RS",
+		"timezone": "Europe/Belgrade",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 44.7866,
+			"lng": 20.4489
+		}
+	},
+	{
+		"id": "zagreb",
+		"name": "Zagreb",
+		"country": "HR",
+		"timezone": "Europe/Zagreb",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 45.8150,
+			"lng": 15.9819
+		}
+	},
+	{
+		"id": "sofia",
+		"name": "Sofia",
+		"country": "BG",
+		"timezone": "Europe/Sofia",
+		"label": "EET/EEST",
+		"coordinates": {
+			"lat": 42.6977,
+			"lng": 23.3219
+		}
+	},
+	{
+		"id": "tbilisi",
+		"name": "Tbilisi",
+		"country": "GE",
+		"timezone": "Asia/Tbilisi",
+		"label": "GET",
+		"coordinates": {
+			"lat": 41.7151,
+			"lng": 44.8271
+		}
+	},
+	{
+		"id": "yerevan",
+		"name": "Yerevan",
+		"country": "AM",
+		"timezone": "Asia/Yerevan",
+		"label": "AMT",
+		"coordinates": {
+			"lat": 40.1811,
+			"lng": 44.5136
+		}
+	},
+	{
+		"id": "baku",
+		"name": "Baku",
+		"country": "AZ",
+		"timezone": "Asia/Baku",
+		"label": "AZT",
+		"coordinates": {
+			"lat": 40.4093,
+			"lng": 49.8671
+		}
+	}
+]

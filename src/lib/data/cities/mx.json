@@ -1,0 +1,134 @@
+[
+	{
+		"id": "mexico-city",
+		"name": "Mexico City",
+		"country": "MX",
+		"timezone": "America/Mexico_City",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 19.4326,
+			"lng": -99.1332
+		}
+	},
+	{
+		"id": "guadalajara",
+		"name": "Guadalajara",
+		"country": "MX",
+		"timezone": "America/Mexico_City",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 20.6597,
+			"lng": -103.3496
+		}
+	},
+	{
+		"id": "monterrey",
+		"name": "Monterrey",
+		"country": "MX",
+		"timezone": "America/Mexico_City",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 25.6866,
+			"lng": -100.3161
+		}
+	},
+	{
+		"id": "puebla",
+		"name": "Puebla",
+		"country": "MX",
+		"timezone": "America/Mexico_City",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 19.0414,
+			"lng": -98.2063
+		}
+	},
+	{
+		"id": "tijuana",
+		"name": "Tijuana",
+		"country": "MX",
+		"timezone": "America/Tijuana",
+		"label": "PST/PDT",
+		"coordinates": {
+			"lat": 32.5149,
+			"lng": -117.0382
+		}
+	},
+	{
+		"id": "leon",
+		"name": "León",
+		"country": "MX",
+		"timezone": "America/Mexico_City",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 21.1253,
+			"lng": -101.6860
+		}
+	},
+	{
+		"id": "juarez",
+		"name": "Juárez",
+		"country": "MX",
+		"timezone": "America/Ojinaga",
+		"label": "MST/MDT",
+		"coordinates": {
+			"lat": 31.6904,
+			"lng": -106.4244
+		}
+	},
+	{
+		"id": "torreon",
+		"name": "Torreón",
+		"country": "MX",
+		"timezone": "America/Mexico_City",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 25.5428,
+			"lng": -103.4068
+		}
+	},
+	{
+		"id": "queretaro",
+		"name": "Querétaro",
+		"country": "MX",
+		"timezone": "America/Mexico_City",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 20.5888,
+			"lng": -100.3899
+		}
+	},
+	{
+		"id": "merida",
+		"name": "Mérida",
+		"country": "MX",
+		"timezone": "America/Merida",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 20.9674,
+			"lng": -89.5926
+		}
+	},
+	{
+		"id": "san-luis-potosi",
+		"name": "San Luis Potosí",
+		"country": "MX",
+		"timezone": "America/Mexico_City",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 22.1565,
+			"lng": -100.9855
+		}
+	},
+	{
+		"id": "aguascalientes",
+		"name": "Aguascalientes",
+		"country": "MX",
+		"timezone": "America/Mexico_City",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 21.8853,
+			"lng": -102.2916
+		}
+	}
+]

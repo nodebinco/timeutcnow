@@ -1,0 +1,13 @@
+[
+	{
+		"id": "warsaw",
+		"name": "Warsaw",
+		"country": "PL",
+		"timezone": "Europe/Warsaw",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 52.2297,
+			"lng": 21.0122
+		}
+	}
+]

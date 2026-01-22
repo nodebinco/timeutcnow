@@ -1,0 +1,13 @@
+[
+	{
+		"id": "phnom-penh",
+		"name": "Phnom Penh",
+		"country": "KH",
+		"timezone": "Asia/Phnom_Penh",
+		"label": "ICT",
+		"coordinates": {
+			"lat": 11.5564,
+			"lng": 104.9282
+		}
+	}
+]

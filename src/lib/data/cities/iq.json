@@ -1,0 +1,13 @@
+[
+	{
+		"id": "baghdad",
+		"name": "Baghdad",
+		"country": "IQ",
+		"timezone": "Asia/Baghdad",
+		"label": "AST",
+		"coordinates": {
+			"lat": 33.3152,
+			"lng": 44.3661
+		}
+	}
+]

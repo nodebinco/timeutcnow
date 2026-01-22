@@ -1,0 +1,13 @@
+[
+	{
+		"id": "cairo",
+		"name": "Cairo",
+		"country": "EG",
+		"timezone": "Africa/Cairo",
+		"label": "EET/EEST",
+		"coordinates": {
+			"lat": 30.0444,
+			"lng": 31.2357
+		}
+	}
+]

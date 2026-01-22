@@ -1,0 +1,13 @@
+[
+	{
+		"id": "bangkok",
+		"name": "Bangkok",
+		"country": "TH",
+		"timezone": "Asia/Bangkok",
+		"label": "ICT",
+		"coordinates": {
+			"lat": 13.7563,
+			"lng": 100.5018
+		}
+	}
+]

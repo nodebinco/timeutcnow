@@ -1,0 +1,189 @@
+[
+	{
+		"id": "beijing",
+		"name": "Beijing",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 39.9042,
+			"lng": 116.4074
+		}
+	},
+	{
+		"id": "shanghai",
+		"name": "Shanghai",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 31.2304,
+			"lng": 121.4737
+		}
+	},
+	{
+		"id": "guangzhou",
+		"name": "Guangzhou",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 23.1291,
+			"lng": 113.2644
+		}
+	},
+	{
+		"id": "shenzhen",
+		"name": "Shenzhen",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 22.5431,
+			"lng": 114.0579
+		}
+	},
+	{
+		"id": "chengdu",
+		"name": "Chengdu",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 30.6624,
+			"lng": 104.0633
+		}
+	},
+	{
+		"id": "xian",
+		"name": "Xi'an",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 34.3416,
+			"lng": 108.9398
+		}
+	},
+	{
+		"id": "hangzhou",
+		"name": "Hangzhou",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 30.2741,
+			"lng": 120.1551
+		}
+	},
+	{
+		"id": "chongqing",
+		"name": "Chongqing",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 29.5630,
+			"lng": 106.5516
+		}
+	},
+	{
+		"id": "tianjin",
+		"name": "Tianjin",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 39.3434,
+			"lng": 117.3616
+		}
+	},
+	{
+		"id": "suzhou",
+		"name": "Suzhou",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 31.2989,
+			"lng": 120.5853
+		}
+	},
+	{
+		"id": "dongguan",
+		"name": "Dongguan",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 23.0477,
+			"lng": 113.7490
+		}
+	},
+	{
+		"id": "nanjing",
+		"name": "Nanjing",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 32.0603,
+			"lng": 118.7969
+		}
+	},
+	{
+		"id": "wuhan",
+		"name": "Wuhan",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 30.5928,
+			"lng": 114.3055
+		}
+	},
+	{
+		"id": "xiamen",
+		"name": "Xiamen",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 24.4798,
+			"lng": 118.0819
+		}
+	},
+	{
+		"id": "qingdao",
+		"name": "Qingdao",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 36.0671,
+			"lng": 120.3826
+		}
+	},
+	{
+		"id": "dalian",
+		"name": "Dalian",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 38.9140,
+			"lng": 121.6147
+		}
+	},
+	{
+		"id": "shenyang",
+		"name": "Shenyang",
+		"country": "CN",
+		"timezone": "Asia/Shanghai",
+		"label": "CST",
+		"coordinates": {
+			"lat": 41.8057,
+			"lng": 123.4315
+		}
+	}
+]

@@ -1,0 +1,13 @@
+[
+	{
+		"id": "reykjavik",
+		"name": "Reykjavik",
+		"country": "IS",
+		"timezone": "Atlantic/Reykjavik",
+		"label": "GMT",
+		"coordinates": {
+			"lat": 64.1466,
+			"lng": -21.9426
+		}
+	}
+]

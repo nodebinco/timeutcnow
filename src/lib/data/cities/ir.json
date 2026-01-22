@@ -1,0 +1,13 @@
+[
+	{
+		"id": "tehran",
+		"name": "Tehran",
+		"country": "IR",
+		"timezone": "Asia/Tehran",
+		"label": "IRST/IRDT",
+		"coordinates": {
+			"lat": 35.6892,
+			"lng": 51.389
+		}
+	}
+]

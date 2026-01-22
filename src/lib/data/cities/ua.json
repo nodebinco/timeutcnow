@@ -1,0 +1,13 @@
+[
+	{
+		"id": "kiev",
+		"name": "Kyiv",
+		"country": "UA",
+		"timezone": "Europe/Kiev",
+		"label": "EET/EEST",
+		"coordinates": {
+			"lat": 50.4501,
+			"lng": 30.5234
+		}
+	}
+]

@@ -1,0 +1,13 @@
+[
+	{
+		"id": "nairobi",
+		"name": "Nairobi",
+		"country": "KE",
+		"timezone": "Africa/Nairobi",
+		"label": "EAT",
+		"coordinates": {
+			"lat": -1.2921,
+			"lng": 36.8219
+		}
+	}
+]

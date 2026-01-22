@@ -1,0 +1,68 @@
+[
+	{
+		"id": "zurich",
+		"name": "Zurich",
+		"country": "CH",
+		"timezone": "Europe/Zurich",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 47.3769,
+			"lng": 8.5417
+		}
+	},
+	{
+		"id": "geneva",
+		"name": "Geneva",
+		"country": "CH",
+		"timezone": "Europe/Zurich",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 46.2044,
+			"lng": 6.1432
+		}
+	},
+	{
+		"id": "basel",
+		"name": "Basel",
+		"country": "CH",
+		"timezone": "Europe/Zurich",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 47.5596,
+			"lng": 7.5886
+		}
+	},
+	{
+		"id": "bern",
+		"name": "Bern",
+		"country": "CH",
+		"timezone": "Europe/Zurich",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 46.9481,
+			"lng": 7.4474
+		}
+	},
+	{
+		"id": "lausanne",
+		"name": "Lausanne",
+		"country": "CH",
+		"timezone": "Europe/Zurich",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 46.5197,
+			"lng": 6.6323
+		}
+	},
+	{
+		"id": "winterthur",
+		"name": "Winterthur",
+		"country": "CH",
+		"timezone": "Europe/Zurich",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 47.5056,
+			"lng": 8.7241
+		}
+	}
+]

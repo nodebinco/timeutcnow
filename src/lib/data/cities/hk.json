@@ -1,0 +1,13 @@
+[
+	{
+		"id": "hong-kong",
+		"name": "Hong Kong",
+		"country": "HK",
+		"timezone": "Asia/Hong_Kong",
+		"label": "HKT",
+		"coordinates": {
+			"lat": 22.3193,
+			"lng": 114.1694
+		}
+	}
+]

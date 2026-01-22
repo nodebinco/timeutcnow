@@ -1,0 +1,156 @@
+[
+	{
+		"id": "sydney",
+		"name": "Sydney",
+		"country": "AU",
+		"timezone": "Australia/Sydney",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -33.8688,
+			"lng": 151.2093
+		}
+	},
+	{
+		"id": "melbourne",
+		"name": "Melbourne",
+		"country": "AU",
+		"timezone": "Australia/Melbourne",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -37.8136,
+			"lng": 144.9631
+		}
+	},
+	{
+		"id": "brisbane",
+		"name": "Brisbane",
+		"country": "AU",
+		"timezone": "Australia/Brisbane",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -27.4698,
+			"lng": 153.0251
+		}
+	},
+	{
+		"id": "perth",
+		"name": "Perth",
+		"country": "AU",
+		"timezone": "Australia/Perth",
+		"label": "AWST",
+		"coordinates": {
+			"lat": -31.9505,
+			"lng": 115.8605
+		}
+	},
+	{
+		"id": "adelaide",
+		"name": "Adelaide",
+		"country": "AU",
+		"timezone": "Australia/Adelaide",
+		"label": "ACST/ACDT",
+		"coordinates": {
+			"lat": -34.9285,
+			"lng": 138.6007
+		}
+	},
+	{
+		"id": "gold-coast",
+		"name": "Gold Coast",
+		"country": "AU",
+		"timezone": "Australia/Brisbane",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -28.0167,
+			"lng": 153.4000
+		}
+	},
+	{
+		"id": "newcastle",
+		"name": "Newcastle",
+		"country": "AU",
+		"timezone": "Australia/Sydney",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -32.9283,
+			"lng": 151.7817
+		}
+	},
+	{
+		"id": "canberra",
+		"name": "Canberra",
+		"country": "AU",
+		"timezone": "Australia/Sydney",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -35.2809,
+			"lng": 149.1300
+		}
+	},
+	{
+		"id": "wollongong",
+		"name": "Wollongong",
+		"country": "AU",
+		"timezone": "Australia/Sydney",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -34.4278,
+			"lng": 150.8931
+		}
+	},
+	{
+		"id": "hobart",
+		"name": "Hobart",
+		"country": "AU",
+		"timezone": "Australia/Hobart",
+		"label": "AEDT/AEST",
+		"coordinates": {
+			"lat": -42.8821,
+			"lng": 147.3272
+		}
+	},
+	{
+		"id": "geelong",
+		"name": "Geelong",
+		"country": "AU",
+		"timezone": "Australia/Melbourne",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -38.1499,
+			"lng": 144.3617
+		}
+	},
+	{
+		"id": "townsville",
+		"name": "Townsville",
+		"country": "AU",
+		"timezone": "Australia/Brisbane",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -19.2590,
+			"lng": 146.8169
+		}
+	},
+	{
+		"id": "cairns",
+		"name": "Cairns",
+		"country": "AU",
+		"timezone": "Australia/Brisbane",
+		"label": "AEST",
+		"coordinates": {
+			"lat": -16.9186,
+			"lng": 145.7781
+		}
+	},
+	{
+		"id": "darwin",
+		"name": "Darwin",
+		"country": "AU",
+		"timezone": "Australia/Darwin",
+		"label": "ACST",
+		"coordinates": {
+			"lat": -12.4634,
+			"lng": 130.8456
+		}
+	}
+]

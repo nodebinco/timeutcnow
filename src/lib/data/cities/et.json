@@ -1,0 +1,13 @@
+[
+	{
+		"id": "addis-ababa",
+		"name": "Addis Ababa",
+		"country": "ET",
+		"timezone": "Africa/Addis_Ababa",
+		"label": "EAT",
+		"coordinates": {
+			"lat": 9.145,
+			"lng": 38.7667
+		}
+	}
+]

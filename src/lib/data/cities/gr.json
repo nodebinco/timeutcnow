@@ -1,0 +1,13 @@
+[
+	{
+		"id": "athens",
+		"name": "Athens",
+		"country": "GR",
+		"timezone": "Europe/Athens",
+		"label": "EET/EEST",
+		"coordinates": {
+			"lat": 37.9838,
+			"lng": 23.7275
+		}
+	}
+]

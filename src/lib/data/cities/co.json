@@ -1,0 +1,13 @@
+[
+	{
+		"id": "bogota",
+		"name": "Bogot\u00e1",
+		"country": "CO",
+		"timezone": "America/Bogota",
+		"label": "COT",
+		"coordinates": {
+			"lat": 4.711,
+			"lng": -74.0721
+		}
+	}
+]

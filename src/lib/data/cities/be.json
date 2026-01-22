@@ -1,0 +1,13 @@
+[
+	{
+		"id": "brussels",
+		"name": "Brussels",
+		"country": "BE",
+		"timezone": "Europe/Brussels",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 50.8503,
+			"lng": 4.3517
+		}
+	}
+]

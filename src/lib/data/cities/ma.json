@@ -1,0 +1,13 @@
+[
+	{
+		"id": "casablanca",
+		"name": "Casablanca",
+		"country": "MA",
+		"timezone": "Africa/Casablanca",
+		"label": "WET/WEST",
+		"coordinates": {
+			"lat": 33.5731,
+			"lng": -7.5898
+		}
+	}
+]

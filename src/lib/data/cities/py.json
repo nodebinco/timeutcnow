@@ -1,0 +1,13 @@
+[
+	{
+		"id": "asuncion",
+		"name": "Asunci\u00f3n",
+		"country": "PY",
+		"timezone": "America/Asuncion",
+		"label": "PYT/PYST",
+		"coordinates": {
+			"lat": -25.2637,
+			"lng": -57.5759
+		}
+	}
+]

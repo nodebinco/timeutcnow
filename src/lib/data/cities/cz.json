@@ -1,0 +1,13 @@
+[
+	{
+		"id": "prague",
+		"name": "Prague",
+		"country": "CZ",
+		"timezone": "Europe/Prague",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 50.0755,
+			"lng": 14.4378
+		}
+	}
+]

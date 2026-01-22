@@ -1,0 +1,13 @@
+[
+	{
+		"id": "yerevan",
+		"name": "Yerevan",
+		"country": "AM",
+		"timezone": "Asia/Yerevan",
+		"label": "AMT",
+		"coordinates": {
+			"lat": 40.1811,
+			"lng": 44.5136
+		}
+	}
+]

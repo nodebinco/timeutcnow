@@ -1,0 +1,13 @@
+[
+	{
+		"id": "colombo",
+		"name": "Colombo",
+		"country": "LK",
+		"timezone": "Asia/Colombo",
+		"label": "IST",
+		"coordinates": {
+			"lat": 6.9271,
+			"lng": 79.8612
+		}
+	}
+]

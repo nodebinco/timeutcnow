@@ -1,0 +1,13 @@
+[
+	{
+		"id": "istanbul",
+		"name": "Istanbul",
+		"country": "TR",
+		"timezone": "Europe/Istanbul",
+		"label": "TRT",
+		"coordinates": {
+			"lat": 41.0082,
+			"lng": 28.9784
+		}
+	}
+]

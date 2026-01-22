@@ -1,0 +1,13 @@
+[
+	{
+		"id": "tel-aviv",
+		"name": "Tel Aviv",
+		"country": "IL",
+		"timezone": "Asia/Jerusalem",
+		"label": "IST/IDT",
+		"coordinates": {
+			"lat": 32.0853,
+			"lng": 34.7818
+		}
+	}
+]

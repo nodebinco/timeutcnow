@@ -1,0 +1,13 @@
+[
+	{
+		"id": "ho-chi-minh",
+		"name": "Ho Chi Minh City",
+		"country": "VN",
+		"timezone": "Asia/Ho_Chi_Minh",
+		"label": "ICT",
+		"coordinates": {
+			"lat": 10.8231,
+			"lng": 106.6297
+		}
+	}
+]

@@ -1,0 +1,134 @@
+[
+	{
+		"id": "madrid",
+		"name": "Madrid",
+		"country": "ES",
+		"timezone": "Europe/Madrid",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 40.4168,
+			"lng": -3.7038
+		}
+	},
+	{
+		"id": "barcelona",
+		"name": "Barcelona",
+		"country": "ES",
+		"timezone": "Europe/Madrid",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 41.3851,
+			"lng": 2.1734
+		}
+	},
+	{
+		"id": "valencia",
+		"name": "Valencia",
+		"country": "ES",
+		"timezone": "Europe/Madrid",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 39.4699,
+			"lng": -0.3763
+		}
+	},
+	{
+		"id": "seville",
+		"name": "Seville",
+		"country": "ES",
+		"timezone": "Europe/Madrid",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 37.3891,
+			"lng": -5.9845
+		}
+	},
+	{
+		"id": "zaragoza",
+		"name": "Zaragoza",
+		"country": "ES",
+		"timezone": "Europe/Madrid",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 41.6488,
+			"lng": -0.8891
+		}
+	},
+	{
+		"id": "malaga",
+		"name": "Málaga",
+		"country": "ES",
+		"timezone": "Europe/Madrid",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 36.7213,
+			"lng": -4.4214
+		}
+	},
+	{
+		"id": "murcia",
+		"name": "Murcia",
+		"country": "ES",
+		"timezone": "Europe/Madrid",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 37.9922,
+			"lng": -1.1307
+		}
+	},
+	{
+		"id": "palma",
+		"name": "Palma",
+		"country": "ES",
+		"timezone": "Europe/Madrid",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 39.5696,
+			"lng": 2.6502
+		}
+	},
+	{
+		"id": "las-palmas",
+		"name": "Las Palmas",
+		"country": "ES",
+		"timezone": "Atlantic/Canary",
+		"label": "WET/WEST",
+		"coordinates": {
+			"lat": 28.1248,
+			"lng": -15.4300
+		}
+	},
+	{
+		"id": "bilbao",
+		"name": "Bilbao",
+		"country": "ES",
+		"timezone": "Europe/Madrid",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 43.2627,
+			"lng": -2.9253
+		}
+	},
+	{
+		"id": "alicante",
+		"name": "Alicante",
+		"country": "ES",
+		"timezone": "Europe/Madrid",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 38.3452,
+			"lng": -0.4810
+		}
+	},
+	{
+		"id": "cordoba",
+		"name": "Córdoba",
+		"country": "ES",
+		"timezone": "Europe/Madrid",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 37.8882,
+			"lng": -4.7794
+		}
+	}
+]

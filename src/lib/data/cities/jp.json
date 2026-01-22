@@ -1,0 +1,156 @@
+[
+	{
+		"id": "tokyo",
+		"name": "Tokyo",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 35.6762,
+			"lng": 139.6503
+		}
+	},
+	{
+		"id": "osaka",
+		"name": "Osaka",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 34.6937,
+			"lng": 135.5023
+		}
+	},
+	{
+		"id": "yokohama",
+		"name": "Yokohama",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 35.4437,
+			"lng": 139.638
+		}
+	},
+	{
+		"id": "kyoto",
+		"name": "Kyoto",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 35.0116,
+			"lng": 135.7681
+		}
+	},
+	{
+		"id": "fukuoka",
+		"name": "Fukuoka",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 33.5904,
+			"lng": 130.4017
+		}
+	},
+	{
+		"id": "sapporo",
+		"name": "Sapporo",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 43.0642,
+			"lng": 141.3469
+		}
+	},
+	{
+		"id": "sendai",
+		"name": "Sendai",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 38.2682,
+			"lng": 140.8694
+		}
+	},
+	{
+		"id": "hiroshima",
+		"name": "Hiroshima",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 34.3853,
+			"lng": 132.4553
+		}
+	},
+	{
+		"id": "nagoya",
+		"name": "Nagoya",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 35.1815,
+			"lng": 136.9066
+		}
+	},
+	{
+		"id": "kobe",
+		"name": "Kobe",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 34.6901,
+			"lng": 135.1956
+		}
+	},
+	{
+		"id": "kawasaki",
+		"name": "Kawasaki",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 35.5309,
+			"lng": 139.7030
+		}
+	},
+	{
+		"id": "saitama",
+		"name": "Saitama",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 35.8617,
+			"lng": 139.6455
+		}
+	},
+	{
+		"id": "chiba",
+		"name": "Chiba",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 35.6074,
+			"lng": 140.1065
+		}
+	},
+	{
+		"id": "kitakyushu",
+		"name": "Kitakyushu",
+		"country": "JP",
+		"timezone": "Asia/Tokyo",
+		"label": "JST",
+		"coordinates": {
+			"lat": 33.8835,
+			"lng": 130.8750
+		}
+	}
+]

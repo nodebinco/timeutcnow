@@ -1,0 +1,13 @@
+[
+	{
+		"id": "lagos",
+		"name": "Lagos",
+		"country": "NG",
+		"timezone": "Africa/Lagos",
+		"label": "WAT",
+		"coordinates": {
+			"lat": 6.5244,
+			"lng": 3.3792
+		}
+	}
+]

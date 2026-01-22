@@ -1,0 +1,13 @@
+[
+	{
+		"id": "oslo",
+		"name": "Oslo",
+		"country": "NO",
+		"timezone": "Europe/Oslo",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 59.9139,
+			"lng": 10.7522
+		}
+	}
+]

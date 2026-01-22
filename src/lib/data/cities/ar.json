@@ -1,0 +1,35 @@
+[
+	{
+		"id": "buenos-aires",
+		"name": "Buenos Aires",
+		"country": "AR",
+		"timezone": "America/Argentina/Buenos_Aires",
+		"label": "ART",
+		"coordinates": {
+			"lat": -34.6037,
+			"lng": -58.3816
+		}
+	},
+	{
+		"id": "cordoba",
+		"name": "Córdoba",
+		"country": "AR",
+		"timezone": "America/Argentina/Buenos_Aires",
+		"label": "ART",
+		"coordinates": {
+			"lat": -31.4201,
+			"lng": -64.1888
+		}
+	},
+	{
+		"id": "rosario",
+		"name": "Rosario",
+		"country": "AR",
+		"timezone": "America/Argentina/Buenos_Aires",
+		"label": "ART",
+		"coordinates": {
+			"lat": -32.9442,
+			"lng": -60.6505
+		}
+	}
+]

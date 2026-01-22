@@ -1,0 +1,13 @@
+[
+	{
+		"id": "dhaka",
+		"name": "Dhaka",
+		"country": "BD",
+		"timezone": "Asia/Dhaka",
+		"label": "BST",
+		"coordinates": {
+			"lat": 23.8103,
+			"lng": 90.4125
+		}
+	}
+]

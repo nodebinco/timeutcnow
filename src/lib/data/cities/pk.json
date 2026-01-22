@@ -1,0 +1,13 @@
+[
+	{
+		"id": "karachi",
+		"name": "Karachi",
+		"country": "PK",
+		"timezone": "Asia/Karachi",
+		"label": "PKT",
+		"coordinates": {
+			"lat": 24.8607,
+			"lng": 67.0011
+		}
+	}
+]

@@ -1,0 +1,13 @@
+[
+	{
+		"id": "taipei",
+		"name": "Taipei",
+		"country": "TW",
+		"timezone": "Asia/Taipei",
+		"label": "CST",
+		"coordinates": {
+			"lat": 25.033,
+			"lng": 121.5654
+		}
+	}
+]

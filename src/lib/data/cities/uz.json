@@ -1,0 +1,13 @@
+[
+	{
+		"id": "tashkent",
+		"name": "Tashkent",
+		"country": "UZ",
+		"timezone": "Asia/Tashkent",
+		"label": "UZT",
+		"coordinates": {
+			"lat": 41.2995,
+			"lng": 69.2401
+		}
+	}
+]

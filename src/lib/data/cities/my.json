@@ -1,0 +1,13 @@
+[
+	{
+		"id": "kuala-lumpur",
+		"name": "Kuala Lumpur",
+		"country": "MY",
+		"timezone": "Asia/Kuala_Lumpur",
+		"label": "MYT",
+		"coordinates": {
+			"lat": 3.139,
+			"lng": 101.6869
+		}
+	}
+]

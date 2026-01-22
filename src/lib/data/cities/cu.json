@@ -1,0 +1,13 @@
+[
+	{
+		"id": "havana",
+		"name": "Havana",
+		"country": "CU",
+		"timezone": "America/Havana",
+		"label": "CST/CDT",
+		"coordinates": {
+			"lat": 23.1136,
+			"lng": -82.3666
+		}
+	}
+]

@@ -1,0 +1,13 @@
+[
+	{
+		"id": "san-jose-cr",
+		"name": "San Jos\u00e9",
+		"country": "CR",
+		"timezone": "America/Costa_Rica",
+		"label": "CST",
+		"coordinates": {
+			"lat": 9.9281,
+			"lng": -84.0907
+		}
+	}
+]

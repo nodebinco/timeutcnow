@@ -1,0 +1,13 @@
+[
+	{
+		"id": "la-paz",
+		"name": "La Paz",
+		"country": "BO",
+		"timezone": "America/La_Paz",
+		"label": "BOT",
+		"coordinates": {
+			"lat": -16.5,
+			"lng": -68.15
+		}
+	}
+]

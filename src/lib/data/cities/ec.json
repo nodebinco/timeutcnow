@@ -1,0 +1,13 @@
+[
+	{
+		"id": "quito",
+		"name": "Quito",
+		"country": "EC",
+		"timezone": "America/Guayaquil",
+		"label": "ECT",
+		"coordinates": {
+			"lat": -0.1807,
+			"lng": -78.4678
+		}
+	}
+]

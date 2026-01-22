@@ -1,0 +1,13 @@
+[
+	{
+		"id": "doha",
+		"name": "Doha",
+		"country": "QA",
+		"timezone": "Asia/Qatar",
+		"label": "AST",
+		"coordinates": {
+			"lat": 25.2854,
+			"lng": 51.531
+		}
+	}
+]

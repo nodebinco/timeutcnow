@@ -1,0 +1,13 @@
+[
+	{
+		"id": "stockholm",
+		"name": "Stockholm",
+		"country": "SE",
+		"timezone": "Europe/Stockholm",
+		"label": "CET/CEST",
+		"coordinates": {
+			"lat": 59.3293,
+			"lng": 18.0686
+		}
+	}
+]

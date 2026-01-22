@@ -1,0 +1,24 @@
+[
+	{
+		"id": "auckland",
+		"name": "Auckland",
+		"country": "NZ",
+		"timezone": "Pacific/Auckland",
+		"label": "NZST/NZDT",
+		"coordinates": {
+			"lat": -36.8485,
+			"lng": 174.7633
+		}
+	},
+	{
+		"id": "wellington",
+		"name": "Wellington",
+		"country": "NZ",
+		"timezone": "Pacific/Auckland",
+		"label": "NZST/NZDT",
+		"coordinates": {
+			"lat": -41.2865,
+			"lng": 174.7762
+		}
+	}
+]

@@ -1,0 +1,13 @@
+[
+	{
+		"id": "algiers",
+		"name": "Algiers",
+		"country": "DZ",
+		"timezone": "Africa/Algiers",
+		"label": "CET",
+		"coordinates": {
+			"lat": 36.7538,
+			"lng": 3.0588
+		}
+	}
+]

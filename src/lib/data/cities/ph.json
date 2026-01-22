@@ -1,0 +1,13 @@
+[
+	{
+		"id": "manila",
+		"name": "Manila",
+		"country": "PH",
+		"timezone": "Asia/Manila",
+		"label": "PHT",
+		"coordinates": {
+			"lat": 14.5995,
+			"lng": 120.9842
+		}
+	}
+]

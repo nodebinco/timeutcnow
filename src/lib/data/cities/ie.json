@@ -1,0 +1,13 @@
+[
+	{
+		"id": "dublin",
+		"name": "Dublin",
+		"country": "IE",
+		"timezone": "Europe/Dublin",
+		"label": "IST/GMT",
+		"coordinates": {
+			"lat": 53.3498,
+			"lng": -6.2603
+		}
+	}
+]

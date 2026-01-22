@@ -1,0 +1,134 @@
+[
+	{
+		"id": "moscow",
+		"name": "Moscow",
+		"country": "RU",
+		"timezone": "Europe/Moscow",
+		"label": "MSK",
+		"coordinates": {
+			"lat": 55.7558,
+			"lng": 37.6173
+		}
+	},
+	{
+		"id": "saint-petersburg",
+		"name": "Saint Petersburg",
+		"country": "RU",
+		"timezone": "Europe/Moscow",
+		"label": "MSK",
+		"coordinates": {
+			"lat": 59.9343,
+			"lng": 30.3351
+		}
+	},
+	{
+		"id": "novosibirsk",
+		"name": "Novosibirsk",
+		"country": "RU",
+		"timezone": "Asia/Novosibirsk",
+		"label": "NOVT",
+		"coordinates": {
+			"lat": 55.0084,
+			"lng": 82.9357
+		}
+	},
+	{
+		"id": "yekaterinburg",
+		"name": "Yekaterinburg",
+		"country": "RU",
+		"timezone": "Asia/Yekaterinburg",
+		"label": "YEKT",
+		"coordinates": {
+			"lat": 56.8431,
+			"lng": 60.6454
+		}
+	},
+	{
+		"id": "kazan",
+		"name": "Kazan",
+		"country": "RU",
+		"timezone": "Europe/Moscow",
+		"label": "MSK",
+		"coordinates": {
+			"lat": 55.8304,
+			"lng": 49.0661
+		}
+	},
+	{
+		"id": "nizhny-novgorod",
+		"name": "Nizhny Novgorod",
+		"country": "RU",
+		"timezone": "Europe/Moscow",
+		"label": "MSK",
+		"coordinates": {
+			"lat": 56.3269,
+			"lng": 44.0075
+		}
+	},
+	{
+		"id": "chelyabinsk",
+		"name": "Chelyabinsk",
+		"country": "RU",
+		"timezone": "Asia/Yekaterinburg",
+		"label": "YEKT",
+		"coordinates": {
+			"lat": 55.1644,
+			"lng": 61.4368
+		}
+	},
+	{
+		"id": "samara",
+		"name": "Samara",
+		"country": "RU",
+		"timezone": "Europe/Samara",
+		"label": "SAMT",
+		"coordinates": {
+			"lat": 53.2001,
+			"lng": 50.15
+		}
+	},
+	{
+		"id": "omsk",
+		"name": "Omsk",
+		"country": "RU",
+		"timezone": "Asia/Omsk",
+		"label": "OMST",
+		"coordinates": {
+			"lat": 54.9885,
+			"lng": 73.3242
+		}
+	},
+	{
+		"id": "rostov-on-don",
+		"name": "Rostov-on-Don",
+		"country": "RU",
+		"timezone": "Europe/Moscow",
+		"label": "MSK",
+		"coordinates": {
+			"lat": 47.2357,
+			"lng": 39.7015
+		}
+	},
+	{
+		"id": "ufa",
+		"name": "Ufa",
+		"country": "RU",
+		"timezone": "Asia/Yekaterinburg",
+		"label": "YEKT",
+		"coordinates": {
+			"lat": 54.7388,
+			"lng": 55.9721
+		}
+	},
+	{
+		"id": "krasnoyarsk",
+		"name": "Krasnoyarsk",
+		"country": "RU",
+		"timezone": "Asia/Krasnoyarsk",
+		"label": "KRAT",
+		"coordinates": {
+			"lat": 56.0184,
+			"lng": 92.8672
+		}
+	}
+]

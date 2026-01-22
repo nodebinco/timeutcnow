@@ -1,0 +1,145 @@
+[
+	{
+		"id": "sao-paulo",
+		"name": "S\u00e3o Paulo",
+		"country": "BR",
+		"timezone": "America/Sao_Paulo",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -23.5505,
+			"lng": -46.6333
+		}
+	},
+	{
+		"id": "rio-de-janeiro",
+		"name": "Rio de Janeiro",
+		"country": "BR",
+		"timezone": "America/Sao_Paulo",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -22.9068,
+			"lng": -43.1729
+		}
+	},
+	{
+		"id": "brasilia",
+		"name": "Bras\u00edlia",
+		"country": "BR",
+		"timezone": "America/Sao_Paulo",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -15.7942,
+			"lng": -47.8822
+		}
+	},
+	{
+		"id": "salvador",
+		"name": "Salvador",
+		"country": "BR",
+		"timezone": "America/Bahia",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -12.9714,
+			"lng": -38.5014
+		}
+	},
+	{
+		"id": "fortaleza",
+		"name": "Fortaleza",
+		"country": "BR",
+		"timezone": "America/Fortaleza",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -3.7172,
+			"lng": -38.5433
+		}
+	},
+	{
+		"id": "belo-horizonte",
+		"name": "Belo Horizonte",
+		"country": "BR",
+		"timezone": "America/Sao_Paulo",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -19.9167,
+			"lng": -43.9345
+		}
+	},
+	{
+		"id": "manaus",
+		"name": "Manaus",
+		"country": "BR",
+		"timezone": "America/Manaus",
+		"label": "AMT",
+		"coordinates": {
+			"lat": -3.1190,
+			"lng": -60.0217
+		}
+	},
+	{
+		"id": "curitiba",
+		"name": "Curitiba",
+		"country": "BR",
+		"timezone": "America/Sao_Paulo",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -25.4284,
+			"lng": -49.2733
+		}
+	},
+	{
+		"id": "recife",
+		"name": "Recife",
+		"country": "BR",
+		"timezone": "America/Recife",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -8.0476,
+			"lng": -34.8770
+		}
+	},
+	{
+		"id": "porto-alegre",
+		"name": "Porto Alegre",
+		"country": "BR",
+		"timezone": "America/Sao_Paulo",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -30.0346,
+			"lng": -51.2177
+		}
+	},
+	{
+		"id": "belem",
+		"name": "Belém",
+		"country": "BR",
+		"timezone": "America/Belem",
+		"label": "BRT",
+		"coordinates": {
+			"lat": -1.4558,
+			"lng": -48.5044
+		}
+	},
+	{
+		"id": "goiania",
+		"name": "Goiânia",
+		"country": "BR",
+		"timezone": "America/Sao_Paulo",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -16.6864,
+			"lng": -49.2643
+		}
+	},
+	{
+		"id": "guarulhos",
+		"name": "Guarulhos",
+		"country": "BR",
+		"timezone": "America/Sao_Paulo",
+		"label": "BRT/BRST",
+		"coordinates": {
+			"lat": -23.4538,
+			"lng": -46.5331
+		}
+	}
+]
