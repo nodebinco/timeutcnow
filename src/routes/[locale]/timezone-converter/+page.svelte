@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
-	import { Clock, Copy, Check, Search, Sunrise, Moon, Plus } from 'lucide-svelte';
+	import { Clock, Copy, Check, Search, Sunrise, Moon, Plus, X } from 'lucide-svelte';
 	import TimeInput from '$lib/components/time-input.svelte';
 	import MeetingCityCard from '$lib/components/meeting-city-card.svelte';
 	import AddCityCard from '$lib/components/add-city-card.svelte';
@@ -91,6 +91,13 @@
 			cities = [];
 		}
 	}
+
+	// Watch for selectedCityIds changes and update cities
+	$effect(() => {
+		selectedCityIds;
+		allCities;
+		updateCities();
+	});
 
 	// Update target time based on input
 	function updateTargetTime() {
@@ -183,7 +190,10 @@
 		if (!selectedCityIds.includes(cityId)) {
 			selectedCityIds = [...selectedCityIds, cityId];
 			updateCities();
-			await savePreferences();
+			// Save preferences after a short delay to batch updates
+			setTimeout(async () => {
+				await savePreferences();
+			}, 100);
 		}
 	}
 
@@ -345,22 +355,31 @@
 		{/if}
 
 		<!-- Add Cities Section -->
-		<section class="border-t border-base-300 pt-12">
-			<div class="mb-6">
-				<h2 class="text-2xl font-bold mb-2">Add Cities</h2>
-				<p class="text-base-content/60 text-sm">Select cities to display converted times</p>
-			</div>
+		<section class="border-t border-base-300 pt-12 mt-12">
+			<div class="mb-8">
+				<div class="flex items-center justify-between mb-4">
+					<div>
+						<h2 class="text-3xl font-bold mb-2">Add Cities to Compare</h2>
+						<p class="text-base-content/60">Search and select cities to see their converted times</p>
+					</div>
+					{#if cities.length > 0}
+						<div class="badge badge-primary badge-lg">
+							{cities.length} {cities.length === 1 ? 'city' : 'cities'} selected
+						</div>
+					{/if}
+				</div>
 
-			<div class="mb-6">
-				<SearchInput
-					placeholder={m.search_city_placeholder()}
-					bind:value={addMoreSearchQuery}
-					class="w-full md:w-64"
-				/>
+				<div class="mb-6">
+					<SearchInput
+						placeholder={m.search_city_placeholder()}
+						bind:value={addMoreSearchQuery}
+						class="w-full md:w-96"
+					/>
+				</div>
 			</div>
 
 			{#if allAvailableCities.length > 0}
-				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
 					{#each allAvailableCities as city (city.id)}
 						<AddCityCard
 							{city}
@@ -378,27 +397,28 @@
 				
 				{#if !showAllTimezones && showingCount < totalAvailable}
 					<div class="text-center mt-8">
-						<p class="text-sm text-base-content/60 mb-2">
+						<p class="text-sm text-base-content/60 mb-4">
 							Showing {showingCount} of {totalAvailable} {addMoreSearchQuery.trim() ? 'results' : 'available cities'}
 						</p>
 						<button
 							type="button"
-							class="btn btn-primary"
+							class="btn btn-primary btn-lg"
 							onclick={() => {
 								showAllTimezones = true;
 							}}
 						>
+							<Plus class="w-5 h-5 mr-2" />
 							{(m as any).view_all_timezones()}
 						</button>
 					</div>
 				{:else if showAllTimezones && showingCount > DEFAULT_TIMEZONE_LIMIT}
 					<div class="text-center mt-8">
-						<p class="text-sm text-base-content/60 mb-2">
+						<p class="text-sm text-base-content/60 mb-4">
 							Showing all {showingCount} {addMoreSearchQuery.trim() ? 'results' : 'available cities'}
 						</p>
 						<button
 							type="button"
-							class="btn btn-ghost"
+							class="btn btn-ghost btn-lg"
 							onclick={() => {
 								showAllTimezones = false;
 							}}
@@ -408,12 +428,20 @@
 					</div>
 				{/if}
 			{:else}
-				<div class="text-center py-12 bg-base-200 rounded-2xl">
-					<p class="text-base-content/60 mb-4">
+				<div class="text-center py-16 bg-base-100 rounded-2xl border border-base-300">
+					<Search class="w-12 h-12 text-base-content/30 mx-auto mb-4" />
+					<p class="text-lg font-semibold mb-2 text-base-content/80">
 						{#if addMoreSearchQuery.trim()}
-							No cities found matching "{addMoreSearchQuery}"
+							No cities found
 						{:else}
-							All cities have been added to your list.
+							All cities added
+						{/if}
+					</p>
+					<p class="text-base-content/60 text-sm">
+						{#if addMoreSearchQuery.trim()}
+							No cities match "{addMoreSearchQuery}". Try a different search term.
+						{:else}
+							All available cities have been added to your list. Remove some cities to add others.
 						{/if}
 					</p>
 				</div>

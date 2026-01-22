@@ -361,5 +361,2040 @@
 			"lat": 43.6591,
 			"lng": -70.2568
 		}
+	},
+	{
+		"id": "minneapolis",
+		"name": "Minneapolis",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 44.9778,
+			"lng": -93.2650
+		}
+	},
+	{
+		"id": "st-louis",
+		"name": "St. Louis",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 38.6270,
+			"lng": -90.1994
+		}
+	},
+	{
+		"id": "tampa",
+		"name": "Tampa",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 27.9506,
+			"lng": -82.4572
+		}
+	},
+	{
+		"id": "pittsburgh",
+		"name": "Pittsburgh",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 40.4406,
+			"lng": -79.9959
+		}
+	},
+	{
+		"id": "sacramento",
+		"name": "Sacramento",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 38.5816,
+			"lng": -121.4944
+		}
+	},
+	{
+		"id": "orlando",
+		"name": "Orlando",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 28.5383,
+			"lng": -81.3792
+		}
+	},
+	{
+		"id": "cleveland",
+		"name": "Cleveland",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 41.4993,
+			"lng": -81.6944
+		}
+	},
+	{
+		"id": "cincinnati",
+		"name": "Cincinnati",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 39.1031,
+			"lng": -84.5120
+		}
+	},
+	{
+		"id": "kansas-city",
+		"name": "Kansas City",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 39.0997,
+			"lng": -94.5786
+		}
+	},
+	{
+		"id": "raleigh",
+		"name": "Raleigh",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 35.7796,
+			"lng": -78.6382
+		}
+	},
+	{
+		"id": "virginia-beach",
+		"name": "Virginia Beach",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 36.8529,
+			"lng": -75.9780
+		}
+	},
+	{
+		"id": "omaha",
+		"name": "Omaha",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 41.2565,
+			"lng": -95.9345
+		}
+	},
+	{
+		"id": "oakland",
+		"name": "Oakland",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 37.8044,
+			"lng": -122.2712
+		}
+	},
+	{
+		"id": "tulsa",
+		"name": "Tulsa",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 36.1540,
+			"lng": -95.9928
+		}
+	},
+	{
+		"id": "arlington",
+		"name": "Arlington",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 32.7357,
+			"lng": -97.1081
+		}
+	},
+	{
+		"id": "wichita",
+		"name": "Wichita",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 37.6872,
+			"lng": -97.3301
+		}
+	},
+	{
+		"id": "bakersfield",
+		"name": "Bakersfield",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 35.3733,
+			"lng": -119.0187
+		}
+	},
+	{
+		"id": "aurora",
+		"name": "Aurora",
+		"country": "US",
+		"timezone": "America/Denver",
+		"label": "MDT/MST",
+		"coordinates": {
+			"lat": 39.7294,
+			"lng": -104.8319
+		}
+	},
+	{
+		"id": "anaheim",
+		"name": "Anaheim",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 33.8353,
+			"lng": -117.9145
+		}
+	},
+	{
+		"id": "santa-ana",
+		"name": "Santa Ana",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 33.7455,
+			"lng": -117.8677
+		}
+	},
+	{
+		"id": "st-paul",
+		"name": "St. Paul",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 44.9537,
+			"lng": -93.0900
+		}
+	},
+	{
+		"id": "corpus-christi",
+		"name": "Corpus Christi",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 27.8006,
+			"lng": -97.3964
+		}
+	},
+	{
+		"id": "riverside",
+		"name": "Riverside",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 33.9533,
+			"lng": -117.3962
+		}
+	},
+	{
+		"id": "lexington",
+		"name": "Lexington",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 38.0406,
+			"lng": -84.5037
+		}
+	},
+	{
+		"id": "stockton",
+		"name": "Stockton",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 37.9577,
+			"lng": -121.2908
+		}
+	},
+	{
+		"id": "henderson",
+		"name": "Henderson",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 36.0395,
+			"lng": -114.9817
+		}
+	},
+	{
+		"id": "st-petersburg",
+		"name": "St. Petersburg",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 27.7676,
+			"lng": -82.6403
+		}
+	},
+	{
+		"id": "jersey-city",
+		"name": "Jersey City",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 40.7178,
+			"lng": -74.0431
+		}
+	},
+	{
+		"id": "chula-vista",
+		"name": "Chula Vista",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 32.6401,
+			"lng": -117.0842
+		}
+	},
+	{
+		"id": "norfolk",
+		"name": "Norfolk",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 36.8468,
+			"lng": -76.2852
+		}
+	},
+	{
+		"id": "chandler",
+		"name": "Chandler",
+		"country": "US",
+		"timezone": "America/Phoenix",
+		"label": "MST",
+		"coordinates": {
+			"lat": 33.3062,
+			"lng": -111.8413
+		}
+	},
+	{
+		"id": "laredo",
+		"name": "Laredo",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 27.5306,
+			"lng": -99.4803
+		}
+	},
+	{
+		"id": "madison",
+		"name": "Madison",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 43.0731,
+			"lng": -89.4012
+		}
+	},
+	{
+		"id": "durham",
+		"name": "Durham",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 35.9940,
+			"lng": -78.8986
+		}
+	},
+	{
+		"id": "lubbock",
+		"name": "Lubbock",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 33.5779,
+			"lng": -101.8552
+		}
+	},
+	{
+		"id": "winston-salem",
+		"name": "Winston-Salem",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 36.0999,
+			"lng": -80.2442
+		}
+	},
+	{
+		"id": "garland",
+		"name": "Garland",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 32.9126,
+			"lng": -96.6389
+		}
+	},
+	{
+		"id": "glendale",
+		"name": "Glendale",
+		"country": "US",
+		"timezone": "America/Phoenix",
+		"label": "MST",
+		"coordinates": {
+			"lat": 33.5387,
+			"lng": -112.1860
+		}
+	},
+	{
+		"id": "hialeah",
+		"name": "Hialeah",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 25.8576,
+			"lng": -80.2781
+		}
+	},
+	{
+		"id": "reno",
+		"name": "Reno",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 39.5296,
+			"lng": -119.8138
+		}
+	},
+	{
+		"id": "chesapeake",
+		"name": "Chesapeake",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 36.7682,
+			"lng": -76.2875
+		}
+	},
+	{
+		"id": "scottsdale",
+		"name": "Scottsdale",
+		"country": "US",
+		"timezone": "America/Phoenix",
+		"label": "MST",
+		"coordinates": {
+			"lat": 33.4942,
+			"lng": -111.9261
+		}
+	},
+	{
+		"id": "north-las-vegas",
+		"name": "North Las Vegas",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 36.1989,
+			"lng": -115.1175
+		}
+	},
+	{
+		"id": "irving",
+		"name": "Irving",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 32.8140,
+			"lng": -96.9489
+		}
+	},
+	{
+		"id": "fremont",
+		"name": "Fremont",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 37.5483,
+			"lng": -121.9886
+		}
+	},
+	{
+		"id": "boise",
+		"name": "Boise",
+		"country": "US",
+		"timezone": "America/Boise",
+		"label": "MDT/MST",
+		"coordinates": {
+			"lat": 43.6150,
+			"lng": -116.2023
+		}
+	},
+	{
+		"id": "richmond",
+		"name": "Richmond",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 37.5407,
+			"lng": -77.4360
+		}
+	},
+	{
+		"id": "spokane",
+		"name": "Spokane",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 47.6588,
+			"lng": -117.4260
+		}
+	},
+	{
+		"id": "baton-rouge",
+		"name": "Baton Rouge",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 30.4515,
+			"lng": -91.1871
+		}
+	},
+	{
+		"id": "tacoma",
+		"name": "Tacoma",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 47.2529,
+			"lng": -122.4443
+		}
+	},
+	{
+		"id": "san-bernardino",
+		"name": "San Bernardino",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.1083,
+			"lng": -117.2898
+		}
+	},
+	{
+		"id": "modesto",
+		"name": "Modesto",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 37.6391,
+			"lng": -120.9969
+		}
+	},
+	{
+		"id": "fontana",
+		"name": "Fontana",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.0922,
+			"lng": -117.4350
+		}
+	},
+	{
+		"id": "des-moines",
+		"name": "Des Moines",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 41.5868,
+			"lng": -93.6250
+		}
+	},
+	{
+		"id": "moreno-valley",
+		"name": "Moreno Valley",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 33.9425,
+			"lng": -117.2297
+		}
+	},
+	{
+		"id": "santa-clarita",
+		"name": "Santa Clarita",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.3917,
+			"lng": -118.5426
+		}
+	},
+	{
+		"id": "fayetteville",
+		"name": "Fayetteville",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 35.0527,
+			"lng": -78.8784
+		}
+	},
+	{
+		"id": "birmingham",
+		"name": "Birmingham",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 33.5207,
+			"lng": -86.8025
+		}
+	},
+	{
+		"id": "oxnard",
+		"name": "Oxnard",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.1975,
+			"lng": -119.1771
+		}
+	},
+	{
+		"id": "rochester",
+		"name": "Rochester",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 43.1566,
+			"lng": -77.6088
+		}
+	},
+	{
+		"id": "port-st-lucie",
+		"name": "Port St. Lucie",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 27.2730,
+			"lng": -80.3582
+		}
+	},
+	{
+		"id": "grand-rapids",
+		"name": "Grand Rapids",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 42.9634,
+			"lng": -85.6681
+		}
+	},
+	{
+		"id": "salt-lake-city",
+		"name": "Salt Lake City",
+		"country": "US",
+		"timezone": "America/Denver",
+		"label": "MDT/MST",
+		"coordinates": {
+			"lat": 40.7608,
+			"lng": -111.8910
+		}
+	},
+	{
+		"id": "tallahassee",
+		"name": "Tallahassee",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 30.4383,
+			"lng": -84.2807
+		}
+	},
+	{
+		"id": "huntsville",
+		"name": "Huntsville",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 34.7304,
+			"lng": -86.5861
+		}
+	},
+	{
+		"id": "grand-prairie",
+		"name": "Grand Prairie",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 32.7459,
+			"lng": -96.9978
+		}
+	},
+	{
+		"id": "knoxville",
+		"name": "Knoxville",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 35.9606,
+			"lng": -83.9207
+		}
+	},
+	{
+		"id": "worcester",
+		"name": "Worcester",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 42.2626,
+			"lng": -71.8023
+		}
+	},
+	{
+		"id": "newport-news",
+		"name": "Newport News",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 37.0871,
+			"lng": -76.4730
+		}
+	},
+	{
+		"id": "brownsville",
+		"name": "Brownsville",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 25.9017,
+			"lng": -97.4975
+		}
+	},
+	{
+		"id": "overland-park",
+		"name": "Overland Park",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 38.9822,
+			"lng": -94.6708
+		}
+	},
+	{
+		"id": "santa-rosa",
+		"name": "Santa Rosa",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 38.4404,
+			"lng": -122.7141
+		}
+	},
+	{
+		"id": "providence",
+		"name": "Providence",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 41.8240,
+			"lng": -71.4128
+		}
+	},
+	{
+		"id": "fort-lauderdale",
+		"name": "Fort Lauderdale",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 26.1224,
+			"lng": -80.1373
+		}
+	},
+	{
+		"id": "chattanooga",
+		"name": "Chattanooga",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 35.0456,
+			"lng": -85.3097
+		}
+	},
+	{
+		"id": "tempe",
+		"name": "Tempe",
+		"country": "US",
+		"timezone": "America/Phoenix",
+		"label": "MST",
+		"coordinates": {
+			"lat": 33.4255,
+			"lng": -111.9400
+		}
+	},
+	{
+		"id": "oceanside",
+		"name": "Oceanside",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 33.1959,
+			"lng": -117.3795
+		}
+	},
+	{
+		"id": "garden-grove",
+		"name": "Garden Grove",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 33.7739,
+			"lng": -117.9414
+		}
+	},
+	{
+		"id": "rancho-cucamonga",
+		"name": "Rancho Cucamonga",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.1064,
+			"lng": -117.5931
+		}
+	},
+	{
+		"id": "cape-coral",
+		"name": "Cape Coral",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 26.5629,
+			"lng": -81.9495
+		}
+	},
+	{
+		"id": "santa-clara",
+		"name": "Santa Clara",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 37.3541,
+			"lng": -121.9552
+		}
+	},
+	{
+		"id": "vancouver-wa",
+		"name": "Vancouver, WA",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 45.6387,
+			"lng": -122.6615
+		}
+	},
+	{
+		"id": "sioux-falls",
+		"name": "Sioux Falls",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 43.5446,
+			"lng": -96.7311
+		}
+	},
+	{
+		"id": "peoria",
+		"name": "Peoria",
+		"country": "US",
+		"timezone": "America/Phoenix",
+		"label": "MST",
+		"coordinates": {
+			"lat": 33.5806,
+			"lng": -112.2374
+		}
+	},
+	{
+		"id": "ontario",
+		"name": "Ontario",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.0633,
+			"lng": -117.6509
+		}
+	},
+	{
+		"id": "elk-grove",
+		"name": "Elk Grove",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 38.4088,
+			"lng": -121.3716
+		}
+	},
+	{
+		"id": "salem",
+		"name": "Salem",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 44.9429,
+			"lng": -123.0351
+		}
+	},
+	{
+		"id": "pembroke-pines",
+		"name": "Pembroke Pines",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 26.0078,
+			"lng": -80.2963
+		}
+	},
+	{
+		"id": "fort-collins",
+		"name": "Fort Collins",
+		"country": "US",
+		"timezone": "America/Denver",
+		"label": "MDT/MST",
+		"coordinates": {
+			"lat": 40.5853,
+			"lng": -105.0844
+		}
+	},
+	{
+		"id": "corona",
+		"name": "Corona",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 33.8753,
+			"lng": -117.5664
+		}
+	},
+	{
+		"id": "eugene",
+		"name": "Eugene",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 44.0521,
+			"lng": -123.0868
+		}
+	},
+	{
+		"id": "lancaster",
+		"name": "Lancaster",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.6868,
+			"lng": -118.1542
+		}
+	},
+	{
+		"id": "palmdale",
+		"name": "Palmdale",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.5794,
+			"lng": -118.1165
+		}
+	},
+	{
+		"id": "salinas",
+		"name": "Salinas",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 36.6777,
+			"lng": -121.6555
+		}
+	},
+	{
+		"id": "springfield",
+		"name": "Springfield",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 42.1015,
+			"lng": -72.5898
+		}
+	},
+	{
+		"id": "pasadena",
+		"name": "Pasadena",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.1478,
+			"lng": -118.1445
+		}
+	},
+	{
+		"id": "fort-worth",
+		"name": "Fort Worth",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 32.7555,
+			"lng": -97.3308
+		}
+	},
+	{
+		"id": "hayward",
+		"name": "Hayward",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 37.6688,
+			"lng": -122.0810
+		}
+	},
+	{
+		"id": "pomona",
+		"name": "Pomona",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.0551,
+			"lng": -117.7498
+		}
+	},
+	{
+		"id": "cary",
+		"name": "Cary",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 35.7915,
+			"lng": -78.7811
+		}
+	},
+	{
+		"id": "rockford",
+		"name": "Rockford",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 42.2711,
+			"lng": -89.0940
+		}
+	},
+	{
+		"id": "alexandria",
+		"name": "Alexandria",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 38.8048,
+			"lng": -77.0469
+		}
+	},
+	{
+		"id": "escondido",
+		"name": "Escondido",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 33.1192,
+			"lng": -117.0864
+		}
+	},
+	{
+		"id": "mckinney",
+		"name": "McKinney",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 33.1972,
+			"lng": -96.6397
+		}
+	},
+	{
+		"id": "kansas-city-ks",
+		"name": "Kansas City, KS",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 39.1142,
+			"lng": -94.6275
+		}
+	},
+	{
+		"id": "joliet",
+		"name": "Joliet",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 41.5250,
+			"lng": -88.0817
+		}
+	},
+	{
+		"id": "sunnyvale",
+		"name": "Sunnyvale",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 37.3688,
+			"lng": -122.0363
+		}
+	},
+	{
+		"id": "torrance",
+		"name": "Torrance",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 33.8358,
+			"lng": -118.3406
+		}
+	},
+	{
+		"id": "bridgeport",
+		"name": "Bridgeport",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 41.1865,
+			"lng": -73.1952
+		}
+	},
+	{
+		"id": "lakewood",
+		"name": "Lakewood",
+		"country": "US",
+		"timezone": "America/Denver",
+		"label": "MDT/MST",
+		"coordinates": {
+			"lat": 39.7047,
+			"lng": -105.0814
+		}
+	},
+	{
+		"id": "hollywood",
+		"name": "Hollywood",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 26.0112,
+			"lng": -80.1495
+		}
+	},
+	{
+		"id": "paterson",
+		"name": "Paterson",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 40.9168,
+			"lng": -74.1718
+		}
+	},
+	{
+		"id": "naperville",
+		"name": "Naperville",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 41.7508,
+			"lng": -88.1535
+		}
+	},
+	{
+		"id": "syracuse",
+		"name": "Syracuse",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 43.0481,
+			"lng": -76.1474
+		}
+	},
+	{
+		"id": "mesquite",
+		"name": "Mesquite",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 32.7668,
+			"lng": -96.5992
+		}
+	},
+	{
+		"id": "dayton",
+		"name": "Dayton",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 39.7589,
+			"lng": -84.1916
+		}
+	},
+	{
+		"id": "savannah",
+		"name": "Savannah",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 32.0809,
+			"lng": -81.0912
+		}
+	},
+	{
+		"id": "pasadena-tx",
+		"name": "Pasadena, TX",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 29.6911,
+			"lng": -95.2091
+		}
+	},
+	{
+		"id": "orange",
+		"name": "Orange",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 33.7879,
+			"lng": -117.8531
+		}
+	},
+	{
+		"id": "fullerton",
+		"name": "Fullerton",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 33.8704,
+			"lng": -117.9242
+		}
+	},
+	{
+		"id": "killeen",
+		"name": "Killeen",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 31.1171,
+			"lng": -97.7278
+		}
+	},
+	{
+		"id": "frisco",
+		"name": "Frisco",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 33.1507,
+			"lng": -96.8236
+		}
+	},
+	{
+		"id": "hampton",
+		"name": "Hampton",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 37.0299,
+			"lng": -76.3452
+		}
+	},
+	{
+		"id": "mcallen",
+		"name": "McAllen",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 26.2034,
+			"lng": -98.2300
+		}
+	},
+	{
+		"id": "warren",
+		"name": "Warren",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 42.5145,
+			"lng": -83.0147
+		}
+	},
+	{
+		"id": "bellevue",
+		"name": "Bellevue",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 47.6101,
+			"lng": -122.2015
+		}
+	},
+	{
+		"id": "west-valley-city",
+		"name": "West Valley City",
+		"country": "US",
+		"timezone": "America/Denver",
+		"label": "MDT/MST",
+		"coordinates": {
+			"lat": 40.6916,
+			"lng": -112.0011
+		}
+	},
+	{
+		"id": "columbia-sc",
+		"name": "Columbia, SC",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 34.0007,
+			"lng": -81.0348
+		}
+	},
+	{
+		"id": "olathe",
+		"name": "Olathe",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 38.8814,
+			"lng": -94.8191
+		}
+	},
+	{
+		"id": "sterling-heights",
+		"name": "Sterling Heights",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 42.5803,
+			"lng": -83.0302
+		}
+	},
+	{
+		"id": "new-haven",
+		"name": "New Haven",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 41.3083,
+			"lng": -72.9279
+		}
+	},
+	{
+		"id": "miramar",
+		"name": "Miramar",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 25.9861,
+			"lng": -80.3036
+		}
+	},
+	{
+		"id": "waco",
+		"name": "Waco",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 31.5493,
+			"lng": -97.1467
+		}
+	},
+	{
+		"id": "thornton",
+		"name": "Thornton",
+		"country": "US",
+		"timezone": "America/Denver",
+		"label": "MDT/MST",
+		"coordinates": {
+			"lat": 39.8680,
+			"lng": -104.9719
+		}
+	},
+	{
+		"id": "charleston-sc",
+		"name": "Charleston, SC",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 32.7765,
+			"lng": -79.9311
+		}
+	},
+	{
+		"id": "denton",
+		"name": "Denton",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 33.2148,
+			"lng": -97.1331
+		}
+	},
+	{
+		"id": "roseville",
+		"name": "Roseville",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 38.7521,
+			"lng": -121.2880
+		}
+	},
+	{
+		"id": "vallejo",
+		"name": "Vallejo",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 38.1041,
+			"lng": -122.2566
+		}
+	},
+	{
+		"id": "gainesville",
+		"name": "Gainesville",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 29.6516,
+			"lng": -82.3248
+		}
+	},
+	{
+		"id": "coral-springs",
+		"name": "Coral Springs",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 26.2712,
+			"lng": -80.2706
+		}
+	},
+	{
+		"id": "cedar-rapids",
+		"name": "Cedar Rapids",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 41.9778,
+			"lng": -91.6656
+		}
+	},
+	{
+		"id": "carrollton",
+		"name": "Carrollton",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 32.9537,
+			"lng": -96.8903
+		}
+	},
+	{
+		"id": "midland",
+		"name": "Midland",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 31.9973,
+			"lng": -102.0779
+		}
+	},
+	{
+		"id": "surprise",
+		"name": "Surprise",
+		"country": "US",
+		"timezone": "America/Phoenix",
+		"label": "MST",
+		"coordinates": {
+			"lat": 33.6292,
+			"lng": -112.3679
+		}
+	},
+	{
+		"id": "inglewood",
+		"name": "Inglewood",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 33.9617,
+			"lng": -118.3531
+		}
+	},
+	{
+		"id": "visalia",
+		"name": "Visalia",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 36.3302,
+			"lng": -119.2921
+		}
+	},
+	{
+		"id": "charleston-wv",
+		"name": "Charleston, WV",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 38.3498,
+			"lng": -81.6326
+		}
+	},
+	{
+		"id": "topeka",
+		"name": "Topeka",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 39.0558,
+			"lng": -95.6890
+		}
+	},
+	{
+		"id": "thousand-oaks",
+		"name": "Thousand Oaks",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.1706,
+			"lng": -118.8376
+		}
+	},
+	{
+		"id": "elizabeth",
+		"name": "Elizabeth",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 40.6639,
+			"lng": -74.2107
+		}
+	},
+	{
+		"id": "simi-valley",
+		"name": "Simi Valley",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.2694,
+			"lng": -118.7815
+		}
+	},
+	{
+		"id": "fargo",
+		"name": "Fargo",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 46.8772,
+			"lng": -96.7898
+		}
+	},
+	{
+		"id": "norman",
+		"name": "Norman",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 35.2226,
+			"lng": -97.4395
+		}
+	},
+	{
+		"id": "abilene",
+		"name": "Abilene",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 32.4487,
+			"lng": -99.7331
+		}
+	},
+	{
+		"id": "wilmington",
+		"name": "Wilmington",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 34.2257,
+			"lng": -77.9447
+		}
+	},
+	{
+		"id": "hartford",
+		"name": "Hartford",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 41.7658,
+			"lng": -73.7694
+		}
+	},
+	{
+		"id": "victorville",
+		"name": "Victorville",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.5361,
+			"lng": -117.2912
+		}
+	},
+	{
+		"id": "evansville",
+		"name": "Evansville",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 37.9748,
+			"lng": -87.5558
+		}
+	},
+	{
+		"id": "salem-or",
+		"name": "Salem, OR",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 44.9429,
+			"lng": -123.0351
+		}
+	},
+	{
+		"id": "odessa",
+		"name": "Odessa",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 31.8457,
+			"lng": -102.3676
+		}
+	},
+	{
+		"id": "athens",
+		"name": "Athens",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 33.9519,
+			"lng": -83.3576
+		}
+	},
+	{
+		"id": "allentown",
+		"name": "Allentown",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 40.6084,
+			"lng": -75.4902
+		}
+	},
+	{
+		"id": "erie",
+		"name": "Erie",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 42.1292,
+			"lng": -80.0851
+		}
+	},
+	{
+		"id": "las-cruces",
+		"name": "Las Cruces",
+		"country": "US",
+		"timezone": "America/Denver",
+		"label": "MDT/MST",
+		"coordinates": {
+			"lat": 32.3199,
+			"lng": -106.7637
+		}
+	},
+	{
+		"id": "stamford",
+		"name": "Stamford",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 41.0534,
+			"lng": -73.5387
+		}
+	},
+	{
+		"id": "santa-barbara",
+		"name": "Santa Barbara",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 34.4208,
+			"lng": -119.6982
+		}
+	},
+	{
+		"id": "concord",
+		"name": "Concord",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 37.9780,
+			"lng": -122.0311
+		}
+	},
+	{
+		"id": "fort-wayne",
+		"name": "Fort Wayne",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 41.0793,
+			"lng": -85.1394
+		}
+	},
+	{
+		"id": "richmond-va",
+		"name": "Richmond, VA",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 37.5407,
+			"lng": -77.4360
+		}
+	},
+	{
+		"id": "fairfield",
+		"name": "Fairfield",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 38.2494,
+			"lng": -122.0400
+		}
+	},
+	{
+		"id": "berkeley",
+		"name": "Berkeley",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 37.8715,
+			"lng": -122.2730
+		}
+	},
+	{
+		"id": "antioch",
+		"name": "Antioch",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 37.9799,
+			"lng": -121.7960
+		}
+	},
+	{
+		"id": "high-point",
+		"name": "High Point",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 35.9557,
+			"lng": -80.0053
+		}
+	},
+	{
+		"id": "murfreesboro",
+		"name": "Murfreesboro",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 35.8456,
+			"lng": -86.3903
+		}
+	},
+	{
+		"id": "arvada",
+		"name": "Arvada",
+		"country": "US",
+		"timezone": "America/Denver",
+		"label": "MDT/MST",
+		"coordinates": {
+			"lat": 39.8028,
+			"lng": -105.0875
+		}
+	},
+	{
+		"id": "ann-arbor",
+		"name": "Ann Arbor",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 42.2808,
+			"lng": -83.7430
+		}
+	},
+	{
+		"id": "longview",
+		"name": "Longview",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 32.5007,
+			"lng": -94.7405
+		}
+	},
+	{
+		"id": "tyler",
+		"name": "Tyler",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 32.3513,
+			"lng": -95.3011
+		}
+	},
+	{
+		"id": "lewisville",
+		"name": "Lewisville",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 33.0462,
+			"lng": -96.9942
+		}
+	},
+	{
+		"id": "college-station",
+		"name": "College Station",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 30.6279,
+			"lng": -96.3344
+		}
+	},
+	{
+		"id": "san-angelo",
+		"name": "San Angelo",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 31.4638,
+			"lng": -100.4370
+		}
+	},
+	{
+		"id": "kenosha",
+		"name": "Kenosha",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 42.5847,
+			"lng": -87.8212
+		}
+	},
+	{
+		"id": "lakeland",
+		"name": "Lakeland",
+		"country": "US",
+		"timezone": "America/New_York",
+		"label": "EDT/EST",
+		"coordinates": {
+			"lat": 28.0395,
+			"lng": -81.9498
+		}
+	},
+	{
+		"id": "round-rock",
+		"name": "Round Rock",
+		"country": "US",
+		"timezone": "America/Chicago",
+		"label": "CDT/CST",
+		"coordinates": {
+			"lat": 30.5083,
+			"lng": -97.6789
+		}
+	},
+	{
+		"id": "tracy",
+		"name": "Tracy",
+		"country": "US",
+		"timezone": "America/Los_Angeles",
+		"label": "PDT/PST",
+		"coordinates": {
+			"lat": 37.7397,
+			"lng": -121.4252
+		}
 	}
 ]
