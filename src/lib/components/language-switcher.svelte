@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { locales, localizeHref, getLocale, setLocale } from '$lib/paraglide/runtime';
+	import { locales, localizeHref, getLocale } from '$lib/paraglide/runtime';
 	import { saveLocale } from '$lib/utils/indexed-db-preferences';
 	import { Globe, ChevronDown } from 'lucide-svelte';
 	
@@ -30,28 +30,28 @@
 	const currentLocale = $derived(getLocale());
 	const currentLanguageName = $derived(languageNames[currentLocale] || currentLocale);
 	
-	async function handleLanguageChange(locale: string) {
+	function handleLanguageChange(locale: string) {
 		if (locale === currentLocale) {
 			closeDropdown();
 			return;
 		}
 		
-		try {
-			// Save locale to IndexedDB first
-			await saveLocale(locale);
-			
-			// Also sync with cookie for paraglide
-			document.cookie = `PARAGLIDE_LOCALE=${locale}; path=/; max-age=34560000`;
-			
-			// Use setLocale which will handle URL change and reload
-			setLocale(locale, { reload: true });
-		} catch (error) {
-			console.error('Failed to change language:', error);
-			// Fallback to URL navigation
-			const currentPath = page.url.pathname;
-			const newPath = localizeHref(currentPath, { locale });
-			window.location.href = newPath;
-		}
+		closeDropdown();
+		
+		// Save locale to IndexedDB (fire and forget)
+		saveLocale(locale).catch(err => {
+			console.error('Failed to save locale to IndexedDB:', err);
+		});
+		
+		// Sync with cookie for paraglide
+		document.cookie = `PARAGLIDE_LOCALE=${locale}; path=/; max-age=34560000`;
+		
+		// Navigate to the new locale URL
+		const currentPath = page.url.pathname;
+		const newPath = localizeHref(currentPath, { locale });
+		
+		// Use window.location for reliable navigation
+		window.location.href = newPath;
 	}
 	
 	function toggleDropdown() {
@@ -93,19 +93,16 @@
 			class="absolute right-0 mt-2 w-48 bg-base-100 rounded-lg shadow-lg border border-base-300 z-50 max-h-96 overflow-y-auto"
 			role="menu"
 			aria-orientation="vertical"
+			onclick={(e) => e.stopPropagation()}
 		>
 			{#each locales as locale}
-				<a
-					href={localizeHref(page.url.pathname, { locale })}
-					class="block px-4 py-2 text-sm hover:bg-base-200 transition-colors {locale === currentLocale ? 'bg-primary/10 text-primary font-semibold' : 'text-base-content'}"
+				<button
+					type="button"
+					class="w-full text-left block px-4 py-2 text-sm hover:bg-base-200 transition-colors {locale === currentLocale ? 'bg-primary/10 text-primary font-semibold' : 'text-base-content'}"
 					role="menuitem"
 					onclick={(e) => {
-						if (locale !== currentLocale) {
-							e.preventDefault();
-							handleLanguageChange(locale);
-						} else {
-							closeDropdown();
-						}
+						e.stopPropagation();
+						handleLanguageChange(locale);
 					}}
 				>
 					<div class="flex items-center justify-between">
@@ -114,7 +111,7 @@
 							<span class="text-primary">✓</span>
 						{/if}
 					</div>
-				</a>
+				</button>
 			{/each}
 		</div>
 	{/if}
