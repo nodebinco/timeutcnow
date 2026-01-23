@@ -311,3 +311,71 @@ export async function saveMeetingConverterPreferences(preferences: MeetingConver
 		throw error;
 	}
 }
+
+/**
+ * Get saved locale from IndexedDB
+ */
+export async function getSavedLocale(): Promise<string | null> {
+	try {
+		const db = await initDB();
+		const transaction = db.transaction([STORES.USER_PREFERENCES], 'readonly');
+		const store = transaction.objectStore(STORES.USER_PREFERENCES);
+		const request = store.get('locale');
+
+		return new Promise((resolve, reject) => {
+			request.onsuccess = () => {
+				if (request.result && request.result.locale) {
+					console.log('📋 getSavedLocale: Found locale:', request.result.locale);
+					resolve(request.result.locale);
+				} else {
+					console.log('📋 getSavedLocale: No locale found');
+					resolve(null);
+				}
+			};
+			request.onerror = (event: Event) => {
+				const error = (event.target as IDBRequest).error;
+				console.error('❌ getSavedLocale error:', error);
+				reject(new Error(`Failed to get saved locale: ${error?.message || 'Unknown error'}`));
+			};
+		});
+	} catch (error) {
+		console.error('❌ Failed to get saved locale:', error);
+		return null;
+	}
+}
+
+/**
+ * Save locale to IndexedDB
+ */
+export async function saveLocale(locale: string): Promise<void> {
+	try {
+		console.log('💾 saveLocale: Saving locale to IndexedDB...', locale);
+		
+		const db = await initDB();
+		const transaction = db.transaction([STORES.USER_PREFERENCES], 'readwrite');
+		const store = transaction.objectStore(STORES.USER_PREFERENCES);
+		
+		const data = {
+			id: 'locale',
+			locale: locale,
+			timestamp: Date.now()
+		};
+		
+		const request = store.put(data);
+
+		return new Promise((resolve, reject) => {
+			request.onsuccess = () => {
+				console.log('✅ saveLocale: Successfully saved locale to IndexedDB');
+				resolve();
+			};
+			request.onerror = (event: Event) => {
+				const error = (event.target as IDBRequest).error;
+				console.error('❌ saveLocale: Failed to save:', error);
+				reject(new Error(`Failed to save locale: ${error?.message || 'Unknown error'}`));
+			};
+		});
+	} catch (error) {
+		console.error('❌ Failed to save locale:', error);
+		throw error;
+	}
+}

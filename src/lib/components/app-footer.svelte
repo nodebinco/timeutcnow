@@ -18,9 +18,7 @@
 			<h4 class="font-bold mb-4">Tools</h4>
 			<ul class="space-y-2 text-sm text-base-content/60">
 				<li><a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a></li>
-				<li><a href="/{page.params.locale}/unix-timestamp" class="hover:text-primary">{m.unix_converter()}</a></li>
 				<li><a href="/{page.params.locale}/time-zone-converter" class="hover:text-primary">{m.time_zone_converter()}</a></li>
-				<li><a href="/{page.params.locale}/date-calculator" class="hover:text-primary">{m.date_calculator()}</a></li>
 			</ul>
 		</div>
 		<div>

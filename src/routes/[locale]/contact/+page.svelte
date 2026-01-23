@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { Clock, Mail, MessageSquare, Github, Send, CheckCircle } from 'lucide-svelte';
+	import { Clock, Mail, MessageSquare, Github, Send, CheckCircle, Menu, X } from 'lucide-svelte';
 	import SiteLogo from '$lib/components/site-logo.svelte';
 	import AppFooter from '$lib/components/app-footer.svelte';
+	import LanguageSwitcher from '$lib/components/language-switcher.svelte';
 	import * as m from '$lib/paraglide/messages';
 	
+	let mobileMenuOpen = $state(false);
 	let formSubmitted = $state(false);
 	let formData = $state({
 		name: '',
@@ -52,10 +54,60 @@
 			
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
 				<a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a>
-				<a href="/{page.params.locale}/converter" class="hover:text-primary">{m.converter()}</a>
+				<a href="/{page.params.locale}/time-zone-converter" class="hover:text-primary">{m.time_zone_converter()}</a>
+			</div>
+
+			<div class="md:hidden">
+				<button
+					type="button"
+					class="btn btn-ghost btn-sm"
+					onclick={() => mobileMenuOpen = !mobileMenuOpen}
+					aria-label="Toggle menu"
+				>
+					{#if mobileMenuOpen}
+						<X class="w-6 h-6" />
+					{:else}
+						<Menu class="w-6 h-6" />
+					{/if}
+				</button>
 			</div>
 		</div>
 	</nav>
+	
+	<!-- Mobile Sidebar -->
+	{#if mobileMenuOpen}
+		<div class="md:hidden fixed inset-0 z-[100] bg-base-100/95 backdrop-blur-md">
+			<div class="flex flex-col h-full">
+				<div class="flex items-center justify-between p-4 border-b border-base-300">
+					<SiteLogo />
+					<button
+						type="button"
+						class="btn btn-ghost btn-sm"
+						onclick={() => mobileMenuOpen = false}
+						aria-label="Close menu"
+					>
+						<X class="w-6 h-6" />
+					</button>
+				</div>
+				<div class="flex-1 overflow-y-auto p-4 space-y-4">
+					<a
+						href="/{page.params.locale}"
+						class="block py-2 text-base font-medium hover:text-primary"
+						onclick={() => mobileMenuOpen = false}
+					>
+						{m.utc_clock()}
+					</a>
+					<a
+						href="/{page.params.locale}/time-zone-converter"
+						class="block py-2 text-base font-medium hover:text-primary"
+						onclick={() => mobileMenuOpen = false}
+					>
+						{m.time_zone_converter()}
+					</a>
+				</div>
+			</div>
+		</div>
+	{/if}
 
 	<main class="max-w-4xl mx-auto px-4 py-12">
 		<!-- Hero Section -->
@@ -64,9 +116,9 @@
 				<MessageSquare class="w-4 h-4" />
 				{m.contact()}
 			</div>
-			<h1 class="text-5xl font-bold mb-6">Get in Touch</h1>
+			<h1 class="text-5xl font-bold mb-6">{m.contact_title()}</h1>
 			<p class="text-xl text-base-content/70 max-w-2xl mx-auto">
-				Have a question, suggestion, or feedback? We'd love to hear from you!
+				{m.contact_subtitle()}
 			</p>
 		</section>
 
@@ -78,12 +130,12 @@
 						<div class="w-16 h-16 bg-success/20 rounded-full flex items-center justify-center mx-auto mb-4">
 							<CheckCircle class="w-8 h-8 text-success" />
 						</div>
-						<h2 class="text-2xl font-bold mb-2">Thank You!</h2>
+						<h2 class="text-2xl font-bold mb-2">{m.contact_form_success_title()}</h2>
 						<p class="text-base-content/70 mb-6">
-							Your message has been received. We'll get back to you as soon as possible.
+							{m.contact_form_success_text()}
 						</p>
 						<p class="text-sm text-base-content/50">
-							Note: This is a demo form. In a production environment, this would send your message to our team.
+							{m.contact_form_success_note()}
 						</p>
 					</div>
 				{:else}
@@ -91,7 +143,7 @@
 						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 							<div>
 								<label for="name" class="block text-sm font-medium mb-2">
-									Name <span class="text-error">*</span>
+									{m.contact_form_name()} <span class="text-error">*</span>
 								</label>
 								<input
 									type="text"
@@ -99,12 +151,12 @@
 									bind:value={formData.name}
 									required
 									class="input input-bordered w-full"
-									placeholder="Your name"
+									placeholder={m.contact_form_name_placeholder()}
 								/>
 							</div>
 							<div>
 								<label for="email" class="block text-sm font-medium mb-2">
-									Email <span class="text-error">*</span>
+									{m.contact_form_email()} <span class="text-error">*</span>
 								</label>
 								<input
 									type="email"
@@ -112,13 +164,13 @@
 									bind:value={formData.email}
 									required
 									class="input input-bordered w-full"
-									placeholder="your.email@example.com"
+									placeholder={m.contact_form_email_placeholder()}
 								/>
 							</div>
 						</div>
 						<div>
 							<label for="subject" class="block text-sm font-medium mb-2">
-								Subject <span class="text-error">*</span>
+								{m.contact_form_subject()} <span class="text-error">*</span>
 							</label>
 							<input
 								type="text"
@@ -126,12 +178,12 @@
 								bind:value={formData.subject}
 								required
 								class="input input-bordered w-full"
-								placeholder="What's this about?"
+								placeholder={m.contact_form_subject_placeholder()}
 							/>
 						</div>
 						<div>
 							<label for="message" class="block text-sm font-medium mb-2">
-								Message <span class="text-error">*</span>
+								{m.contact_form_message()} <span class="text-error">*</span>
 							</label>
 							<textarea
 								id="message"
@@ -139,16 +191,16 @@
 								required
 								rows="6"
 								class="textarea textarea-bordered w-full"
-								placeholder="Tell us what's on your mind..."
+								placeholder={m.contact_form_message_placeholder()}
 							></textarea>
 						</div>
 						<div class="flex items-center gap-4">
 							<button type="submit" class="btn btn-primary">
 								<Send class="w-4 h-4 mr-2" />
-								Send Message
+								{m.contact_form_send()}
 							</button>
 							<p class="text-sm text-base-content/50">
-								All fields marked with <span class="text-error">*</span> are required
+								{m.contact_form_required()} <span class="text-error">*</span> {m.contact_form_required_are()}
 							</p>
 						</div>
 					</form>
@@ -158,15 +210,15 @@
 
 		<!-- Alternative Contact Methods -->
 		<section class="mb-16">
-			<h2 class="text-3xl font-bold mb-8 text-center">Other Ways to Reach Us</h2>
+			<h2 class="text-3xl font-bold mb-8 text-center">{m.contact_other_title()}</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<div class="bg-base-100 rounded-2xl p-8 border border-base-300 text-center">
 					<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
 						<Mail class="w-6 h-6 text-primary" />
 					</div>
-					<h3 class="text-xl font-bold mb-2">Email</h3>
+					<h3 class="text-xl font-bold mb-2">{m.contact_email_title()}</h3>
 					<p class="text-base-content/70 mb-4">
-						Send us an email and we'll respond as soon as possible.
+						{m.contact_email_text()}
 					</p>
 					<a href="mailto:contact@timeutcnow.com" class="text-primary hover:underline">
 						contact@timeutcnow.com
@@ -177,9 +229,9 @@
 					<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
 						<Github class="w-6 h-6 text-primary" />
 					</div>
-					<h3 class="text-xl font-bold mb-2">GitHub</h3>
+					<h3 class="text-xl font-bold mb-2">{m.contact_github_title()}</h3>
 					<p class="text-base-content/70 mb-4">
-						Found a bug or have a feature request? Open an issue on GitHub.
+						{m.contact_github_text()}
 					</p>
 					<a href="https://github.com/nodebinco/timeutcnow" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
 						github.com/nodebinco/timeutcnow
@@ -191,27 +243,24 @@
 		<!-- FAQ Section -->
 		<section class="mb-16">
 			<div class="bg-primary rounded-3xl p-8 md:p-12 text-primary-content">
-				<h2 class="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
+				<h2 class="text-3xl font-bold mb-6">{m.contact_faq_title()}</h2>
 				<div class="space-y-6">
 					<div>
-						<h3 class="text-xl font-semibold mb-2">How quickly will I receive a response?</h3>
+						<h3 class="text-xl font-semibold mb-2">{m.contact_faq_response_q()}</h3>
 						<p class="text-primary-content/90">
-							We typically respond to inquiries within 24-48 hours during business days. 
-							For urgent matters, please indicate this in your message.
+							{m.contact_faq_response_a()}
 						</p>
 					</div>
 					<div>
-						<h3 class="text-xl font-semibold mb-2">Can I report a bug or suggest a feature?</h3>
+						<h3 class="text-xl font-semibold mb-2">{m.contact_faq_bug_q()}</h3>
 						<p class="text-primary-content/90">
-							Absolutely! We welcome all feedback, bug reports, and feature suggestions. 
-							You can use the contact form above or open an issue on our GitHub repository.
+							{m.contact_faq_bug_a()}
 						</p>
 					</div>
 					<div>
-						<h3 class="text-xl font-semibold mb-2">Is TimeUTCNow free to use?</h3>
+						<h3 class="text-xl font-semibold mb-2">{m.contact_faq_free_q()}</h3>
 						<p class="text-primary-content/90">
-							Yes, TimeUTCNow is completely free to use. There are no hidden fees, 
-							subscriptions, or premium tiers.
+							{m.contact_faq_free_a()}
 						</p>
 					</div>
 				</div>
@@ -221,12 +270,12 @@
 		<!-- Support Section -->
 		<section class="text-center">
 			<div class="bg-primary rounded-3xl p-12 text-primary-content shadow-xl">
-				<h2 class="text-3xl font-bold mb-4">Need Help?</h2>
+				<h2 class="text-3xl font-bold mb-4">{m.contact_support_title()}</h2>
 				<p class="text-lg text-primary-content/90 mb-8 max-w-2xl mx-auto">
-					Check out our FAQ section for answers to common questions.
+					{m.contact_support_text()}
 				</p>
 				<a href="/{page.params.locale}" class="btn btn-lg btn-primary-content text-primary">
-					View FAQ
+					{m.contact_support_button()}
 				</a>
 			</div>
 		</section>

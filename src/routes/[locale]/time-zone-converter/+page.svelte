@@ -9,6 +9,7 @@
 	import TimeFormatSelector from '$lib/components/time-format-selector.svelte';
 	import SiteLogo from '$lib/components/site-logo.svelte';
 	import AppFooter from '$lib/components/app-footer.svelte';
+	import LanguageSwitcher from '$lib/components/language-switcher.svelte';
 	import type { City, TimeFormat } from '$lib/types/timezone';
 	import { getTimezoneData, getMeetingConverterPreferences, saveMeetingConverterPreferences, getUserPreferences, saveUserPreferences } from '$lib/utils/indexed-db-utils';
 	import { formatTime } from '$lib/utils/time-utils';
@@ -457,8 +458,8 @@
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
 				<a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a>
 				<a href="/{page.params.locale}/time-zone-converter" class="hover:text-primary font-semibold">{m.time_zone_converter()}</a>
-				<a href="/{page.params.locale}/converter" class="hover:text-primary">{m.converter()}</a>
 				<TimeFormatSelector bind:value={timeFormat} />
+				<LanguageSwitcher />
 			</div>
 
 			<div class="md:hidden">
@@ -507,13 +508,6 @@
 						onclick={() => mobileMenuOpen = false}
 					>
 						{m.time_zone_converter()}
-					</a>
-					<a
-						href="/{page.params.locale}/converter"
-						class="block py-2 text-base font-medium hover:text-primary"
-						onclick={() => mobileMenuOpen = false}
-					>
-						{m.converter()}
 					</a>
 					<div class="pt-4 border-t border-base-300">
 						<TimeFormatSelector bind:value={timeFormat} />

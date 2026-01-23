@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { Clock, Users, Target, Zap, Globe, Heart } from 'lucide-svelte';
+	import { Clock, Users, Target, Zap, Globe, Heart, Menu, X } from 'lucide-svelte';
 	import SiteLogo from '$lib/components/site-logo.svelte';
 	import AppFooter from '$lib/components/app-footer.svelte';
+	import LanguageSwitcher from '$lib/components/language-switcher.svelte';
 	import * as m from '$lib/paraglide/messages';
+	
+	let mobileMenuOpen = $state(false);
 </script>
 
 <svelte:head>
@@ -33,10 +36,61 @@
 			
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
 				<a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a>
-				<a href="/{page.params.locale}/converter" class="hover:text-primary">{m.converter()}</a>
+				<a href="/{page.params.locale}/time-zone-converter" class="hover:text-primary">{m.time_zone_converter()}</a>
+				<LanguageSwitcher />
+			</div>
+
+			<div class="md:hidden">
+				<button
+					type="button"
+					class="btn btn-ghost btn-sm"
+					onclick={() => mobileMenuOpen = !mobileMenuOpen}
+					aria-label="Toggle menu"
+				>
+					{#if mobileMenuOpen}
+						<X class="w-6 h-6" />
+					{:else}
+						<Menu class="w-6 h-6" />
+					{/if}
+				</button>
 			</div>
 		</div>
 	</nav>
+	
+	<!-- Mobile Sidebar -->
+	{#if mobileMenuOpen}
+		<div class="md:hidden fixed inset-0 z-[100] bg-base-100/95 backdrop-blur-md">
+			<div class="flex flex-col h-full">
+				<div class="flex items-center justify-between p-4 border-b border-base-300">
+					<SiteLogo />
+					<button
+						type="button"
+						class="btn btn-ghost btn-sm"
+						onclick={() => mobileMenuOpen = false}
+						aria-label="Close menu"
+					>
+						<X class="w-6 h-6" />
+					</button>
+				</div>
+				<div class="flex-1 overflow-y-auto p-4 space-y-4">
+					<a
+						href="/{page.params.locale}"
+						class="block py-2 text-base font-medium hover:text-primary"
+						onclick={() => mobileMenuOpen = false}
+					>
+						{m.utc_clock()}
+					</a>
+					<a
+						href="/{page.params.locale}/time-zone-converter"
+						class="block py-2 text-base font-medium hover:text-primary"
+						onclick={() => mobileMenuOpen = false}
+					>
+						{m.time_zone_converter()}
+					</a>
+				</div>
+			</div>
+		</div>
+	{/if}
 
 	<main class="max-w-4xl mx-auto px-4 py-12">
 		<!-- Hero Section -->
@@ -45,9 +99,9 @@
 				<Users class="w-4 h-4" />
 				{m.about_us()}
 			</div>
-			<h1 class="text-5xl font-bold mb-6">About TimeUTCNow</h1>
+			<h1 class="text-5xl font-bold mb-6">{m.about_title()}</h1>
 			<p class="text-xl text-base-content/70 max-w-2xl mx-auto">
-				The world's most precise live UTC clock. Trusted by developers, pilots, researchers, and professionals worldwide.
+				{m.about_subtitle()}
 			</p>
 		</section>
 
@@ -59,11 +113,9 @@
 						<Target class="w-6 h-6 text-primary" />
 					</div>
 					<div>
-						<h2 class="text-3xl font-bold mb-4">Our Mission</h2>
+						<h2 class="text-3xl font-bold mb-4">{m.about_mission_title()}</h2>
 						<p class="text-base-content/70 leading-relaxed text-lg">
-							TimeUTCNow was created to provide the most accurate, accessible, and user-friendly UTC time reference available. 
-							We believe that precise timekeeping is essential in our interconnected world, where coordination across time zones 
-							is critical for everything from software development to international business.
+							{m.about_mission_text()}
 						</p>
 					</div>
 				</div>
@@ -72,16 +124,15 @@
 
 		<!-- Features Section -->
 		<section class="mb-16">
-			<h2 class="text-3xl font-bold mb-8 text-center">Why Choose TimeUTCNow?</h2>
+			<h2 class="text-3xl font-bold mb-8 text-center">{m.about_features_title()}</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<div class="bg-base-100 rounded-2xl p-6 border border-base-300">
 					<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
 						<Zap class="w-5 h-5 text-primary" />
 					</div>
-					<h3 class="text-xl font-bold mb-2">Lightning Fast</h3>
+					<h3 class="text-xl font-bold mb-2">{m.about_feature_fast_title()}</h3>
 					<p class="text-base-content/70">
-						Built with modern web technologies for instant loading and real-time updates. 
-						No lag, no delays - just accurate time when you need it.
+						{m.about_feature_fast_text()}
 					</p>
 				</div>
 
@@ -89,10 +140,9 @@
 					<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
 						<Target class="w-5 h-5 text-primary" />
 					</div>
-					<h3 class="text-xl font-bold mb-2">Precision First</h3>
+					<h3 class="text-xl font-bold mb-2">{m.about_feature_precision_title()}</h3>
 					<p class="text-base-content/70">
-						Based on atomic clock standards, synchronized with global time servers. 
-						We ensure accuracy down to the millisecond.
+						{m.about_feature_precision_text()}
 					</p>
 				</div>
 
@@ -100,10 +150,9 @@
 					<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
 						<Globe class="w-5 h-5 text-primary" />
 					</div>
-					<h3 class="text-xl font-bold mb-2">Global Access</h3>
+					<h3 class="text-xl font-bold mb-2">{m.about_feature_global_title()}</h3>
 					<p class="text-base-content/70">
-						Available in multiple languages and accessible from anywhere in the world. 
-						View times for major cities across all continents.
+						{m.about_feature_global_text()}
 					</p>
 				</div>
 
@@ -111,10 +160,9 @@
 					<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
 						<Heart class="w-5 h-5 text-primary" />
 					</div>
-					<h3 class="text-xl font-bold mb-2">Free & Open</h3>
+					<h3 class="text-xl font-bold mb-2">{m.about_feature_free_title()}</h3>
 					<p class="text-base-content/70">
-						Completely free to use, no registration required. 
-						We're committed to providing accurate time information to everyone.
+						{m.about_feature_free_text()}
 					</p>
 				</div>
 			</div>
@@ -123,30 +171,30 @@
 		<!-- Who Uses It Section -->
 		<section class="mb-16">
 			<div class="bg-primary rounded-3xl p-8 md:p-12 text-primary-content">
-				<h2 class="text-3xl font-bold mb-6">Who Uses TimeUTCNow?</h2>
+				<h2 class="text-3xl font-bold mb-6">{m.about_users_title()}</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					<div>
-						<h3 class="text-xl font-semibold mb-3">Software Developers</h3>
+						<h3 class="text-xl font-semibold mb-3">{m.about_users_developers_title()}</h3>
 						<p class="text-primary-content/90">
-							For timestamping, debugging time-related issues, and coordinating with international teams.
+							{m.about_users_developers_text()}
 						</p>
 					</div>
 					<div>
-						<h3 class="text-xl font-semibold mb-3">Aviation Professionals</h3>
+						<h3 class="text-xl font-semibold mb-3">{m.about_users_aviation_title()}</h3>
 						<p class="text-primary-content/90">
-							Essential for flight planning, scheduling, and understanding Zulu time.
+							{m.about_users_aviation_text()}
 						</p>
 					</div>
 					<div>
-						<h3 class="text-xl font-semibold mb-3">Researchers & Scientists</h3>
+						<h3 class="text-xl font-semibold mb-3">{m.about_users_researchers_title()}</h3>
 						<p class="text-primary-content/90">
-							For precise time measurements, data logging, and synchronized experiments.
+							{m.about_users_researchers_text()}
 						</p>
 					</div>
 					<div>
-						<h3 class="text-xl font-semibold mb-3">Business Professionals</h3>
+						<h3 class="text-xl font-semibold mb-3">{m.about_users_business_title()}</h3>
 						<p class="text-primary-content/90">
-							Coordinating meetings across time zones and managing global operations.
+							{m.about_users_business_text()}
 						</p>
 					</div>
 				</div>
@@ -156,12 +204,12 @@
 		<!-- CTA Section -->
 		<section class="text-center">
 			<div class="bg-primary rounded-3xl p-12 text-primary-content shadow-xl">
-				<h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+				<h2 class="text-3xl font-bold mb-4">{m.about_cta_title()}</h2>
 				<p class="text-lg text-primary-content/90 mb-8 max-w-2xl mx-auto">
-					Start using TimeUTCNow today and experience the most accurate UTC time reference available.
+					{m.about_cta_text()}
 				</p>
 				<a href="/{page.params.locale}" class="btn btn-lg btn-primary-content text-primary">
-					View Live UTC Clock
+					{m.about_cta_button()}
 				</a>
 			</div>
 		</section>

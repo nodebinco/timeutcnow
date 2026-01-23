@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { Clock, Shield, Lock, Eye, Database, Cookie } from 'lucide-svelte';
+	import { Clock, Shield, Lock, Eye, Database, Cookie, Menu, X } from 'lucide-svelte';
 	import SiteLogo from '$lib/components/site-logo.svelte';
 	import AppFooter from '$lib/components/app-footer.svelte';
+	import LanguageSwitcher from '$lib/components/language-switcher.svelte';
 	import * as m from '$lib/paraglide/messages';
+	
+	let mobileMenuOpen = $state(false);
 </script>
 
 <svelte:head>
@@ -33,10 +36,61 @@
 			
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
 				<a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a>
-				<a href="/{page.params.locale}/converter" class="hover:text-primary">{m.converter()}</a>
+				<a href="/{page.params.locale}/time-zone-converter" class="hover:text-primary">{m.time_zone_converter()}</a>
+				<LanguageSwitcher />
+			</div>
+
+			<div class="md:hidden">
+				<button
+					type="button"
+					class="btn btn-ghost btn-sm"
+					onclick={() => mobileMenuOpen = !mobileMenuOpen}
+					aria-label="Toggle menu"
+				>
+					{#if mobileMenuOpen}
+						<X class="w-6 h-6" />
+					{:else}
+						<Menu class="w-6 h-6" />
+					{/if}
+				</button>
 			</div>
 		</div>
 	</nav>
+	
+	<!-- Mobile Sidebar -->
+	{#if mobileMenuOpen}
+		<div class="md:hidden fixed inset-0 z-[100] bg-base-100/95 backdrop-blur-md">
+			<div class="flex flex-col h-full">
+				<div class="flex items-center justify-between p-4 border-b border-base-300">
+					<SiteLogo />
+					<button
+						type="button"
+						class="btn btn-ghost btn-sm"
+						onclick={() => mobileMenuOpen = false}
+						aria-label="Close menu"
+					>
+						<X class="w-6 h-6" />
+					</button>
+				</div>
+				<div class="flex-1 overflow-y-auto p-4 space-y-4">
+					<a
+						href="/{page.params.locale}"
+						class="block py-2 text-base font-medium hover:text-primary"
+						onclick={() => mobileMenuOpen = false}
+					>
+						{m.utc_clock()}
+					</a>
+					<a
+						href="/{page.params.locale}/time-zone-converter"
+						class="block py-2 text-base font-medium hover:text-primary"
+						onclick={() => mobileMenuOpen = false}
+					>
+						{m.time_zone_converter()}
+					</a>
+				</div>
+			</div>
+		</div>
+	{/if}
 
 	<main class="max-w-4xl mx-auto px-4 py-12">
 		<!-- Hero Section -->
@@ -45,9 +99,9 @@
 				<Shield class="w-4 h-4" />
 				{m.privacy_policy()}
 			</div>
-			<h1 class="text-5xl font-bold mb-6">Privacy Policy</h1>
+			<h1 class="text-5xl font-bold mb-6">{m.privacy_title()}</h1>
 			<p class="text-xl text-base-content/70 max-w-2xl mx-auto">
-				Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+				{m.privacy_last_updated()} {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
 			</p>
 		</section>
 
@@ -55,9 +109,7 @@
 		<section class="mb-12">
 			<div class="bg-base-100 rounded-3xl p-8 md:p-12 border border-base-300">
 				<p class="text-lg text-base-content/70 leading-relaxed">
-					At TimeUTCNow, we take your privacy seriously. This Privacy Policy explains how we collect, 
-					use, and protect your information when you use our service. We are committed to transparency 
-					and ensuring your data remains private and secure.
+					{m.privacy_intro()}
 				</p>
 			</div>
 		</section>
@@ -70,31 +122,27 @@
 						<Database class="w-6 h-6 text-primary" />
 					</div>
 					<div class="flex-1">
-						<h2 class="text-3xl font-bold mb-4">Information We Collect</h2>
+						<h2 class="text-3xl font-bold mb-4">{m.privacy_collect_title()}</h2>
 						<div class="space-y-4 text-base-content/70">
 							<div>
-								<h3 class="text-xl font-semibold mb-2">Local Storage Data</h3>
+								<h3 class="text-xl font-semibold mb-2">{m.privacy_collect_storage_title()}</h3>
 								<p>
-									TimeUTCNow uses IndexedDB (a browser storage technology) to store your preferences locally on your device. 
-									This includes:
+									{m.privacy_collect_storage_text()}
 								</p>
 								<ul class="list-disc list-inside mt-2 space-y-1 ml-4">
-									<li>Selected cities for your UTC clock</li>
-									<li>Time format preferences (12-hour or 24-hour)</li>
-									<li>City display order</li>
-									<li>Widget configurations</li>
+									<li>{m.privacy_collect_storage_item1()}</li>
+									<li>{m.privacy_collect_storage_item2()}</li>
+									<li>{m.privacy_collect_storage_item3()}</li>
+									<li>{m.privacy_collect_storage_item4()}</li>
 								</ul>
 								<p class="mt-3">
-									<strong>Important:</strong> This data is stored entirely on your device and is never transmitted to our servers. 
-									We have no access to this information.
+									<strong>{m.privacy_collect_storage_important()}</strong> {m.privacy_collect_storage_important_text()}
 								</p>
 							</div>
 							<div>
-								<h3 class="text-xl font-semibold mb-2">No Personal Information</h3>
+								<h3 class="text-xl font-semibold mb-2">{m.privacy_collect_personal_title()}</h3>
 								<p>
-									We do not collect, store, or transmit any personal information such as names, email addresses, 
-									phone numbers, or any other identifying information. TimeUTCNow does not require registration 
-									or account creation.
+									{m.privacy_collect_personal_text()}
 								</p>
 							</div>
 						</div>
@@ -111,17 +159,16 @@
 						<Eye class="w-6 h-6 text-primary" />
 					</div>
 					<div class="flex-1">
-						<h2 class="text-3xl font-bold mb-4">How We Use Information</h2>
+						<h2 class="text-3xl font-bold mb-4">{m.privacy_use_title()}</h2>
 						<div class="space-y-3 text-base-content/70">
 							<p>
-								Since all preference data is stored locally on your device, we do not use your information 
-								for any purpose. The data stored in IndexedDB is used solely to:
+								{m.privacy_use_text()}
 							</p>
 							<ul class="list-disc list-inside space-y-1 ml-4">
-								<li>Remember your selected cities and preferences</li>
-								<li>Maintain your preferred time format</li>
-								<li>Preserve your widget configurations</li>
-								<li>Enhance your user experience on return visits</li>
+								<li>{m.privacy_use_item1()}</li>
+								<li>{m.privacy_use_item2()}</li>
+								<li>{m.privacy_use_item3()}</li>
+								<li>{m.privacy_use_item4()}</li>
 							</ul>
 						</div>
 					</div>
@@ -137,15 +184,13 @@
 						<Cookie class="w-6 h-6 text-primary" />
 					</div>
 					<div class="flex-1">
-						<h2 class="text-3xl font-bold mb-4">Cookies and Tracking</h2>
+						<h2 class="text-3xl font-bold mb-4">{m.privacy_cookies_title()}</h2>
 						<div class="space-y-3 text-base-content/70">
 							<p>
-								TimeUTCNow does not use cookies for tracking purposes. We do not employ any third-party 
-								analytics services, advertising networks, or tracking technologies.
+								{m.privacy_cookies_text1()}
 							</p>
 							<p>
-								The only data stored is in your browser's IndexedDB, which is used exclusively for 
-								storing your preferences locally.
+								{m.privacy_cookies_text2()}
 							</p>
 						</div>
 					</div>
@@ -161,16 +206,13 @@
 						<Lock class="w-6 h-6 text-primary" />
 					</div>
 					<div class="flex-1">
-						<h2 class="text-3xl font-bold mb-4">Data Security</h2>
+						<h2 class="text-3xl font-bold mb-4">{m.privacy_security_title()}</h2>
 						<div class="space-y-3 text-base-content/70">
 							<p>
-								Since all your preference data is stored locally on your device using IndexedDB, 
-								it is protected by your browser's security mechanisms. We do not have access to 
-								this data, and it cannot be accessed by third parties through our service.
+								{m.privacy_security_text1()}
 							</p>
 							<p>
-								TimeUTCNow is served over HTTPS, ensuring that all communication between your 
-								browser and our servers is encrypted and secure.
+								{m.privacy_security_text2()}
 							</p>
 						</div>
 					</div>
@@ -181,45 +223,42 @@
 		<!-- Third-Party Services -->
 		<section class="mb-12">
 			<div class="bg-base-100 rounded-2xl p-8 border border-base-300">
-				<h2 class="text-3xl font-bold mb-4">Third-Party Services</h2>
-				<div class="space-y-3 text-base-content/70">
-					<p>
-						TimeUTCNow does not integrate with any third-party services that collect or process 
-						user data. We do not use:
-					</p>
-					<ul class="list-disc list-inside space-y-1 ml-4">
-						<li>Analytics services (Google Analytics, etc.)</li>
-						<li>Advertising networks</li>
-						<li>Social media tracking pixels</li>
-						<li>User behavior tracking tools</li>
-						<li>Third-party data processors</li>
-					</ul>
-				</div>
+						<h2 class="text-3xl font-bold mb-4">{m.privacy_third_party_title()}</h2>
+						<div class="space-y-3 text-base-content/70">
+							<p>
+								{m.privacy_third_party_text()}
+							</p>
+							<ul class="list-disc list-inside space-y-1 ml-4">
+								<li>{m.privacy_third_party_item1()}</li>
+								<li>{m.privacy_third_party_item2()}</li>
+								<li>{m.privacy_third_party_item3()}</li>
+								<li>{m.privacy_third_party_item4()}</li>
+								<li>{m.privacy_third_party_item5()}</li>
+							</ul>
+						</div>
 			</div>
 		</section>
 
 		<!-- Your Rights -->
 		<section class="mb-12">
 			<div class="bg-primary rounded-3xl p-8 md:p-12 text-primary-content">
-				<h2 class="text-3xl font-bold mb-6">Your Rights</h2>
+				<h2 class="text-3xl font-bold mb-6">{m.privacy_rights_title()}</h2>
 				<div class="space-y-4 text-primary-content/90">
 					<div>
-						<h3 class="text-xl font-semibold mb-2">Data Control</h3>
+						<h3 class="text-xl font-semibold mb-2">{m.privacy_rights_control_title()}</h3>
 						<p>
-							You have complete control over your data. Since all preferences are stored locally 
-							on your device, you can:
+							{m.privacy_rights_control_text()}
 						</p>
 						<ul class="list-disc list-inside mt-2 space-y-1 ml-4">
-							<li>Clear your browser's IndexedDB to remove all stored preferences</li>
-							<li>Modify your preferences at any time through the application</li>
-							<li>Use the application in incognito/private browsing mode to prevent data storage</li>
+							<li>{m.privacy_rights_control_item1()}</li>
+							<li>{m.privacy_rights_control_item2()}</li>
+							<li>{m.privacy_rights_control_item3()}</li>
 						</ul>
 					</div>
 					<div>
-						<h3 class="text-xl font-semibold mb-2">No Data Collection</h3>
+						<h3 class="text-xl font-semibold mb-2">{m.privacy_rights_no_collection_title()}</h3>
 						<p>
-							Since we do not collect any personal information, there is no data to request, 
-							modify, or delete from our servers. Your privacy is protected by design.
+							{m.privacy_rights_no_collection_text()}
 						</p>
 					</div>
 				</div>
@@ -229,11 +268,9 @@
 		<!-- Changes to Privacy Policy -->
 		<section class="mb-12">
 			<div class="bg-base-100 rounded-2xl p-8 border border-base-300">
-				<h2 class="text-3xl font-bold mb-4">Changes to This Privacy Policy</h2>
+				<h2 class="text-3xl font-bold mb-4">{m.privacy_changes_title()}</h2>
 				<p class="text-base-content/70">
-					We may update this Privacy Policy from time to time. Any changes will be posted on this page 
-					with an updated "Last updated" date. We encourage you to review this Privacy Policy periodically 
-					to stay informed about how we protect your information.
+					{m.privacy_changes_text()}
 				</p>
 			</div>
 		</section>
@@ -241,10 +278,9 @@
 		<!-- Contact -->
 		<section class="mb-12">
 			<div class="bg-base-100 rounded-2xl p-8 border border-base-300 text-center">
-				<h2 class="text-3xl font-bold mb-4">Questions About Privacy?</h2>
+				<h2 class="text-3xl font-bold mb-4">{m.privacy_questions_title()}</h2>
 				<p class="text-base-content/70 mb-6">
-					If you have any questions or concerns about this Privacy Policy or our data practices, 
-					please contact us.
+					{m.privacy_questions_text()}
 				</p>
 				<a href="/{page.params.locale}/contact" class="btn btn-primary">
 					{m.contact()}

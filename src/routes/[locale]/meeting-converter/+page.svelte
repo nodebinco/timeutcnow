@@ -9,6 +9,7 @@
 	import TimeFormatSelector from '$lib/components/time-format-selector.svelte';
 	import SiteLogo from '$lib/components/site-logo.svelte';
 	import AppFooter from '$lib/components/app-footer.svelte';
+	import LanguageSwitcher from '$lib/components/language-switcher.svelte';
 	import type { City, TimeFormat } from '$lib/types/timezone';
 	import { getTimezoneData, getMeetingConverterPreferences, saveMeetingConverterPreferences, getUserPreferences } from '$lib/utils/indexed-db-utils';
 	import { formatTime } from '$lib/utils/time-utils';
@@ -231,8 +232,8 @@
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
 				<a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a>
 				<a href="/{page.params.locale}/meeting-converter" class="hover:text-primary font-semibold">Time Zone Converter</a>
-				<a href="/{page.params.locale}/converter" class="hover:text-primary">{m.converter()}</a>
 				<TimeFormatSelector bind:value={timeFormat} />
+				<LanguageSwitcher />
 			</div>
 
 			<div class="md:hidden">

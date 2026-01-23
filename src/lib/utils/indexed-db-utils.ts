@@ -126,3 +126,29 @@ export async function getMeetingConverterPreferences(): Promise<MeetingConverter
 export async function saveMeetingConverterPreferences(preferences: MeetingConverterPreferences): Promise<void> {
 	return saveMeetingConverterPreferencesToIndexedDB(preferences);
 }
+
+/**
+ * Get saved locale from IndexedDB
+ */
+export async function getSavedLocale(): Promise<string | null> {
+	try {
+		const { getSavedLocale: getSavedLocaleFromIndexedDB } = await import('./indexed-db-preferences');
+		return getSavedLocaleFromIndexedDB();
+	} catch (error) {
+		console.error('Failed to get saved locale:', error);
+		return null;
+	}
+}
+
+/**
+ * Save locale to IndexedDB
+ */
+export async function saveLocale(locale: string): Promise<void> {
+	try {
+		const { saveLocale: saveLocaleToIndexedDB } = await import('./indexed-db-preferences');
+		return saveLocaleToIndexedDB(locale);
+	} catch (error) {
+		console.error('Failed to save locale:', error);
+		throw error;
+	}
+}
