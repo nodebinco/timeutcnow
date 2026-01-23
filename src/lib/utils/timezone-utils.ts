@@ -2,9 +2,32 @@ import type { City } from '$lib/types/timezone';
 
 /**
  * Get current time for a specific timezone
+ * Converts a UTC Date to a Date object representing the local time in the timezone
  */
 export function getCityTime(date: Date, timezone: string): Date {
-	return new Date(date.toLocaleString('en-US', { timeZone: timezone }));
+	// Use Intl.DateTimeFormat to get the time components in the target timezone
+	const formatter = new Intl.DateTimeFormat('en-CA', {
+		timeZone: timezone,
+		year: 'numeric',
+		month: '2-digit',
+		day: '2-digit',
+		hour: '2-digit',
+		minute: '2-digit',
+		second: '2-digit',
+		hour12: false
+	});
+	
+	const parts = formatter.formatToParts(date);
+	const year = parseInt(parts.find(p => p.type === 'year')?.value || '0');
+	const month = parseInt(parts.find(p => p.type === 'month')?.value || '0') - 1;
+	const day = parseInt(parts.find(p => p.type === 'day')?.value || '0');
+	const hour = parseInt(parts.find(p => p.type === 'hour')?.value || '0');
+	const minute = parseInt(parts.find(p => p.type === 'minute')?.value || '0');
+	const second = parseInt(parts.find(p => p.type === 'second')?.value || '0');
+	
+	// Create a Date object with these components (in local timezone)
+	// This represents the local time in the target timezone
+	return new Date(year, month, day, hour, minute, second);
 }
 
 /**
@@ -102,22 +125,17 @@ export function sortCitiesByOrder(cities: City[], order: string[]): City[] {
  * @returns UTC Date object
  */
 export function convertCityTimeToUTC(localDate: Date, timezone: string): Date {
-	// Extract local date components (these represent the local time in the timezone)
+	// Extract time components (representing local time in the target timezone)
 	const year = localDate.getFullYear();
 	const month = localDate.getMonth();
 	const day = localDate.getDate();
 	const hours = localDate.getHours();
 	const minutes = localDate.getMinutes();
 	const seconds = localDate.getSeconds();
-	const milliseconds = localDate.getMilliseconds();
 	
-	// Strategy: Find the UTC time that, when displayed in the timezone, equals our target
-	// We'll use an iterative approach to find the correct UTC time
+	console.log(`[convertCityTimeToUTC] Input: ${year}-${month+1}-${day} ${hours}:${minutes}:${seconds} in ${timezone}`);
 	
-	// Start with an estimate: assume the local time components represent UTC
-	let testUTC = new Date(Date.UTC(year, month, day, hours, minutes, seconds, milliseconds));
-	
-	// Use Intl to see what this UTC time looks like in the target timezone
+	// Simple logic: Find UTC time that when displayed in timezone gives us our target time
 	const formatter = new Intl.DateTimeFormat('en-CA', {
 		timeZone: timezone,
 		year: 'numeric',
@@ -129,9 +147,13 @@ export function convertCityTimeToUTC(localDate: Date, timezone: string): Date {
 		hour12: false
 	});
 	
-	// Iteratively adjust to find the correct UTC time (max 10 iterations)
-	for (let i = 0; i < 10; i++) {
-		const parts = formatter.formatToParts(testUTC);
+	// Start with UTC estimate (same components)
+	let utc = new Date(Date.UTC(year, month, day, hours, minutes, seconds));
+	console.log(`[convertCityTimeToUTC] Initial UTC estimate: ${utc.toISOString()}`);
+	
+	// Iterate to find correct UTC
+	for (let i = 0; i < 15; i++) {
+		const parts = formatter.formatToParts(utc);
 		const tzYear = parseInt(parts.find(p => p.type === 'year')?.value || '0');
 		const tzMonth = parseInt(parts.find(p => p.type === 'month')?.value || '0') - 1;
 		const tzDay = parseInt(parts.find(p => p.type === 'day')?.value || '0');
@@ -139,28 +161,51 @@ export function convertCityTimeToUTC(localDate: Date, timezone: string): Date {
 		const tzMinute = parseInt(parts.find(p => p.type === 'minute')?.value || '0');
 		const tzSecond = parseInt(parts.find(p => p.type === 'second')?.value || '0');
 		
-		// Check if we've found the match
+		console.log(`[convertCityTimeToUTC] Iteration ${i}: UTC ${utc.toISOString()} shows as ${tzYear}-${tzMonth+1}-${tzDay} ${tzHour}:${tzMinute}:${tzSecond} in ${timezone}`);
+		
+		// Check if match
 		if (tzYear === year && tzMonth === month && tzDay === day && 
 		    tzHour === hours && tzMinute === minutes && tzSecond === seconds) {
-			return testUTC;
+			console.log(`[convertCityTimeToUTC] Match found! Returning UTC: ${utc.toISOString()}`);
+			return utc;
 		}
 		
-		// Calculate the difference in time components
-		// Create date objects for comparison (using local timezone for both)
-		const targetDate = new Date(year, month, day, hours, minutes, seconds, milliseconds);
-		const currentDate = new Date(tzYear, tzMonth, tzDay, tzHour, tzMinute, tzSecond, 0);
-		const diffMs = targetDate.getTime() - currentDate.getTime();
+		// Calculate difference: how much to adjust UTC
+		// Simple logic: if timezone shows 13:00 but we want 06:00, UTC must go back 7 hours
 		
-		// Adjust the UTC time by the difference
-		testUTC = new Date(testUTC.getTime() - diffMs);
+		// Calculate time difference in seconds
+		const targetSeconds = hours * 3600 + minutes * 60 + seconds;
+		const currentSeconds = tzHour * 3600 + tzMinute * 60 + tzSecond;
+		let timeDiffSeconds = currentSeconds - targetSeconds;
 		
-		// Prevent infinite loops
-		if (Math.abs(diffMs) < 1000) {
+		// Handle date crossing: if dates are different, adjust time difference
+		if (tzYear !== year || tzMonth !== month || tzDay !== day) {
+			// Calculate how many days difference
+			// If timezone shows next day but we want current day, subtract 24 hours
+			// If timezone shows previous day but we want current day, add 24 hours
+			const targetDate = new Date(Date.UTC(year, month, day));
+			const currentDate = new Date(Date.UTC(tzYear, tzMonth, tzDay));
+			const dayDiffMs = currentDate.getTime() - targetDate.getTime();
+			const dayDiff = Math.round(dayDiffMs / (1000 * 60 * 60 * 24));
+			timeDiffSeconds += dayDiff * 86400;
+		}
+		
+		console.log(`[convertCityTimeToUTC] Time diff: ${timeDiffSeconds}s (${Math.round(timeDiffSeconds/3600)}h)`);
+		
+		// Adjust UTC: subtract the difference (if timezone is ahead, UTC goes back)
+		const adjustMs = timeDiffSeconds * 1000;
+		utc = new Date(utc.getTime() - adjustMs);
+		
+		console.log(`[convertCityTimeToUTC] Adjusted UTC: ${utc.toISOString()}`);
+		
+		if (Math.abs(adjustMs) < 1000) {
+			console.log(`[convertCityTimeToUTC] Adjustment too small, breaking`);
 			break;
 		}
 	}
 	
-	return testUTC;
+	console.log(`[convertCityTimeToUTC] Final UTC: ${utc.toISOString()}`);
+	return utc;
 }
 
 /**

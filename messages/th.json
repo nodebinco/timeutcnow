@@ -44,7 +44,7 @@
 	"copied_to_clipboard": "คัดลอกไปยังคลิปบอร์ดแล้ว!",
 	"utc_clock": "นาฬิกา UTC",
 	"unix_converter": "ตัวแปลง Unix",
-	"timezone_map": "แผนที่เขตเวลา",
+	"time_zone_converter": "ตัวแปลงเขตเวลา",
 	"date_calculator": "เครื่องคำนวณวันที่",
 	"api_documentation": "เอกสาร API",
 	"about_us": "เกี่ยวกับเรา",

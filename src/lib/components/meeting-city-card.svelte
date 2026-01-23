@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { City, TimeFormat } from '$lib/types/timezone';
 	import { Sunrise, Moon, X, Copy } from 'lucide-svelte';
-	import { isDayTime, getTimezoneOffset, formatTimezoneOffset } from '$lib/utils/timezone-utils';
+	import { isDayTime, getTimezoneOffset, formatTimezoneOffset, getCityTime } from '$lib/utils/timezone-utils';
 	import { formatTimeShort } from '$lib/utils/time-utils';
 
 	interface Props {
@@ -29,9 +29,10 @@
 	}: Props = $props();
 
 	// Convert the target time to this city's timezone
-	const cityTime = $derived(new Date(targetTime.toLocaleString('en-US', { timeZone: city.timezone })));
+	// Use getCityTime which properly converts UTC to city timezone
+	const cityTime = $derived(getCityTime(targetTime, city.timezone));
 	const isDay = $derived(isDayTime(targetTime, city.timezone));
-	const timeDisplay = $derived(formatTimeShort(cityTime, timeFormat, city.timezone));
+	const timeDisplay = $derived(formatTimeShort(cityTime, timeFormat));
 	const utcOffset = $derived(getTimezoneOffset(city.timezone, targetTime));
 	const offsetDisplay = $derived(formatTimezoneOffset(utcOffset));
 	const dateDisplay = $derived(cityTime.toLocaleDateString([], { day: 'numeric', month: 'short', year: 'numeric' }));

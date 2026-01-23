@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { Clock, Mail, MessageSquare, Github, Send, CheckCircle } from 'lucide-svelte';
+	import SiteLogo from '$lib/components/site-logo.svelte';
+	import AppFooter from '$lib/components/app-footer.svelte';
 	import * as m from '$lib/paraglide/messages';
 	
 	let formSubmitted = $state(false);
@@ -24,23 +26,32 @@
 </script>
 
 <svelte:head>
-	<title>{m.site_name()} - {m.contact()}</title>
-	<meta name="description" content="Contact TimeUTCNow - Get in touch with our team." />
+	<title>{m.contact()} - TimeUTCNow</title>
+	<meta name="description" content="Contact TimeUTCNow - Get in touch with our team. Have questions about our UTC clock or timezone converter? We'd love to hear from you." />
+	<meta name="keywords" content="contact TimeUTCNow, UTC clock support, timezone converter help, contact us, feedback" />
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://timeutcnow.com/{page.params.locale}/contact" />
+	<meta property="og:title" content="{m.contact()} - TimeUTCNow" />
+	<meta property="og:description" content="Contact TimeUTCNow - Get in touch with our team. Have questions about our UTC clock or timezone converter?" />
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="{m.contact()} - TimeUTCNow" />
+	<meta name="twitter:description" content="Contact TimeUTCNow - Get in touch with our team. Have questions about our UTC clock or timezone converter?" />
 </svelte:head>
 
 <div class="min-h-screen bg-base-200 text-base-content">
 	<!-- Navigation -->
 	<nav class="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-300">
 		<div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-			<a href="/{page.params.locale}" class="flex items-center gap-2 cursor-pointer">
-				<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-					<Clock class="text-primary-content w-5 h-5" />
-				</div>
-				<span class="font-bold text-xl tracking-tight">{m.site_name()}</span>
+			<a href="/{page.params.locale}">
+				<SiteLogo class="cursor-pointer" />
 			</a>
 			
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
-				<a href="/{page.params.locale}" class="hover:text-primary">{m.world_clock()}</a>
+				<a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a>
 				<a href="/{page.params.locale}/converter" class="hover:text-primary">{m.converter()}</a>
 			</div>
 		</div>
@@ -221,40 +232,5 @@
 		</section>
 	</main>
 
-	<!-- Footer -->
-	<footer class="border-t border-base-300 py-12 bg-base-200 mt-20">
-		<div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
-			<div class="col-span-2">
-				<div class="flex items-center gap-2 mb-4">
-					<div class="w-6 h-6 bg-primary rounded flex items-center justify-center">
-						<Clock class="text-primary-content w-4 h-4" />
-					</div>
-					<span class="font-bold text-lg">{m.site_name()}</span>
-				</div>
-				<p class="text-base-content/60 text-sm max-w-xs mb-6">
-					{m.footer_tagline()}
-				</p>
-			</div>
-			<div>
-				<h4 class="font-bold mb-4">Tools</h4>
-				<ul class="space-y-2 text-sm text-base-content/60">
-					<li><a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a></li>
-					<li><a href="/{page.params.locale}/unix-timestamp" class="hover:text-primary">{m.unix_converter()}</a></li>
-					<li><a href="/{page.params.locale}/timezone-map" class="hover:text-primary">{m.timezone_map()}</a></li>
-					<li><a href="/{page.params.locale}/date-calculator" class="hover:text-primary">{m.date_calculator()}</a></li>
-				</ul>
-			</div>
-			<div>
-				<h4 class="font-bold mb-4">Support</h4>
-				<ul class="space-y-2 text-sm text-base-content/60">
-					<li><a href="/{page.params.locale}/about" class="hover:text-primary">{m.about_us()}</a></li>
-					<li><a href="/{page.params.locale}/privacy" class="hover:text-primary">{m.privacy_policy()}</a></li>
-					<li><a href="/{page.params.locale}/contact" class="hover:text-primary">{m.contact()}</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="max-w-6xl mx-auto px-4 mt-12 pt-8 border-t border-base-300 text-center text-xs text-base-content/40">
-			© {new Date().getFullYear()} {m.site_name()}. {m.footer_copyright()}
-		</div>
-	</footer>
+	<AppFooter />
 </div>

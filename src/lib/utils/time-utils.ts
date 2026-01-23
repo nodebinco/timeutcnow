@@ -36,20 +36,19 @@ export function formatTime(date: Date, format: TimeFormat, timezone?: string): s
 
 /**
  * Format time without seconds (for city cards)
+ * Note: date should already be converted to the target timezone using getCityTime
  */
 export function formatTimeShort(date: Date, format: TimeFormat, timezone?: string): string {
-	const targetDate = timezone ? new Date(date.toLocaleString('en-US', { timeZone: timezone })) : date;
+	// date is already in the target timezone, so use getHours/getMinutes directly
+	const hours = date.getHours();
+	const minutes = date.getMinutes();
 	
 	if (format === '12h') {
-		const hours = targetDate.getHours();
-		const minutes = targetDate.getMinutes();
 		const ampm = hours >= 12 ? 'PM' : 'AM';
 		const displayHours = hours % 12 || 12;
 		return `${displayHours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${ampm}`;
 	}
 	
-	const hours = timezone ? targetDate.getHours() : targetDate.getUTCHours();
-	const minutes = timezone ? targetDate.getMinutes() : targetDate.getUTCMinutes();
 	return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
 }
 

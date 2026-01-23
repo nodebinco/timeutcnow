@@ -1,13 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
-	import { Clock, Copy, Check, Settings, Info, ExternalLink, Search, Sunrise, Moon, Plus } from 'lucide-svelte';
+	import { Clock, Copy, Check, Settings, Info, ExternalLink, Search, Sunrise, Moon, Plus, Menu, X } from 'lucide-svelte';
 	import UTCClock from '$lib/components/utc-clock.svelte';
 	import InfoCard from '$lib/components/info-card.svelte';
 	import CityCard from '$lib/components/city-card.svelte';
 	import AddCityCard from '$lib/components/add-city-card.svelte';
 	import SearchInput from '$lib/components/search-input.svelte';
 	import TimeFormatSelector from '$lib/components/time-format-selector.svelte';
+	import SiteLogo from '$lib/components/site-logo.svelte';
+	import AppFooter from '$lib/components/app-footer.svelte';
 	import type { City, TimeFormat } from '$lib/types/timezone';
 	import { getTimezoneData, getUserPreferences, saveUserPreferences, getHomeSelectedCities, saveHomeSelectedCities } from '$lib/utils/indexed-db-utils';
 	import { getUnixTimestamp, getJulianDate, getISO8601, getUTCOffset, formatUTCOffset, formatTime } from '$lib/utils/time-utils';
@@ -25,6 +27,7 @@
 	let addMoreSearchQuery = $state('');
 	let showAllTimezones = $state(false); // Show 24 by default, user can click "Show More"
 	const DEFAULT_TIMEZONE_LIMIT = 24;
+	let mobileMenuOpen = $state(false);
 
 	// Update clock every 100ms
 	$effect(() => {
@@ -277,33 +280,96 @@
 </script>
 
 <svelte:head>
-	<title>{m.site_name()} - {m.live_utc_time()}</title>
-	<meta name="description" content="The world's most precise live UTC clock. Real-time UTC time display with major cities worldwide." />
+	<title>{m.live_utc_time()} - TimeUTCNow</title>
+	<meta name="description" content="The world's most precise live UTC clock. Real-time UTC time display with major cities worldwide. Free UTC clock with timezone converter, Unix timestamp, and ISO 8601 format." />
+	<meta name="keywords" content="UTC clock, UTC time, live UTC, timezone clock, UTC converter, international time, time zone, GMT time, coordinated universal time" />
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://timeutcnow.com/{page.params.locale}" />
+	<meta property="og:title" content="{m.live_utc_time()} - TimeUTCNow" />
+	<meta property="og:description" content="The world's most precise live UTC clock. Real-time UTC time display with major cities worldwide." />
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="{m.live_utc_time()} - TimeUTCNow" />
+	<meta name="twitter:description" content="The world's most precise live UTC clock. Real-time UTC time display with major cities worldwide." />
 </svelte:head>
 
 <div class="min-h-screen bg-base-200 text-base-content">
 	<!-- Navigation -->
 	<nav class="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-300">
 		<div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-			<div class="flex items-center gap-2 cursor-pointer">
-				<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-					<Clock class="text-primary-content w-5 h-5" />
-				</div>
-				<span class="font-bold text-xl tracking-tight">{m.site_name()}</span>
-			</div>
+			<SiteLogo class="cursor-pointer" />
 			
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
-				<a href="/{page.params.locale}" class="hover:text-primary">{m.world_clock()}</a>
-				<a href="/{page.params.locale}/timezone-map" class="hover:text-primary">{m.timezone_map()}</a>
+				<a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a>
+				<a href="/{page.params.locale}/time-zone-converter" class="hover:text-primary">{m.time_zone_converter()}</a>
 				<a href="/{page.params.locale}/converter" class="hover:text-primary">{m.converter()}</a>
 				<TimeFormatSelector value={timeFormat} onChange={handleTimeFormatChange} />
 			</div>
 
 			<div class="md:hidden">
-				<Settings class="w-6 h-6 text-base-content/60" />
+				<button
+					type="button"
+					class="btn btn-ghost btn-sm"
+					onclick={() => mobileMenuOpen = !mobileMenuOpen}
+					aria-label="Toggle menu"
+				>
+					{#if mobileMenuOpen}
+						<X class="w-6 h-6" />
+					{:else}
+						<Menu class="w-6 h-6" />
+					{/if}
+				</button>
 			</div>
 		</div>
 	</nav>
+	
+	<!-- Mobile Sidebar -->
+	{#if mobileMenuOpen}
+		<div class="md:hidden fixed inset-0 z-[100] bg-base-100/95 backdrop-blur-md">
+			<div class="flex flex-col h-full">
+				<div class="flex items-center justify-between p-4 border-b border-base-300">
+					<SiteLogo />
+					<button
+						type="button"
+						class="btn btn-ghost btn-sm"
+						onclick={() => mobileMenuOpen = false}
+						aria-label="Close menu"
+					>
+						<X class="w-6 h-6" />
+					</button>
+				</div>
+				<div class="flex-1 overflow-y-auto p-4 space-y-4">
+					<a
+						href="/{page.params.locale}"
+						class="block py-2 text-base font-medium hover:text-primary"
+						onclick={() => mobileMenuOpen = false}
+					>
+						{m.utc_clock()}
+					</a>
+					<a
+						href="/{page.params.locale}/time-zone-converter"
+						class="block py-2 text-base font-medium hover:text-primary"
+						onclick={() => mobileMenuOpen = false}
+					>
+						{m.time_zone_converter()}
+					</a>
+					<a
+						href="/{page.params.locale}/converter"
+						class="block py-2 text-base font-medium hover:text-primary"
+						onclick={() => mobileMenuOpen = false}
+					>
+						{m.converter()}
+					</a>
+					<div class="pt-4 border-t border-base-300">
+						<TimeFormatSelector value={timeFormat} onChange={handleTimeFormatChange} />
+					</div>
+				</div>
+			</div>
+		</div>
+	{/if}
 
 	<main class="max-w-6xl mx-auto px-4 py-8 md:py-12">
 		<!-- Main Hero Clock Section -->
@@ -320,7 +386,7 @@
 				<p class="mt-6 mb-4 text-sm text-base-content/60 flex items-center justify-center gap-2 flex-wrap">
 					<span>Your Local Timezone</span>
 					<span class="font-semibold text-base-content">{localTime}</span>
-					<span>UTC {offsetStr}</span>
+					<span class="text-primary font-semibold">UTC {offsetStr}</span>
 					<span>{userTimezone}</span>
 					{#if isLocalDay}
 						<Sunrise class="w-5 h-5 text-warning" />
@@ -486,8 +552,8 @@
 		</section>
 
 		<!-- Bottom Content / FAQ -->
-		<section class="max-w-3xl mx-auto mb-20">
-			<h2 class="text-3xl font-bold mb-8 text-center">{m.faq_title()}</h2>
+		<section class="max-w-6xl mx-auto mb-20">
+			<h2 class="text-4xl font-bold mb-12 text-center">{m.faq_title()}</h2>
 			<div class="space-y-4">
 				{#each [
 					{ q: m.faq_utc_gmt_q(), a: m.faq_utc_gmt_a() },
@@ -499,13 +565,13 @@
 					{ q: m.faq_zulu_q(), a: m.faq_zulu_a() },
 					{ q: m.faq_timezones_q(), a: m.faq_timezones_a() }
 				] as faq, index}
-					<div class="collapse collapse-plus bg-base-100 border border-base-300">
+					<div class="collapse collapse-plus bg-base-100 border border-base-300 shadow-sm">
 						<input type="checkbox" name="faq-accordion" />
-						<div class="collapse-title text-lg font-bold">
+						<div class="collapse-title text-xl font-bold">
 							{faq.q}
 						</div>
 						<div class="collapse-content">
-							<p class="text-base-content/60 leading-relaxed">{faq.a}</p>
+							<p class="text-base-content/70 leading-relaxed text-base">{faq.a}</p>
 						</div>
 					</div>
 				{/each}
@@ -513,41 +579,7 @@
 		</section>
 	</main>
 
-	<footer class="border-t border-base-300 py-12 bg-base-200 mt-20">
-		<div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
-			<div class="col-span-2">
-				<div class="flex items-center gap-2 mb-4">
-					<div class="w-6 h-6 bg-primary rounded flex items-center justify-center">
-						<Clock class="text-primary-content w-4 h-4" />
-					</div>
-					<span class="font-bold text-lg">{m.site_name()}</span>
-				</div>
-				<p class="text-base-content/60 text-sm max-w-xs mb-6">
-					{m.footer_tagline()}
-				</p>
-			</div>
-			<div>
-				<h4 class="font-bold mb-4">Tools</h4>
-				<ul class="space-y-2 text-sm text-base-content/60">
-					<li><a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a></li>
-					<li><a href="/{page.params.locale}/unix-timestamp" class="hover:text-primary">{m.unix_converter()}</a></li>
-					<li><a href="/{page.params.locale}/timezone-map" class="hover:text-primary">{m.timezone_map()}</a></li>
-					<li><a href="/{page.params.locale}/date-calculator" class="hover:text-primary">{m.date_calculator()}</a></li>
-				</ul>
-			</div>
-			<div>
-				<h4 class="font-bold mb-4">Support</h4>
-				<ul class="space-y-2 text-sm text-base-content/60">
-					<li><a href="/{page.params.locale}/about" class="hover:text-primary">{m.about_us()}</a></li>
-					<li><a href="/{page.params.locale}/privacy" class="hover:text-primary">{m.privacy_policy()}</a></li>
-					<li><a href="/{page.params.locale}/contact" class="hover:text-primary">{m.contact()}</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="max-w-6xl mx-auto px-4 mt-12 pt-8 border-t border-base-300 text-center text-xs text-base-content/40">
-			© {new Date().getFullYear()} {m.site_name()}. {m.footer_copyright()}
-		</div>
-	</footer>
+	<AppFooter />
 
 	<!-- Toast Notification -->
 	{#if copied}

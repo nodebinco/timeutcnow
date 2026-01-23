@@ -40,5 +40,6 @@
 	<h1 class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-4 tabular-nums">
 		{hours}:{minutes}{#if showSeconds}:<span class="text-primary">{seconds}</span>{/if}{#if ampm} <span class="text-base-content/60 text-4xl md:text-6xl lg:text-7xl">{ampm}</span>{/if}
 	</h1>
+	<p class="text-lg md:text-xl text-primary font-semibold mb-2">UTC</p>
 	<p class="text-xl md:text-2xl text-base-content/60 font-medium mb-8">{dateString}</p>
 </div>
