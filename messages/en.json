@@ -240,5 +240,6 @@
 	"utc_feature_5": "Used by GPS satellites and international space stations",
 	"utc_feature_6": "Essential for financial markets and global trading",
 	"converter_date_label": "Date:",
-	"converter_time_label": "Time:"
+	"converter_time_label": "Time:",
+	"converter_corresponding_utc": "Corresponding UTC Time:"
 }

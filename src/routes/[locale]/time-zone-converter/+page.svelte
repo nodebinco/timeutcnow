@@ -687,45 +687,69 @@
 										{m.converter_timezone()} <span class="font-medium text-base-content">{selectedCityInfo.label}</span>
 									</div>
 									
-									<!-- Selected Input Time and Current Time on same line -->
+									<!-- Selected Input Time, UTC Time, and Current Time -->
 									<div class="pt-2 border-t border-primary/20">
-										<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-											<!-- Selected Time (Left) -->
-											<div class="w-full sm:flex-1 min-w-0">
-												<div class="text-xs text-base-content/50 mb-1">{m.converter_selected_time()}</div>
-												<div class="flex items-center gap-2 sm:gap-4 flex-nowrap">
-													<div>
-														<span class="text-xs text-base-content/60">{m.converter_date()}:</span>
-														<span class="ml-2 text-xs sm:text-base font-semibold text-base-content">
-															{selectedCityLocalTime.date}
-														</span>
-													</div>
-													<div>
-														<span class="text-xs text-base-content/60">{m.converter_time()}:</span>
-														<span class="ml-2 text-xs sm:text-base font-semibold text-base-content">
-															{selectedCityLocalTime.time}
-														</span>
+										<div class="flex flex-col gap-4">
+											<!-- Selected Time and UTC Time on same line -->
+											<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+												<!-- Selected Time (Left) -->
+												<div class="w-full sm:flex-1 min-w-0">
+													<div class="text-xs text-base-content/50 mb-1">{m.converter_selected_time()}</div>
+													<div class="flex items-center gap-2 sm:gap-4 flex-nowrap">
+														<div>
+															<span class="text-xs text-base-content/60">{m.converter_date()}:</span>
+															<span class="ml-2 text-xs sm:text-base font-semibold text-base-content">
+																{selectedCityLocalTime.date}
+															</span>
+														</div>
+														<div>
+															<span class="text-xs text-base-content/60">{m.converter_time()}:</span>
+															<span class="ml-2 text-xs sm:text-base font-semibold text-base-content">
+																{selectedCityLocalTime.time}
+															</span>
+														</div>
 													</div>
 												</div>
+
+												<!-- UTC Time (Right) -->
+												{#if targetTime}
+													<div class="w-full sm:flex-1 min-w-0 text-left">
+														<div class="text-xs text-base-content/50 mb-1">{m.converter_corresponding_utc()}</div>
+														<div class="flex items-center gap-2 sm:gap-4 flex-nowrap">
+															<div>
+																<span class="text-xs text-base-content/60">{m.converter_date()}:</span>
+																<span class="ml-2 text-xs sm:text-base font-semibold text-primary">
+																	{targetTime.toLocaleDateString(getLocale(), { day: 'numeric', month: 'short' })}
+																</span>
+															</div>
+															<div>
+																<span class="text-xs text-base-content/60">{m.converter_time()}:</span>
+																<span class="ml-2 text-xs sm:text-base font-semibold text-primary tabular-nums">
+																	{`${String(targetTime.getUTCHours()).padStart(2, '0')}:${String(targetTime.getUTCMinutes()).padStart(2, '0')}:${String(targetTime.getUTCSeconds()).padStart(2, '0')}`}
+																</span>
+															</div>
+														</div>
+													</div>
+												{/if}
 											</div>
 
-											<!-- Current Time (Right) -->
+											<!-- Current Time -->
 											{#if selectedCityCurrentTime}
-												<div class="w-full sm:flex-1 min-w-0 text-left">
+												<div class="w-full text-left pt-2 border-t border-primary/10">
 													<div class="text-xs text-base-content/40 mb-1">{m.converter_current_time()}</div>
 													<div class="flex items-center gap-2 sm:gap-4 flex-nowrap">
-													<div>
-														<span class="text-xs text-base-content/50">{m.converter_date_label()}</span>
-														<span class="ml-2 text-xs sm:text-base text-base-content/70">
-															{selectedCityCurrentTime.date}
-														</span>
-													</div>
-													<div>
-														<span class="text-xs text-base-content/50">{m.converter_time_label()}</span>
-														<span class="ml-2 text-xs sm:text-base text-base-content/80 tabular-nums">
-															{selectedCityCurrentTime.time}
-														</span>
-													</div>
+														<div>
+															<span class="text-xs text-base-content/50">{m.converter_date_label()}</span>
+															<span class="ml-2 text-xs sm:text-base text-base-content/70">
+																{selectedCityCurrentTime.date}
+															</span>
+														</div>
+														<div>
+															<span class="text-xs text-base-content/50">{m.converter_time_label()}</span>
+															<span class="ml-2 text-xs sm:text-base text-base-content/80 tabular-nums">
+																{selectedCityCurrentTime.time}
+															</span>
+														</div>
 													</div>
 												</div>
 											{/if}
@@ -734,6 +758,48 @@
 								</div>
 							</div>
 						{/if}
+					</div>
+				</div>
+			{/if}
+
+			{#if inputMode === 'utc' && targetTime}
+				<div class="mt-4 p-4 bg-primary/10 border border-primary/20 rounded-lg">
+					<div class="flex items-center justify-between mb-2">
+						<div class="flex items-center gap-2">
+							<Clock class="w-5 h-5 text-primary" />
+							<h3 class="text-lg font-bold text-primary">
+								{m.converter_utc_time()}
+							</h3>
+						</div>
+					</div>
+					<div class="space-y-2">
+						<div class="text-sm text-base-content/60">
+							{m.converter_timezone()} <span class="font-medium text-base-content">UTC+00:00 (UTC)</span>
+						</div>
+						
+						<!-- UTC Time Display -->
+						<div class="pt-2 border-t border-primary/20">
+							<div class="flex flex-col gap-4">
+								<!-- UTC Time -->
+								<div class="w-full">
+									<div class="text-xs text-base-content/50 mb-1">{m.converter_selected_time()}</div>
+									<div class="flex items-center gap-2 sm:gap-4 flex-nowrap">
+										<div>
+											<span class="text-xs text-base-content/60">{m.converter_date()}:</span>
+											<span class="ml-2 text-xs sm:text-base font-semibold text-primary">
+												{targetTime.toLocaleDateString(getLocale(), { day: 'numeric', month: 'short' })}
+											</span>
+										</div>
+										<div>
+											<span class="text-xs text-base-content/60">{m.converter_time()}:</span>
+											<span class="ml-2 text-xs sm:text-base font-semibold text-primary tabular-nums">
+												{`${String(targetTime.getUTCHours()).padStart(2, '0')}:${String(targetTime.getUTCMinutes()).padStart(2, '0')}:${String(targetTime.getUTCSeconds()).padStart(2, '0')}`}
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			{/if}
