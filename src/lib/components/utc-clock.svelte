@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { TimeFormat } from '$lib/types/timezone';
 	import { formatTime, format24Hour, format12Hour } from '$lib/utils/time-utils';
+	import { getLocale } from '$lib/paraglide/runtime';
 
 	interface Props {
 		currentTime: Date;
@@ -27,7 +28,8 @@
 	const seconds = $derived(utcSeconds.toString().padStart(2, '0'));
 	const ampm = $derived(timeFormat === '12h' ? (utcHours >= 12 ? 'PM' : 'AM') : '');
 	
-	const dateString = $derived(currentTime.toLocaleDateString('en-GB', {
+	const locale = $derived(getLocale());
+	const dateString = $derived(currentTime.toLocaleDateString(locale, {
 		weekday: 'long',
 		day: 'numeric',
 		month: 'long',

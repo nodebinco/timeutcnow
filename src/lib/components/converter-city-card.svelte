@@ -2,6 +2,7 @@
 	import type { City, TimeFormat } from '$lib/types/timezone';
 	import { Sunrise, Moon, X } from 'lucide-svelte';
 	import { isDayTime, getTimezoneOffset, formatTimezoneOffset, getCityTime } from '$lib/utils/timezone-utils';
+	import { getLocale } from '$lib/paraglide/runtime';
 
 	interface Props {
 		city: City;
@@ -56,8 +57,9 @@
 	const utcOffset = $derived(getTimezoneOffset(city.timezone, targetTime));
 	const offsetDisplay = $derived(formatTimezoneOffset(utcOffset));
 	
-	// Format date
-	const dateDisplay = $derived(new Date(cityYear, cityMonth, cityDay).toLocaleDateString([], { day: 'numeric', month: 'short', year: 'numeric' }));
+	// Format date (short format like currentdatetime)
+	const locale = $derived(getLocale());
+	const dateDisplay = $derived(new Date(cityYear, cityMonth, cityDay).toLocaleDateString(locale, { day: 'numeric', month: 'short' }));
 	
 	// Format time with seconds using the timezone components directly
 	const formatTimeWithSeconds = (hour: number, minute: number, second: number, format: TimeFormat): string => {

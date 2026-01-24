@@ -8,55 +8,59 @@
 
 	let { children } = $props();
 
+	// Set locale from URL immediately (before render) - URL takes priority
+	// This ensures Paraglide uses the locale from the URL, not from cookie/IndexedDB
+	$effect(() => {
+		// Get locale from URL path (page.params.locale or first segment)
+		const urlLocale = page.params?.locale || page.url.pathname.split('/').filter(Boolean)[0];
+		
+		if (urlLocale && locales.includes(urlLocale as any)) {
+			// URL has a valid locale - set it immediately
+			setLocale(urlLocale);
+			// Sync cookie with URL locale
+			if (typeof document !== 'undefined') {
+				document.cookie = `PARAGLIDE_LOCALE=${urlLocale}; path=/; max-age=34560000`;
+			}
+		}
+	});
+
 	// Initialize custom locale strategy
 	onMount(() => {
 		initLocaleStorage();
 	});
 
-	// Load saved locale from IndexedDB on mount and sync with cookie
+	// Sync IndexedDB with URL locale (runs after mount, doesn't affect initial render)
 	onMount(async () => {
 		try {
-			const savedLocale = await getSavedLocale();
-			if (savedLocale) {
-				const currentLocale = getLocale();
-				// Only change if different from current
-				if (savedLocale !== currentLocale) {
-					// Check if saved locale is valid
-					if (locales.includes(savedLocale as any)) {
-						// Sync cookie with IndexedDB for paraglide
-						document.cookie = `PARAGLIDE_LOCALE=${savedLocale}; path=/; max-age=34560000`;
-						
-						// Update URL if needed - check if URL locale matches saved locale
-						const currentPath = page.url.pathname;
-						const pathSegments = currentPath.split('/').filter(Boolean);
-						const urlLocale = pathSegments[0];
-						
-						// If URL locale doesn't match saved locale, redirect
-						if (urlLocale !== savedLocale && locales.includes(urlLocale as any)) {
-							// Redirect to correct locale URL
-							const newPath = '/' + savedLocale + currentPath.substring(`/${urlLocale}`.length);
-							if (newPath !== currentPath) {
-								window.location.href = newPath;
-								return;
-							}
-						}
+			// Get locale from URL
+			const urlLocale = page.params?.locale || page.url.pathname.split('/').filter(Boolean)[0];
+			const hasUrlLocale = urlLocale && locales.includes(urlLocale as any);
+			
+			if (hasUrlLocale) {
+				// URL has a valid locale - sync IndexedDB with it
+				const { saveLocale: saveLocaleToIndexedDB } = await import('$lib/utils/indexed-db-preferences');
+				const savedLocale = await getSavedLocale();
+				
+				if (!savedLocale || savedLocale !== urlLocale) {
+					try {
+						await saveLocaleToIndexedDB(urlLocale);
+					} catch (error) {
+						console.error('Failed to save URL locale to IndexedDB:', error);
 					}
-				} else {
-					// Sync cookie with current locale if it's already correct
-					document.cookie = `PARAGLIDE_LOCALE=${currentLocale}; path=/; max-age=34560000`;
 				}
 			} else {
-				// If no saved locale, save current locale to IndexedDB
-				const currentLocale = getLocale();
-				try {
-					const { saveLocale: saveLocaleToIndexedDB } = await import('$lib/utils/indexed-db-preferences');
-					await saveLocaleToIndexedDB(currentLocale);
-				} catch (error) {
-					console.error('Failed to save current locale:', error);
+				// No locale in URL - use saved locale from IndexedDB or default
+				const savedLocale = await getSavedLocale();
+				if (savedLocale && locales.includes(savedLocale as any)) {
+					// Use saved locale and sync cookie
+					if (typeof document !== 'undefined') {
+						document.cookie = `PARAGLIDE_LOCALE=${savedLocale}; path=/; max-age=34560000`;
+					}
+					setLocale(savedLocale);
 				}
 			}
 		} catch (error) {
-			console.error('Failed to load saved locale:', error);
+			console.error('Failed to sync locale:', error);
 		}
 	});
 </script>

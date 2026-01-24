@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
+	import { localizeHref, getLocale } from '$lib/paraglide/runtime';
 	import { Clock, Copy, Check, Search, Sunrise, Moon, Plus } from 'lucide-svelte';
 	import TimeInput from '$lib/components/time-input.svelte';
 	import MeetingCityCard from '$lib/components/meeting-city-card.svelte';
@@ -179,7 +180,8 @@
 		
 		const cityTime = convertUTCToCity(targetTime, city.timezone);
 		const timeStr = formatTime(cityTime, timeFormat, city.timezone);
-		const dateStr = cityTime.toLocaleDateString([], { day: 'numeric', month: 'short', year: 'numeric' });
+		const locale = getLocale();
+		const dateStr = cityTime.toLocaleDateString(locale, { day: 'numeric', month: 'short', year: 'numeric' });
 		const fullStr = `${timeStr} on ${dateStr} (${city.label})`;
 		
 		try {
@@ -225,13 +227,13 @@
 	<!-- Navigation -->
 	<nav class="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-300">
 		<div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-			<a href="/{page.params.locale}">
+			<a href={localizeHref("/")}>
 				<SiteLogo class="cursor-pointer" />
 			</a>
 			
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
-				<a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a>
-				<a href="/{page.params.locale}/meeting-converter" class="hover:text-primary font-semibold">Time Zone Converter</a>
+				<a href={localizeHref("/")} class="hover:text-primary">{m.utc_clock()}</a>
+				<a href={localizeHref("/meeting-converter")} class="hover:text-primary font-semibold">Time Zone Converter</a>
 				<TimeFormatSelector bind:value={timeFormat} />
 				<LanguageSwitcher />
 			</div>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { localizeHref } from '$lib/paraglide/runtime';
 	import { Clock, Mail, MessageSquare, Github, Send, CheckCircle, Menu, X } from 'lucide-svelte';
 	import SiteLogo from '$lib/components/site-logo.svelte';
 	import AppFooter from '$lib/components/app-footer.svelte';
@@ -48,13 +49,13 @@
 	<!-- Navigation -->
 	<nav class="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-300">
 		<div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-			<a href="/{page.params.locale}">
+			<a href={localizeHref("/")}>
 				<SiteLogo class="cursor-pointer" />
 			</a>
 			
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
-				<a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a>
-				<a href="/{page.params.locale}/time-zone-converter" class="hover:text-primary">{m.time_zone_converter()}</a>
+				<a href={localizeHref("/")} class="hover:text-primary">{m.utc_clock()}</a>
+				<a href={localizeHref("/time-zone-converter")} class="hover:text-primary">{m.time_zone_converter()}</a>
 			</div>
 
 			<div class="md:hidden">
@@ -91,14 +92,14 @@
 				</div>
 				<div class="flex-1 overflow-y-auto p-4 space-y-4">
 					<a
-						href="/{page.params.locale}"
+						href={localizeHref("/")}
 						class="block py-2 text-base font-medium hover:text-primary"
 						onclick={() => mobileMenuOpen = false}
 					>
 						{m.utc_clock()}
 					</a>
 					<a
-						href="/{page.params.locale}/time-zone-converter"
+						href={localizeHref("/time-zone-converter")}
 						class="block py-2 text-base font-medium hover:text-primary"
 						onclick={() => mobileMenuOpen = false}
 					>
@@ -274,7 +275,7 @@
 				<p class="text-lg text-primary-content/90 mb-8 max-w-2xl mx-auto">
 					{m.contact_support_text()}
 				</p>
-				<a href="/{page.params.locale}" class="btn btn-lg btn-primary-content text-primary">
+				<a href={localizeHref("/")} class="btn btn-lg btn-primary-content text-primary">
 					{m.contact_support_button()}
 				</a>
 			</div>

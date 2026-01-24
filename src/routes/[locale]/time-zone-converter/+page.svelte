@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
+	import { localizeHref } from '$lib/paraglide/runtime';
 	import { Clock, Copy, Check, Search, Sunrise, Moon, Plus, X, Menu } from 'lucide-svelte';
 	import TimeInput from '$lib/components/time-input.svelte';
 	import ConverterCityCard from '$lib/components/converter-city-card.svelte';
@@ -14,6 +15,7 @@
 	import { getTimezoneData, getMeetingConverterPreferences, saveMeetingConverterPreferences, getUserPreferences, saveUserPreferences } from '$lib/utils/indexed-db-utils';
 	import { formatTime } from '$lib/utils/time-utils';
 	import { searchCities, filterCitiesByIds, sortCitiesByOrder, isDayTime, convertCityTimeToUTC, convertUTCToCity, getTimezoneOffset, formatTimezoneOffset } from '$lib/utils/timezone-utils';
+	import { getLocale } from '$lib/paraglide/runtime';
 	import * as m from '$lib/paraglide/messages';
 
 	type InputMode = 'utc' | 'city';
@@ -348,7 +350,7 @@
 			const offset = getTimezoneOffset(userTimezone, currentTime);
 			const offsetStr = formatTimezoneOffset(offset);
 			return {
-				name: 'My Local Time',
+				name: m.converter_my_local_time(),
 				timezone: userTimezone,
 				label: `${offsetStr} (${userTimezone})`,
 				country: ''
@@ -376,15 +378,20 @@
 		}
 		
 		// The inputDate and inputTime represent the local time in the selected city
-		// So we can display them directly
+		// Format date similar to current time (compact format)
 		const [year, month, day] = inputDate.split('-').map(Number);
 		const timeParts = inputTime.split(':');
 		const hours = Number(timeParts[0]);
 		const minutes = Number(timeParts[1]);
 		const seconds = timeParts[2] ? Number(timeParts[2]) : 0;
 		
+		// Create date object and format it like current time
+		const dateObj = new Date(year, month - 1, day);
+		const locale = getLocale();
+		const formattedDate = dateObj.toLocaleDateString(locale, { day: 'numeric', month: 'short' });
+		
 		return {
-			date: new Date(year, month - 1, day),
+			date: formattedDate,
 			time: `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
 		};
 	});
@@ -402,9 +409,10 @@
 		
 		// Get current time in the selected city's timezone
 		const cityTime = new Date(currentTime.toLocaleString('en-US', { timeZone: timezone }));
+		const locale = getLocale();
 		
 		return {
-			date: cityTime.toLocaleDateString([], { day: 'numeric', month: 'short', year: 'numeric' }),
+			date: cityTime.toLocaleDateString(locale, { day: 'numeric', month: 'short' }),
 			time: `${String(cityTime.getHours()).padStart(2, '0')}:${String(cityTime.getMinutes()).padStart(2, '0')}:${String(cityTime.getSeconds()).padStart(2, '0')}`
 		};
 	});
@@ -432,32 +440,32 @@
 
 <svelte:head>
 	<title>{m.time_zone_converter()} - TimeUTCNow</title>
-	<meta name="description" content="Free time zone converter tool for scheduling meetings with international teams. Convert UTC time or any city time to multiple time zones instantly. Perfect for coordinating global calls, webinars, and virtual events across different time zones." />
+	<meta name="description" content={m.converter_meta_description()} />
 	<meta name="keywords" content="time zone converter, UTC converter, timezone converter, meeting scheduler, UTC clock, time conversion, international time, time zone calculator, UTC time converter, global time converter" />
 	
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://timeutcnow.com/{page.params.locale}/time-zone-converter" />
 	<meta property="og:title" content="{m.time_zone_converter()} - TimeUTCNow" />
-	<meta property="og:description" content="Free time zone converter tool for scheduling meetings with international teams. Convert UTC time or any city time to multiple time zones instantly." />
+	<meta property="og:description" content={m.converter_meta_description()} />
 	
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="{m.time_zone_converter()} - TimeUTCNow" />
-	<meta name="twitter:description" content="Free time zone converter tool for scheduling meetings with international teams. Convert UTC time or any city time to multiple time zones instantly." />
+	<meta name="twitter:description" content={m.converter_meta_description()} />
 </svelte:head>
 
 <div class="min-h-screen bg-base-200 text-base-content">
 	<!-- Navigation -->
 	<nav class="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-300">
 		<div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-			<a href="/{page.params.locale}">
+			<a href={localizeHref("/")}>
 				<SiteLogo class="cursor-pointer" />
 			</a>
 			
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
-				<a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a>
-				<a href="/{page.params.locale}/time-zone-converter" class="hover:text-primary font-semibold">{m.time_zone_converter()}</a>
+				<a href={localizeHref("/")} class="hover:text-primary">{m.utc_clock()}</a>
+				<a href={localizeHref("/time-zone-converter")} class="hover:text-primary font-semibold">{m.time_zone_converter()}</a>
 				<TimeFormatSelector bind:value={timeFormat} />
 				<LanguageSwitcher />
 			</div>
@@ -496,14 +504,14 @@
 				</div>
 				<div class="flex-1 overflow-y-auto p-4 space-y-4">
 					<a
-						href="/{page.params.locale}"
+						href={localizeHref("/")}
 						class="block py-2 text-base font-medium hover:text-primary"
 						onclick={() => mobileMenuOpen = false}
 					>
 						{m.utc_clock()}
 					</a>
 					<a
-						href="/{page.params.locale}/time-zone-converter"
+						href={localizeHref("/time-zone-converter")}
 						class="block py-2 text-base font-medium hover:text-primary"
 						onclick={() => mobileMenuOpen = false}
 					>
@@ -524,12 +532,12 @@
 				<Clock class="w-4 h-4" />
 				{m.time_zone_converter()}
 			</div>
-			<h1 class="text-4xl md:text-5xl font-bold mb-4">Time Zone Converter</h1>
+			<h1 class="text-4xl md:text-5xl font-bold mb-4">{m.converter_title()}</h1>
 			<p class="text-lg text-base-content/70 max-w-2xl mx-auto mb-2">
-				Convert any time to multiple time zones instantly. Perfect for scheduling meetings with international teams, coordinating global calls, and finding convenient times across different time zones.
+				{m.converter_subtitle()}
 			</p>
 			<p class="text-sm text-base-content/60 max-w-2xl mx-auto">
-				Enter a time in UTC or select a city and time, then see the corresponding time in all your selected cities worldwide.
+				{m.converter_description()}
 			</p>
 		</section>
 
@@ -537,7 +545,7 @@
 		<section class="bg-base-100 border border-base-300 rounded-3xl p-6 md:p-8 mb-8">
 			<div class="mb-6">
 				<label class="label pb-2">
-					<span class="label-text font-semibold">Choose Input Type</span>
+					<span class="label-text font-semibold">{m.converter_input_type()}</span>
 				</label>
 				<div class="flex flex-col sm:flex-row gap-2">
 					<button
@@ -552,7 +560,7 @@
 						}}
 					>
 						<Search class="w-4 h-4 mr-2" />
-						City Time
+						{m.converter_city_time()}
 					</button>
 					<button
 						class="btn {inputMode === 'utc' ? 'btn-primary' : 'btn-outline'} w-full sm:flex-initial h-12 sm:h-11 text-base"
@@ -563,7 +571,7 @@
 						}}
 					>
 						<Clock class="w-4 h-4 mr-2" />
-						UTC Time
+						{m.converter_utc_time()}
 					</button>
 				</div>
 			</div>
@@ -571,7 +579,7 @@
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
 				<div>
 					<label class="label py-0 pb-1">
-						<span class="label-text font-semibold">Date</span>
+						<span class="label-text font-semibold">{m.converter_date()}</span>
 					</label>
 					<input
 						type="date"
@@ -584,7 +592,7 @@
 				</div>
 				<div>
 					<label class="label py-0 pb-1">
-						<span class="label-text font-semibold">Time</span>
+						<span class="label-text font-semibold">{m.converter_time()}</span>
 					</label>
 					<input
 						type="time"
@@ -601,7 +609,7 @@
 			{#if inputMode === 'city'}
 				<div class="mt-4">
 					<label class="label">
-						<span class="label-text font-semibold">Select City</span>
+						<span class="label-text font-semibold">{m.converter_select_city()}</span>
 					</label>
 					<div class="space-y-2">
 						<!-- Local City Option -->
@@ -613,7 +621,7 @@
 							}}
 						>
 							<Clock class="w-4 h-4 mr-2" />
-							<span class="flex-1 text-left">My Local Time ({userTimezone})</span>
+							<span class="flex-1 text-left">{m.converter_my_local_time()} ({userTimezone})</span>
 							{#if selectedCityId === 'local'}
 								<Check class="w-4 h-4" />
 							{/if}
@@ -622,7 +630,7 @@
 						<!-- City Search -->
 						<div class="relative">
 							<SearchInput
-								placeholder="Or search for a city..."
+								placeholder={m.converter_search_city()}
 								bind:value={citySearchQuery}
 								onInput={(query) => {
 									citySearchQuery = query;
@@ -654,7 +662,7 @@
 								</div>
 							{:else if citySearchQuery && citySearchResults.length === 0}
 								<div class="absolute z-10 w-full mt-2 bg-base-100 border border-base-300 rounded-lg p-3 text-sm text-base-content/60">
-									No cities found. Try a different search term.
+									{m.converter_no_cities_found()} "{citySearchQuery}"
 								</div>
 							{/if}
 						</div>
@@ -676,7 +684,7 @@
 								</div>
 								<div class="space-y-2">
 									<div class="text-sm text-base-content/60">
-										Timezone: <span class="font-medium text-base-content">{selectedCityInfo.label}</span>
+										{m.converter_timezone()} <span class="font-medium text-base-content">{selectedCityInfo.label}</span>
 									</div>
 									
 									<!-- Selected Input Time and Current Time on same line -->
@@ -684,16 +692,16 @@
 										<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
 											<!-- Selected Time (Left) -->
 											<div class="w-full sm:flex-1 min-w-0">
-												<div class="text-xs text-base-content/50 mb-1">Selected Time:</div>
+												<div class="text-xs text-base-content/50 mb-1">{m.converter_selected_time()}</div>
 												<div class="flex items-center gap-2 sm:gap-4 flex-nowrap">
 													<div>
-														<span class="text-xs text-base-content/60">Date:</span>
+														<span class="text-xs text-base-content/60">{m.converter_date()}:</span>
 														<span class="ml-2 text-xs sm:text-base font-semibold text-base-content">
-															{selectedCityLocalTime.date.toLocaleDateString([], { day: 'numeric', month: 'short', year: 'numeric' })}
+															{selectedCityLocalTime.date}
 														</span>
 													</div>
 													<div>
-														<span class="text-xs text-base-content/60">Time:</span>
+														<span class="text-xs text-base-content/60">{m.converter_time()}:</span>
 														<span class="ml-2 text-xs sm:text-base font-semibold text-base-content">
 															{selectedCityLocalTime.time}
 														</span>
@@ -704,20 +712,20 @@
 											<!-- Current Time (Right) -->
 											{#if selectedCityCurrentTime}
 												<div class="w-full sm:flex-1 min-w-0 text-left">
-													<div class="text-xs text-base-content/40 mb-1">Current Time:</div>
+													<div class="text-xs text-base-content/40 mb-1">{m.converter_current_time()}</div>
 													<div class="flex items-center gap-2 sm:gap-4 flex-nowrap">
-														<div>
-															<span class="text-xs text-base-content/50">Date:</span>
-															<span class="ml-2 text-xs sm:text-base text-base-content/70">
-																{selectedCityCurrentTime.date}
-															</span>
-														</div>
-														<div>
-															<span class="text-xs text-base-content/50">Time:</span>
-															<span class="ml-2 text-xs sm:text-base text-base-content/80 tabular-nums">
-																{selectedCityCurrentTime.time}
-															</span>
-														</div>
+													<div>
+														<span class="text-xs text-base-content/50">{m.converter_date_label()}</span>
+														<span class="ml-2 text-xs sm:text-base text-base-content/70">
+															{selectedCityCurrentTime.date}
+														</span>
+													</div>
+													<div>
+														<span class="text-xs text-base-content/50">{m.converter_time_label()}</span>
+														<span class="ml-2 text-xs sm:text-base text-base-content/80 tabular-nums">
+															{selectedCityCurrentTime.time}
+														</span>
+													</div>
 													</div>
 												</div>
 											{/if}
@@ -736,15 +744,20 @@
 			<section class="mb-8">
 				<div class="flex items-center justify-between mb-4">
 					<div>
-						<h2 class="text-2xl font-bold">Converted Times</h2>
+						<h2 class="text-2xl font-bold">{m.converter_converted_times()}</h2>
 						<p class="text-sm text-base-content/60 mt-1">
 							{#if targetTime}
-								Showing time in {cities.length} {cities.length === 1 ? 'city' : 'cities'}
-								{#if cities.length > DEFAULT_TIMEZONE_LIMIT && !showAllTimezones}
-									(displaying first {DEFAULT_TIMEZONE_LIMIT})
+								{(() => {
+									const count = cities?.length || 0;
+									return count === 1 
+										? m.converter_showing_time_singular()
+										: m.converter_showing_time_plural({ count });
+								})()}
+								{#if cities?.length > DEFAULT_TIMEZONE_LIMIT && !showAllTimezones}
+									{m.converter_displaying_first({ limit: DEFAULT_TIMEZONE_LIMIT })}
 								{/if}
 							{:else}
-								Select a date and time above to see converted times
+								{m.converter_select_date_time()}
 							{/if}
 						</p>
 					</div>
@@ -755,7 +768,7 @@
 								showAllTimezones = !showAllTimezones;
 							}}
 						>
-							{showAllTimezones ? 'Show Less' : `Show All (${cities.length})`}
+							{showAllTimezones ? m.converter_show_less() : m.converter_show_all({ count: cities.length })}
 						</button>
 					{/if}
 				</div>
@@ -786,13 +799,13 @@
 											type="button"
 											class="btn btn-ghost btn-xs btn-circle"
 											onclick={() => removeCity(city.id)}
-											aria-label="Remove city"
+											aria-label={m.converter_remove_city()}
 										>
 											<X class="w-4 h-4" />
 										</button>
 									</div>
 									<div class="text-sm text-base-content/60">
-										Enter date and time above to see converted time
+										{m.converter_enter_date_time()}
 									</div>
 								</div>
 							</div>
@@ -803,21 +816,21 @@
 		{:else}
 			<section class="mb-8">
 				<div class="alert alert-info">
-					<p>No cities selected. Add cities from the section below to see converted times.</p>
+					<p>{m.converter_no_cities_selected()}</p>
 				</div>
 			</section>
 		{/if}
 
 		<!-- Add More Cities -->
 		<section class="bg-base-100 border border-base-300 rounded-3xl p-6 md:p-8">
-			<div class="mb-6">
-				<h2 class="text-2xl font-bold mb-2">Add More Cities</h2>
-				<p class="text-base-content/60 text-sm">Add cities to see converted times in different time zones</p>
+				<div class="mb-6">
+				<h2 class="text-2xl font-bold mb-2">{m.converter_add_cities()}</h2>
+				<p class="text-base-content/60 text-sm">{m.converter_add_cities_description()}</p>
 			</div>
 
 			<div class="mb-6">
 				<SearchInput
-					placeholder="Search for a city..."
+					placeholder={m.converter_search_placeholder()}
 					bind:value={addMoreSearchQuery}
 					onInput={(query) => {
 						addMoreSearchQuery = query;
@@ -846,7 +859,7 @@
 				{#if !showAllTimezones && showingCount < totalAvailable}
 					<div class="text-center mt-8">
 						<p class="text-sm text-base-content/60 mb-2">
-							Showing {showingCount} of {totalAvailable} {addMoreSearchQuery.trim() ? 'results' : 'available cities'}
+							{m.converter_showing_of_available({ showing: showingCount, total: totalAvailable })}
 						</p>
 						<button
 							type="button"
@@ -855,13 +868,13 @@
 								showAllTimezones = true;
 							}}
 						>
-							View All Cities
+							{m.converter_view_all_cities()}
 						</button>
 					</div>
 				{:else if showAllTimezones && showingCount > DEFAULT_TIMEZONE_LIMIT}
 					<div class="text-center mt-8">
 						<p class="text-sm text-base-content/60 mb-2">
-							Showing all {showingCount} {addMoreSearchQuery.trim() ? 'results' : 'available cities'}
+							{m.converter_showing_of_available({ showing: showingCount, total: showingCount })}
 						</p>
 						<button
 							type="button"
@@ -870,7 +883,7 @@
 								showAllTimezones = false;
 							}}
 						>
-							Show Less
+							{m.converter_show_less()}
 						</button>
 					</div>
 				{/if}
@@ -878,9 +891,9 @@
 				<div class="text-center py-12 bg-base-200 rounded-2xl">
 					<p class="text-base-content/60 mb-4">
 						{#if addMoreSearchQuery.trim()}
-							No cities found matching "{addMoreSearchQuery}"
+							{m.converter_no_cities_found()} "{addMoreSearchQuery}"
 						{:else}
-							All cities have been added to your list.
+							{m.converter_all_cities_added()}
 						{/if}
 					</p>
 				</div>
@@ -889,19 +902,19 @@
 
 		<!-- SEO Content -->
 		<section class="mt-16 bg-primary rounded-3xl p-8 md:p-12 text-primary-content">
-			<h2 class="text-3xl font-bold mb-6">Why Use a Time Zone Converter?</h2>
+			<h2 class="text-3xl font-bold mb-6">{m.converter_why_title()}</h2>
 			<div class="space-y-4 text-primary-content/90">
 				<p class="text-lg">
-					Scheduling meetings with international teams can be challenging when team members are spread across different time zones. Our time zone converter makes it easy to find the perfect meeting time for everyone, regardless of where they are in the world.
+					{m.converter_why_text()}
 				</p>
-				<h3 class="text-xl font-semibold mt-6 mb-3">Perfect for:</h3>
+				<h3 class="text-xl font-semibold mt-6 mb-3">{m.converter_perfect_for()}</h3>
 				<ul class="space-y-3">
 					<li class="flex items-start gap-3">
 						<div class="w-5 h-5 rounded-full bg-primary-content/30 flex items-center justify-center shrink-0 mt-0.5">
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>Scheduling team meetings:</strong> Coordinate with team members across multiple time zones to find times that work for everyone. No more back-and-forth emails trying to figure out when 2 PM EST is in Tokyo or London.
+							<strong>{m.converter_scheduling_meetings().split(':')[0]}:</strong> {m.converter_scheduling_meetings().split(':').slice(1).join(':')}
 						</div>
 					</li>
 					<li class="flex items-start gap-3">
@@ -909,7 +922,7 @@
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>Planning global conference calls:</strong> Quickly see what time your call will be in all participants' local times, making it easier to schedule and communicate meeting times.
+							<strong>{m.converter_global_calls().split(':')[0]}:</strong> {m.converter_global_calls().split(':').slice(1).join(':')}
 						</div>
 					</li>
 					<li class="flex items-start gap-3">
@@ -917,7 +930,7 @@
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>Organizing webinars and virtual events:</strong> Find optimal times for your global audience by seeing how your event time translates across different regions.
+							<strong>{m.converter_webinars().split(':')[0]}:</strong> {m.converter_webinars().split(':').slice(1).join(':')}
 						</div>
 					</li>
 					<li class="flex items-start gap-3">
@@ -925,7 +938,7 @@
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>Setting deadlines across time zones:</strong> When working with international clients or remote teams, ensure deadlines are clear by showing exactly when they occur in each team member's local time.
+							<strong>{m.converter_deadlines().split(':')[0]}:</strong> {m.converter_deadlines().split(':').slice(1).join(':')}
 						</div>
 					</li>
 					<li class="flex items-start gap-3">
@@ -933,7 +946,7 @@
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>Coordinating with international clients:</strong> Professional communication means respecting time zones. Our converter helps you propose meeting times that work for both parties.
+							<strong>{m.converter_clients().split(':')[0]}:</strong> {m.converter_clients().split(':').slice(1).join(':')}
 						</div>
 					</li>
 					<li class="flex items-start gap-3">
@@ -941,16 +954,16 @@
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>Planning recurring meetings:</strong> Set up regular meetings with global teams by finding times that consistently work across all time zones.
+							<strong>{m.converter_recurring().split(':')[0]}:</strong> {m.converter_recurring().split(':').slice(1).join(':')}
 						</div>
 					</li>
 				</ul>
 				<p class="mt-6">
-					Simply enter a time in UTC (Coordinated Universal Time) or select a specific city and time, and our tool instantly shows you the corresponding time in all your selected cities worldwide. Add or remove cities as needed to customize your view for your specific team or project needs.
+					{m.converter_description()}
 				</p>
-				<h3 class="text-xl font-semibold mt-8 mb-3">How It Works</h3>
+				<h3 class="text-xl font-semibold mt-8 mb-3">{m.converter_how_works()}</h3>
 				<p class="text-lg">
-					Our time zone converter uses the latest timezone database to ensure accuracy across all regions, including daylight saving time transitions. Simply choose your input method:
+					{m.converter_how_works_text()}
 				</p>
 				<ul class="space-y-3 mt-4">
 					<li class="flex items-start gap-3">
@@ -958,7 +971,7 @@
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>UTC Time Mode:</strong> Enter a time in Coordinated Universal Time (UTC), the global standard for timekeeping. This is ideal for technical teams, developers, and anyone working with international systems.
+							<strong>{m.converter_utc_mode().split(':')[0]}:</strong> {m.converter_utc_mode().split(':').slice(1).join(':')}
 						</div>
 					</li>
 					<li class="flex items-start gap-3">
@@ -966,21 +979,21 @@
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>City Time Mode:</strong> Select a specific city and enter a local time. The converter will show you what that time corresponds to in all your selected cities. Perfect for scheduling meetings when you know your local time.
+							<strong>{m.converter_city_mode().split(':')[0]}:</strong> {m.converter_city_mode().split(':').slice(1).join(':')}
 						</div>
 					</li>
 				</ul>
 				<p class="text-lg mt-6">
-					All conversions are calculated in real-time and account for daylight saving time changes, ensuring you always have the most accurate information for scheduling and planning.
+					{m.converter_real_time()}
 				</p>
-				<h3 class="text-xl font-semibold mt-8 mb-3">Benefits of Using Our Time Zone Converter</h3>
+				<h3 class="text-xl font-semibold mt-8 mb-3">{m.converter_benefits_title()}</h3>
 				<ul class="space-y-3 mt-4">
 					<li class="flex items-start gap-3">
 						<div class="w-5 h-5 rounded-full bg-primary-content/30 flex items-center justify-center shrink-0 mt-0.5">
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>100% Free:</strong> No registration required, no hidden fees, and no limitations on usage. Use it as often as you need for personal or professional purposes.
+							<strong>{m.converter_benefit_free_title()}</strong> {m.converter_benefit_free_text()}
 						</div>
 					</li>
 					<li class="flex items-start gap-3">
@@ -988,7 +1001,7 @@
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>Accurate and Up-to-Date:</strong> Our converter uses the official IANA timezone database, ensuring all conversions account for the latest timezone rules and daylight saving time changes.
+							<strong>{m.converter_benefit_accurate_title()}</strong> {m.converter_benefit_accurate_text()}
 						</div>
 					</li>
 					<li class="flex items-start gap-3">
@@ -996,7 +1009,7 @@
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>Easy to Use:</strong> Intuitive interface that works on desktop, tablet, and mobile devices. No technical knowledge required.
+							<strong>{m.converter_benefit_easy_title()}</strong> {m.converter_benefit_easy_text()}
 						</div>
 					</li>
 					<li class="flex items-start gap-3">
@@ -1004,7 +1017,7 @@
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>Customizable:</strong> Add or remove cities from your conversion list to focus on the locations most relevant to your work or personal needs.
+							<strong>{m.converter_benefit_customizable_title()}</strong> {m.converter_benefit_customizable_text()}
 						</div>
 					</li>
 					<li class="flex items-start gap-3">
@@ -1012,7 +1025,7 @@
 							<Check class="w-3 h-3" />
 						</div>
 						<div>
-							<strong>Works Offline:</strong> Once loaded, the converter works without an internet connection, making it perfect for travel or areas with limited connectivity.
+							<strong>{m.converter_benefit_offline_title()}</strong> {m.converter_benefit_offline_text()}
 						</div>
 					</li>
 				</ul>

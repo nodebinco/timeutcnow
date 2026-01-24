@@ -3,6 +3,7 @@
 	import { Sunrise, Moon, X, Copy } from 'lucide-svelte';
 	import { isDayTime, getTimezoneOffset, formatTimezoneOffset } from '$lib/utils/timezone-utils';
 	import { formatTimeShort } from '$lib/utils/time-utils';
+	import { getLocale } from '$lib/paraglide/runtime';
 
 	interface Props {
 		city: City;
@@ -33,7 +34,8 @@
 	const timeDisplay = $derived(formatTimeShort(cityTime, timeFormat, city.timezone));
 	const utcOffset = $derived(getTimezoneOffset(city.timezone, currentTime));
 	const offsetDisplay = $derived(formatTimezoneOffset(utcOffset));
-	const dateDisplay = $derived(cityTime.toLocaleDateString([], { day: 'numeric', month: 'short', year: 'numeric' }));
+	const locale = $derived(getLocale());
+	const dateDisplay = $derived(cityTime.toLocaleDateString(locale, { day: 'numeric', month: 'short' }));
 </script>
 
 <div class="card bg-base-100 border border-base-300 hover:shadow-lg transition-all {className}">

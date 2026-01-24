@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
+	import { localizeHref } from '$lib/paraglide/runtime';
 	import { Clock, Copy, Check, Settings, Info, ExternalLink, Search, Sunrise, Moon, Plus, Menu, X } from 'lucide-svelte';
 	import UTCClock from '$lib/components/utc-clock.svelte';
 	import InfoCard from '$lib/components/info-card.svelte';
@@ -304,8 +305,8 @@
 			<SiteLogo class="cursor-pointer" />
 			
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
-				<a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a>
-				<a href="/{page.params.locale}/time-zone-converter" class="hover:text-primary">{m.time_zone_converter()}</a>
+				<a href={localizeHref("/")} class="hover:text-primary">{m.utc_clock()}</a>
+				<a href={localizeHref("/time-zone-converter")} class="hover:text-primary">{m.time_zone_converter()}</a>
 				<TimeFormatSelector value={timeFormat} onChange={handleTimeFormatChange} />
 				<LanguageSwitcher />
 			</div>
@@ -344,14 +345,14 @@
 				</div>
 				<div class="flex-1 overflow-y-auto p-4 space-y-4">
 					<a
-						href="/{page.params.locale}"
+						href={localizeHref("/")}
 						class="block py-2 text-base font-medium hover:text-primary"
 						onclick={() => mobileMenuOpen = false}
 					>
 						{m.utc_clock()}
 					</a>
 					<a
-						href="/{page.params.locale}/time-zone-converter"
+						href={localizeHref("/time-zone-converter")}
 						class="block py-2 text-base font-medium hover:text-primary"
 						onclick={() => mobileMenuOpen = false}
 					>
@@ -523,12 +524,12 @@
 					</div>
 					<ul class="space-y-4 mt-6">
 						{#each [
-							"No daylight saving time shifts - UTC remains constant year-round",
-							"Standard for aviation and weather reporting worldwide",
-							"Synchronizes global computer servers and distributed systems",
-							"High precision based on atomic clocks with leap second adjustments",
-							"Used by GPS satellites and international space stations",
-							"Essential for financial markets and global trading"
+							m.utc_feature_1(),
+							m.utc_feature_2(),
+							m.utc_feature_3(),
+							m.utc_feature_4(),
+							m.utc_feature_5(),
+							m.utc_feature_6()
 						] as item}
 							<li class="flex items-center gap-3">
 								<div class="w-5 h-5 rounded-full bg-primary-content/30 flex items-center justify-center shrink-0">

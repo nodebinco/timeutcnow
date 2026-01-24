@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { localizeHref } from '$lib/paraglide/runtime';
 	import SiteLogo from '$lib/components/site-logo.svelte';
 	import * as m from '$lib/paraglide/messages';
 </script>
@@ -17,16 +18,16 @@
 		<div>
 			<h4 class="font-bold mb-4">Tools</h4>
 			<ul class="space-y-2 text-sm text-base-content/60">
-				<li><a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a></li>
-				<li><a href="/{page.params.locale}/time-zone-converter" class="hover:text-primary">{m.time_zone_converter()}</a></li>
+				<li><a href={localizeHref("/")} class="hover:text-primary">{m.utc_clock()}</a></li>
+				<li><a href={localizeHref("/time-zone-converter")} class="hover:text-primary">{m.time_zone_converter()}</a></li>
 			</ul>
 		</div>
 		<div>
 			<h4 class="font-bold mb-4">Support</h4>
 			<ul class="space-y-2 text-sm text-base-content/60">
-				<li><a href="/{page.params.locale}/about" class="hover:text-primary">{m.about_us()}</a></li>
-				<li><a href="/{page.params.locale}/privacy" class="hover:text-primary">{m.privacy_policy()}</a></li>
-				<li><a href="/{page.params.locale}/contact" class="hover:text-primary">{m.contact()}</a></li>
+				<li><a href={localizeHref("/about")} class="hover:text-primary">{m.about_us()}</a></li>
+				<li><a href={localizeHref("/privacy")} class="hover:text-primary">{m.privacy_policy()}</a></li>
+				<li><a href={localizeHref("/contact")} class="hover:text-primary">{m.contact()}</a></li>
 			</ul>
 		</div>
 	</div>

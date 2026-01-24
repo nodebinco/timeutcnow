@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { localizeHref, getLocale } from '$lib/paraglide/runtime';
 	import { Clock, Shield, Lock, Eye, Database, Cookie, Menu, X } from 'lucide-svelte';
 	import SiteLogo from '$lib/components/site-logo.svelte';
 	import AppFooter from '$lib/components/app-footer.svelte';
@@ -7,6 +8,7 @@
 	import * as m from '$lib/paraglide/messages';
 	
 	let mobileMenuOpen = $state(false);
+	const locale = $derived(getLocale());
 </script>
 
 <svelte:head>
@@ -30,13 +32,13 @@
 	<!-- Navigation -->
 	<nav class="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-300">
 		<div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-			<a href="/{page.params.locale}">
+			<a href={localizeHref("/")}>
 				<SiteLogo class="cursor-pointer" />
 			</a>
 			
 			<div class="hidden md:flex items-center gap-6 text-sm font-medium">
-				<a href="/{page.params.locale}" class="hover:text-primary">{m.utc_clock()}</a>
-				<a href="/{page.params.locale}/time-zone-converter" class="hover:text-primary">{m.time_zone_converter()}</a>
+				<a href={localizeHref("/")} class="hover:text-primary">{m.utc_clock()}</a>
+				<a href={localizeHref("/time-zone-converter")} class="hover:text-primary">{m.time_zone_converter()}</a>
 				<LanguageSwitcher />
 			</div>
 
@@ -74,14 +76,14 @@
 				</div>
 				<div class="flex-1 overflow-y-auto p-4 space-y-4">
 					<a
-						href="/{page.params.locale}"
+						href={localizeHref("/")}
 						class="block py-2 text-base font-medium hover:text-primary"
 						onclick={() => mobileMenuOpen = false}
 					>
 						{m.utc_clock()}
 					</a>
 					<a
-						href="/{page.params.locale}/time-zone-converter"
+						href={localizeHref("/time-zone-converter")}
 						class="block py-2 text-base font-medium hover:text-primary"
 						onclick={() => mobileMenuOpen = false}
 					>
@@ -101,7 +103,7 @@
 			</div>
 			<h1 class="text-5xl font-bold mb-6">{m.privacy_title()}</h1>
 			<p class="text-xl text-base-content/70 max-w-2xl mx-auto">
-				{m.privacy_last_updated()} {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+				{m.privacy_last_updated()} {new Date().toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })}
 			</p>
 		</section>
 
@@ -282,7 +284,7 @@
 				<p class="text-base-content/70 mb-6">
 					{m.privacy_questions_text()}
 				</p>
-				<a href="/{page.params.locale}/contact" class="btn btn-primary">
+				<a href={localizeHref("/contact")} class="btn btn-primary">
 					{m.contact()}
 				</a>
 			</div>
