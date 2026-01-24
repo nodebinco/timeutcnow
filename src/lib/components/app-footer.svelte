@@ -16,14 +16,14 @@
 			</p>
 		</div>
 		<div>
-			<h4 class="font-bold mb-4">Tools</h4>
+			<h4 class="font-bold mb-4">{m.footer_tools()}</h4>
 			<ul class="space-y-2 text-sm text-base-content/60">
 				<li><a href={localizeHref("/")} class="hover:text-primary">{m.utc_clock()}</a></li>
 				<li><a href={localizeHref("/time-zone-converter")} class="hover:text-primary">{m.time_zone_converter()}</a></li>
 			</ul>
 		</div>
 		<div>
-			<h4 class="font-bold mb-4">Support</h4>
+			<h4 class="font-bold mb-4">{m.footer_support()}</h4>
 			<ul class="space-y-2 text-sm text-base-content/60">
 				<li><a href={localizeHref("/about")} class="hover:text-primary">{m.about_us()}</a></li>
 				<li><a href={localizeHref("/privacy")} class="hover:text-primary">{m.privacy_policy()}</a></li>

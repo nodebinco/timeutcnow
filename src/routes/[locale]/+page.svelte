@@ -422,7 +422,7 @@
 				</div>
 			{:else}
 				<div class="text-center py-12 bg-base-200 rounded-2xl">
-					<p class="text-base-content/60 mb-4">No cities selected. Add cities from the list below.</p>
+					<p class="text-base-content/60 mb-4">{m.home_no_cities_selected()}</p>
 				</div>
 			{/if}
 
@@ -482,7 +482,7 @@
 					{:else if showAllTimezones && showingCount > DEFAULT_TIMEZONE_LIMIT}
 						<div class="text-center mt-8">
 							<p class="text-sm text-base-content/60 mb-2">
-								Showing all {showingCount} {addMoreSearchQuery.trim() ? 'results' : 'available cities'}
+								{m.home_showing_all({ count: showingCount, type: addMoreSearchQuery.trim() ? m.home_results() : m.home_available_cities() })}
 							</p>
 							<button
 								type="button"
@@ -491,7 +491,7 @@
 									showAllTimezones = false;
 								}}
 							>
-								Show Less
+								{m.home_show_less()}
 							</button>
 						</div>
 					{/if}
@@ -499,9 +499,9 @@
 					<div class="text-center py-12 bg-base-200 rounded-2xl">
 						<p class="text-base-content/60 mb-4">
 							{#if addMoreSearchQuery.trim()}
-								No cities found matching "{addMoreSearchQuery}"
+								{m.home_no_cities_found()} "{addMoreSearchQuery}"
 							{:else}
-								All cities have been added to your list.
+								{m.home_all_cities_added()}
 							{/if}
 						</p>
 					</div>
