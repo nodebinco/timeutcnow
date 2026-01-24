@@ -382,7 +382,7 @@
 			{#if userTimezone}
 				{@const isLocalDay = isDayTime(currentTime, userTimezone)}
 				<p class="mt-6 mb-4 text-sm text-base-content/60 flex items-center justify-center gap-2 flex-wrap">
-					<span>Your Local Timezone</span>
+					<span>{m.your_local_timezone()}</span>
 					<span class="font-semibold text-base-content">{localTime}</span>
 					<span class="text-primary font-semibold">UTC {offsetStr}</span>
 					<span>{userTimezone}</span>
@@ -464,7 +464,10 @@
 					{#if !showAllTimezones && showingCount < totalAvailable}
 						<div class="text-center mt-8">
 							<p class="text-sm text-base-content/60 mb-2">
-								Showing {showingCount} of {totalAvailable} {addMoreSearchQuery.trim() ? 'results' : 'available cities'}
+								{addMoreSearchQuery.trim() 
+									? m.showing_of_results({ showing: showingCount, total: totalAvailable })
+									: m.showing_of_available_cities({ showing: showingCount, total: totalAvailable })
+								}
 							</p>
 							<button
 								type="button"
